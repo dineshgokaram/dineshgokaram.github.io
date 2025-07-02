@@ -18,6 +18,7 @@ body {
 header.intro {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -42,15 +43,15 @@ header.intro .subtitle {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 16px #0ea5e9;
+  box-shadow: 0 0 20px #0ea5e9;
 }
 
 /* Social Icons */
 .social-icons {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   margin-top: 0.6rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .social-icons a {
@@ -59,10 +60,10 @@ header.intro .subtitle {
 }
 
 .social-icons a:hover {
-  color: #0f172a;
+  color: #0284c7;
 }
 
-/* Section Headings */
+/* Sections */
 section {
   margin-bottom: 3rem;
 }
@@ -71,7 +72,7 @@ h2 {
   border-bottom: 2px solid #0ea5e9;
   padding-bottom: 0.4rem;
   margin-bottom: 1rem;
-  font-size: 1.9rem;
+  font-size: 2rem;
   color: #0f172a;
 }
 
@@ -79,60 +80,63 @@ h2 {
   color: #0ea5e9;
 }
 
-/* Vertical Tabs (Experience Section) */
+/* Work Experience Vertical Tabs */
 .experience-wrapper {
   display: flex;
-  flex-wrap: nowrap;
   gap: 2rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
 }
 
 .experience-tabs {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  min-width: 150px;
-  flex-shrink: 0;
+  min-width: 160px;
+  border-left: 2px solid #e2e8f0;
+  padding-left: 1rem;
 }
 
 .experience-tab {
-  background: #f1f5f9;
-  color: #475569;
+  background: transparent;
   border: none;
   padding: 0.6rem 1rem;
-  border-left: 4px solid transparent;
+  font-size: 1rem;
+  color: #64748b;
   text-align: left;
-  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-radius: 6px;
+  border-left: 3px solid transparent;
 }
 
 .experience-tab:hover,
 .experience-tab.active {
-  background: #e2e8f0;
+  background: #f1f5f9;
+  border-left: 3px solid #0ea5e9;
   color: #0ea5e9;
-  border-left: 4px solid #0ea5e9;
+  font-weight: 600;
 }
 
 .experience-content {
-  flex: 2;
-  min-width: 280px;
+  flex: 1;
 }
 
 .experience-panel {
   display: none;
+  animation: slideFade 0.4s ease-in-out;
 }
 
 .experience-panel.active {
   display: block;
-  animation: slideFade 0.4s ease-in-out;
 }
 
 @keyframes slideFade {
-  from { transform: translateX(-10px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* Contact Form */
@@ -191,7 +195,7 @@ footer.footer .social-icons {
   margin-top: 1rem;
 }
 
-/* Responsive Fixes */
+/* Responsive */
 @media (max-width: 768px) {
   .experience-wrapper {
     flex-direction: column;
@@ -207,8 +211,8 @@ footer.footer .social-icons {
   }
 
   .profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
 }
 
