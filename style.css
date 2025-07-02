@@ -13,7 +13,6 @@ body {
   padding: 2rem;
 }
 
-/* Header Layout */
 header.intro {
   display: flex;
   align-items: center;
@@ -44,7 +43,6 @@ header.intro .subtitle {
   box-shadow: 0 0 16px #14b8a6;
 }
 
-/* Social Icons */
 .social-icons {
   display: flex;
   gap: 1rem;
@@ -61,7 +59,6 @@ header.intro .subtitle {
   color: #0f172a;
 }
 
-/* Headings & Sections */
 section {
   margin-bottom: 3rem;
 }
@@ -78,7 +75,7 @@ h2 {
   color: #14b8a6;
 }
 
-/* Vertical Tabs */
+/* Experience Tabs */
 .experience-wrapper {
   display: flex;
   flex-wrap: nowrap;
@@ -134,7 +131,7 @@ h2 {
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* Contact Form */
+/* Form */
 form#contact {
   display: flex;
   flex-direction: column;
