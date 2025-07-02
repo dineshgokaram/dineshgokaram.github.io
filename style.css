@@ -214,3 +214,41 @@ form button:hover {
     justify-content: center;
   }
 }
+header.intro {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+header.intro h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+header.intro .subtitle {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
