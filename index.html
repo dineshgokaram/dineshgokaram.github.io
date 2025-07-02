@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gokaram Dinesh Goud - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
@@ -16,83 +16,87 @@
         <h1>Gokaram Dinesh Goud</h1>
         <p class="subtitle">Backend Developer | Python | Django | FastAPI</p>
         <div class="social-icons">
-          <a href="mailto:dineshgokaram2706@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-          <a href="https://github.com/dineshgokaram" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/in/dineshgokaram" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://leetcode.com/dineshgokaram" title="LeetCode" target="_blank"><i class="fas fa-code"></i></a>
+          <a href="mailto:gokaramdinesh@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/dineshgokaram" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/dineshgokaram" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://leetcode.com/dinesh_gokaram" target="_blank"><i class="fas fa-code"></i></a>
         </div>
       </div>
     </header>
 
     <section>
       <h2>About Me</h2>
-      <p>I’m a backend developer from Hyderabad, India. I specialize in scalable systems using Python, Django, FastAPI, and building robust ETL pipelines. I love automating workflows and learning new tech to build impactful software.</p>
+      <p>I’m a passionate software engineer from Hyderabad, India with hands-on experience in building scalable backend systems using Python, Django, and FastAPI. I thrive on transforming data into actionable insights and automating workflows through robust ETL pipelines. As a lifelong learner, I enjoy contributing to dynamic teams and building production-ready applications.</p>
     </section>
 
     <section>
       <h2>Education</h2>
-      <p><strong>Sai Sudhir Degree and PG College</strong> — Master’s in Computer Science<br><em>Mar 2021 – Jan 2023, Hyderabad</em></p>
+      <p><strong>Sai Sudhir Degree and PG College</strong> — Master’s in Computer Science<br>
+      <em>Mar 2021 – Jan 2023, Hyderabad, Telangana</em></p>
     </section>
 
     <section>
       <h2>Technical Skills</h2>
       <p>
-        <strong>Languages:</strong> Python, SQL, C++, HTML, Node.js<br>
-        <strong>Frameworks:</strong> Django, Flask, FastAPI, Pandas, Numpy<br>
-        <strong>Tools:</strong> Git, Docker, AWS, Power BI, MS Excel<br>
-        <strong>Concepts:</strong> REST APIs, JWT, Agile, Data Analysis
+        <strong>Languages:</strong> Python, SQL, C++ (familiar), HTML (familiar), Node.js (familiar)<br>
+        <strong>Frameworks/Libraries:</strong> Django, Flask, FastAPI, Pandas, Numpy<br>
+        <strong>Tools:</strong> Git/GitHub, Docker, AWS, Power BI, MS Excel<br>
+        <strong>Concepts:</strong> REST APIs, JWT, QA, Data Analysis, Agile, Problem Solving
       </p>
     </section>
 
     <section>
-      <h2>Work Experience</h2>
+      <h2>Experience</h2>
       <div class="experience-wrapper">
         <div class="experience-tabs">
-          <button class="experience-tab active" onclick="showPanel('codec')">Codec Tech</button>
-          <button class="experience-tab" onclick="showPanel('codtech')">Codtech</button>
-          <button class="experience-tab" onclick="showPanel('codingster')">Codingster</button>
-          <button class="experience-tab" onclick="showPanel('innovapath')">Innovapath</button>
-          <button class="experience-tab" onclick="showPanel('cognizant')">Cognizant</button>
+          <button class="experience-tab active" onclick="showExperience('codec')">Codec Technology</button>
+          <button class="experience-tab" onclick="showExperience('codtech')">Codtech</button>
+          <button class="experience-tab" onclick="showExperience('codingster')">Codingster</button>
+          <button class="experience-tab" onclick="showExperience('innovapath')">Innovapath</button>
+          <button class="experience-tab" onclick="showExperience('cognizant')">Cognizant</button>
         </div>
         <div class="experience-content">
           <div id="codec" class="experience-panel active">
-            <h3><strong>Data Analytics Intern</strong> <span class="highlight">@ Codec Technology India</span></h3>
-            <p><em>May 2025 – Present · Remote</em></p>
+            <h3>Data Analytics Intern @ <span class="highlight">Codec Technology India</span></h3>
+            <p><em>May 2025 – Present (Remote)</em></p>
             <ul>
-              <li>Built ETL pipelines with Pandas & SQL</li>
-              <li>Automated backend data flows & reporting</li>
+              <li>Built backend-driven ETL workflows for data ingestion and transformation</li>
+              <li>Automated reporting with Pandas and SQL</li>
             </ul>
           </div>
           <div id="codtech" class="experience-panel">
-            <h3><strong>Python Developer Intern</strong> <span class="highlight">@ Codtech IT Solutions</span></h3>
-            <p><em>Dec 2024 – Feb 2025 · Remote</em></p>
+            <h3>Python Developer Intern @ <span class="highlight">Codtech IT Solutions</span></h3>
+            <p><em>Dec 2024 – Feb 2025 (Remote)</em></p>
             <ul>
-              <li>Developed grade tracking & library tools in Python</li>
-              <li>Worked in agile teams to meet project goals</li>
+              <li>Created student grade tracker and library manager tools in Python</li>
+              <li>Collaborated with teams to deliver end-user-ready systems</li>
             </ul>
           </div>
           <div id="codingster" class="experience-panel">
-            <h3><strong>Freelance Backend Developer</strong> <span class="highlight">@ Codingster Pvt Ltd</span></h3>
-            <p><em>Oct 2024 – Nov 2024 · Remote</em></p>
+            <h3>Freelance Backend Developer @ <span class="highlight">Codingster Pvt Ltd</span></h3>
+            <p><em>Oct 2024 – Nov 2024 (Remote)</em></p>
             <ul>
-              <li>Built e-commerce backend with Node.js & Express</li>
-              <li>Handled user auth, REST APIs & payments</li>
+              <li>Developed Node.js backend for e-commerce platform</li>
+              <li>Implemented REST APIs, user auth, and payment gateway integration</li>
+              <li>Used MongoDB and Express.js for backend services</li>
             </ul>
           </div>
           <div id="innovapath" class="experience-panel">
-            <h3><strong>Python Developer</strong> <span class="highlight">@ Innovapath IT Solutions</span></h3>
-            <p><em>Feb 2024 – Sept 2024 · Hyderabad</em></p>
+            <h3>Python Developer @ <span class="highlight">Innovapath IT Solutions</span></h3>
+            <p><em>Feb 2024 – Sept 2024, Hyderabad</em></p>
             <ul>
-              <li>Created Django/FastAPI services & ML integrations</li>
-              <li>Worked with Docker & AWS deployments</li>
+              <li>Developed backend APIs with Django and FastAPI</li>
+              <li>Integrated chatbot systems and ML models</li>
+              <li>Deployed with AWS and Docker</li>
             </ul>
           </div>
           <div id="cognizant" class="experience-panel">
-            <h3><strong>Data Analyst</strong> <span class="highlight">@ Cognizant</span></h3>
-            <p><em>Jul 2021 – Aug 2023 · Hyderabad</em></p>
+            <h3>Data Analyst @ <span class="highlight">Cognizant</span></h3>
+            <p><em>Jul 2021 – Aug 2023, Hyderabad</em></p>
             <ul>
-              <li>Monitored content accuracy & policy compliance</li>
-              <li>Built dashboards with Excel and Power BI</li>
+              <li>Reviewed user content and ensured policy compliance</li>
+              <li>Tracked performance via Power BI and Excel</li>
+              <li>Recommended data-driven quality improvements</li>
             </ul>
           </div>
         </div>
@@ -102,9 +106,9 @@
     <section>
       <h2>Projects</h2>
       <ul>
-        <li><strong>Online Coding Platform</strong> – Django, FastAPI, JWT</li>
-        <li><strong>Automated Report Generation</strong> – Python, Pandas</li>
-        <li><strong>Library Management CLI</strong> – Python-based app</li>
+        <li><strong>Online Coding Platform</strong> — Django, FastAPI, JWT, Render, Vercel</li>
+        <li><strong>Automated Report Generation</strong> — Python, Pandas, ReportLab</li>
+        <li><strong>Library Management System</strong> — Python CLI-based app</li>
       </ul>
     </section>
 
@@ -119,6 +123,11 @@
     </section>
 
     <section>
+      <h2>Languages</h2>
+      <p>English, Telugu, Hindi</p>
+    </section>
+
+    <section>
       <h2>Contact</h2>
       <form id="contact">
         <input type="text" placeholder="Your Name" required />
@@ -129,21 +138,21 @@
     </section>
 
     <footer class="footer">
-      <p>© 2025 Gokaram Dinesh Goud</p>
+      <p>&copy; 2025 Gokaram Dinesh Goud</p>
       <div class="social-icons">
-        <a href="mailto:dineshgokaram2706@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="mailto:gokaramdinesh@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
         <a href="https://github.com/dineshgokaram" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://linkedin.com/in/dineshgokaram" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://leetcode.com/dineshgokaram" target="_blank"><i class="fas fa-code"></i></a>
+        <a href="https://leetcode.com/dinesh_gokaram" target="_blank"><i class="fas fa-code"></i></a>
       </div>
     </footer>
   </div>
 
   <script>
-    function showPanel(id) {
+    function showExperience(id) {
       document.querySelectorAll('.experience-tab').forEach(tab => tab.classList.remove('active'));
       document.querySelectorAll('.experience-panel').forEach(panel => panel.classList.remove('active'));
-      document.querySelector(`[onclick="showPanel('${id}')"]`).classList.add('active');
+      document.querySelector(`.experience-tab[onclick="showExperience('${id}')"]`).classList.add('active');
       document.getElementById(id).classList.add('active');
     }
   </script>
