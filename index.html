@@ -47,16 +47,16 @@
 
     <section>
       <h2>Experience</h2>
-      <div class="vertical-tabs">
-        <div class="tab-links">
-          <button class="tab-link active" onclick="showVerticalTab('codec')">Codec Technology</button>
-          <button class="tab-link" onclick="showVerticalTab('codtech')">Codtech</button>
-          <button class="tab-link" onclick="showVerticalTab('codingster')">Codingster</button>
-          <button class="tab-link" onclick="showVerticalTab('innovapath')">Innovapath</button>
-          <button class="tab-link" onclick="showVerticalTab('cognizant')">Cognizant</button>
+      <div class="experience-wrapper">
+        <div class="experience-tabs">
+          <button class="experience-tab active" onclick="showExp('codec')">Codec Technology</button>
+          <button class="experience-tab" onclick="showExp('codtech')">Codtech</button>
+          <button class="experience-tab" onclick="showExp('codingster')">Codingster</button>
+          <button class="experience-tab" onclick="showExp('innovapath')">Innovapath</button>
+          <button class="experience-tab" onclick="showExp('cognizant')">Cognizant</button>
         </div>
-        <div class="tab-details">
-          <div id="codec" class="tab-info active">
+        <div class="experience-content">
+          <div id="codec" class="experience-panel active">
             <h3>Data Analytics Intern @ <span class="highlight">Codec Technology India</span></h3>
             <p><em>May 2025 – Present (Remote)</em></p>
             <ul>
@@ -64,7 +64,7 @@
               <li>Automated reporting with Pandas and SQL</li>
             </ul>
           </div>
-          <div id="codtech" class="tab-info">
+          <div id="codtech" class="experience-panel">
             <h3>Python Developer Intern @ <span class="highlight">Codtech IT Solutions</span></h3>
             <p><em>Dec 2024 – Feb 2025 (Remote)</em></p>
             <ul>
@@ -72,7 +72,7 @@
               <li>Collaborated with teams to deliver end-user-ready systems</li>
             </ul>
           </div>
-          <div id="codingster" class="tab-info">
+          <div id="codingster" class="experience-panel">
             <h3>Freelance Backend Developer @ <span class="highlight">Codingster Pvt Ltd</span></h3>
             <p><em>Oct 2024 – Nov 2024 (Remote)</em></p>
             <ul>
@@ -81,7 +81,7 @@
               <li>Used MongoDB and Express.js for backend services</li>
             </ul>
           </div>
-          <div id="innovapath" class="tab-info">
+          <div id="innovapath" class="experience-panel">
             <h3>Python Developer @ <span class="highlight">Innovapath IT Solutions</span></h3>
             <p><em>Feb 2024 – Sept 2024, Hyderabad</em></p>
             <ul>
@@ -90,7 +90,7 @@
               <li>Deployed with AWS and Docker</li>
             </ul>
           </div>
-          <div id="cognizant" class="tab-info">
+          <div id="cognizant" class="experience-panel">
             <h3>Data Analyst @ <span class="highlight">Cognizant</span></h3>
             <p><em>Jul 2021 – Aug 2023, Hyderabad</em></p>
             <ul>
@@ -149,10 +149,10 @@
   </footer>
 
   <script>
-    function showVerticalTab(id) {
-      document.querySelectorAll('.tab-link').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.tab-info').forEach(tab => tab.classList.remove('active'));
-      document.querySelector(`[onclick="showVerticalTab('${id}')"]`).classList.add('active');
+    function showExp(id) {
+      document.querySelectorAll('.experience-tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.experience-panel').forEach(panel => panel.classList.remove('active'));
+      document.querySelector(`[onclick="showExp('${id}')"]`).classList.add('active');
       document.getElementById(id).classList.add('active');
     }
   </script>
