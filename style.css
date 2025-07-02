@@ -19,8 +19,6 @@ header.top-left {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 3rem;
-  text-align: left;
   position: absolute;
   top: 1.5rem;
   left: 2rem;
@@ -45,8 +43,25 @@ header.top-left .subtitle {
   box-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
 }
 
+/* Social Icons */
+.social-icons {
+  margin-top: 0.4rem;
+  display: flex;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+}
 
-/* Social buttons */
+.social-icons a {
+  text-decoration: none;
+  color: #00bcd4;
+  transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+/* Buttons */
 .buttons {
   margin-top: 1.5rem;
   display: flex;
@@ -69,7 +84,7 @@ header.top-left .subtitle {
   color: #fff;
 }
 
-/* Section styling */
+/* Sections */
 section {
   margin-bottom: 3rem;
 }
@@ -79,6 +94,10 @@ h2 {
   padding-bottom: 0.4rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+}
+
+.highlight {
+  color: #00bcd4;
 }
 
 /* Tabs */
@@ -121,10 +140,6 @@ h2 {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-.highlight {
-  color: #00bcd4;
 }
 
 /* Contact Form */
@@ -178,17 +193,24 @@ form button:hover {
     text-align: center;
   }
 
-  header.intro {
+  header.top-left {
+    position: static;
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    margin-bottom: 2rem;
   }
 
   .profile-pic {
-    width: 96px;
-    height: 96px;
+    width: 90px;
+    height: 90px;
   }
 
-  header h1 {
+  header.top-left h1 {
     font-size: 1.6rem;
+  }
+
+  .social-icons {
+    justify-content: center;
   }
 }
