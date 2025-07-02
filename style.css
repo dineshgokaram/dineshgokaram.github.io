@@ -1,4 +1,4 @@
-/* Base Reset & Light Theme */
+/* Reset & Base */
 body {
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@ body {
   padding: 2rem;
 }
 
-/* Header Layout */
+/* Header */
 header.intro {
   display: flex;
   align-items: center;
@@ -27,19 +27,19 @@ header.intro {
 }
 
 header.intro h1 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   margin-bottom: 0.3rem;
   color: #0ea5e9;
 }
 
 header.intro .subtitle {
   font-size: 1.2rem;
-  color: #64748b;
+  color: #475569;
 }
 
 .profile-pic {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 16px #0ea5e9;
@@ -59,10 +59,10 @@ header.intro .subtitle {
 }
 
 .social-icons a:hover {
-  color: #000000;
+  color: #0f172a;
 }
 
-/* Headings & Sections */
+/* Section Headings */
 section {
   margin-bottom: 3rem;
 }
@@ -79,7 +79,7 @@ h2 {
   color: #0ea5e9;
 }
 
-/* Vertical Tabs for Experience */
+/* Vertical Tabs (Experience Section) */
 .experience-wrapper {
   display: flex;
   flex-wrap: nowrap;
@@ -207,8 +207,8 @@ footer.footer .social-icons {
   }
 
   .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 }
 
