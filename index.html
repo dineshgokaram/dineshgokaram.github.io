@@ -1,60 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gokaram Dinesh Goud - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Gokaram Dinesh Goud</h1>
-    <p>Backend Developer | Python | Django | FastAPI</p>
-  </header>
+  <div class="container">
+    <header>
+      <img src="profile.jpg" alt="Profile Photo" class="profile-pic" />
+      <h1>Gokaram Dinesh Goud</h1>
+      <p class="subtitle">Backend Developer | Python | Django | FastAPI</p>
+      <div class="buttons">
+        <a href="#contact" class="btn">Contact</a>
+        <a href="https://github.com/dineshgokaram" class="btn" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/dineshgokaram" class="btn" target="_blank">LinkedIn</a>
+      </div>
+    </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>I’m a passionate software engineer from Hyderabad, India with experience in building scalable backend systems, ETL pipelines, and automating workflows. I love working with data and backend logic.</p>
-  </section>
+    <section>
+      <h2>About Me</h2>
+      <p>I’m a passionate backend engineer from Hyderabad, India, specializing in scalable systems, automation, and data-driven backend solutions using Django and FastAPI.</p>
+    </section>
 
-  <section>
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <strong>Freelance Contributor at Codingster</strong><br>
-        Built backend services for an e-commerce platform using Node.js
-      </li>
-      <!-- Add other roles here -->
-    </ul>
-  </section>
+    <section>
+      <h2>Work Experience</h2>
+      <div class="tabs">
+        <div class="tab-list">
+          <button class="tab active" onclick="showTab('emitrr')">Emitrr</button>
+          <button class="tab" onclick="showTab('teachyst')">Teachyst</button>
+          <button class="tab" onclick="showTab('dimension')">Dimension</button>
+          <button class="tab" onclick="showTab('trryst')">Trryst</button>
+        </div>
+        <div class="tab-content">
+          <div id="emitrr" class="tab-panel active">
+            <h3>Software Engineer @ <span class="highlight">Emitrr</span></h3>
+            <p><em>Mar 2023 - Apr 2024 (Remote)</em></p>
+            <ul>
+              <li>Worked on SMS Automations</li>
+              <li>Integrated HubSpot and Mailchimp APIs</li>
+              <li>Built automated workflows from scratch</li>
+            </ul>
+          </div>
+          <div id="teachyst" class="tab-panel">
+            <h3>Backend Intern @ <span class="highlight">Teachyst</span></h3>
+            <p><em>2022</em></p>
+            <ul>
+              <li>Worked on platform integrations and course APIs</li>
+            </ul>
+          </div>
+          <div id="dimension" class="tab-panel">
+            <h3>Developer Intern @ <span class="highlight">Dimension</span></h3>
+            <p><em>2021</em></p>
+            <ul>
+              <li>Built analytics dashboard and data scrapers</li>
+            </ul>
+          </div>
+          <div id="trryst" class="tab-panel">
+            <h3>Freelance Developer @ <span class="highlight">Trryst</span></h3>
+            <p><em>2020</em></p>
+            <ul>
+              <li>Built real-time chat module using Node.js</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li>Data API with FastAPI for ML model inference</li>
-      <li>ETL Pipeline to automate invoice extraction</li>
-      <!-- Add more projects -->
-    </ul>
-  </section>
+    <section>
+      <h2>Contact</h2>
+      <form id="contact">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
 
-  <section>
-    <h2>Skills</h2>
-    <p><strong>Languages:</strong> Python, JavaScript<br>
-       <strong>Frameworks:</strong> Django, FastAPI, Node.js<br>
-       <strong>Tools:</strong> Git, Docker, SQL, MongoDB, Postman</p>
-  </section>
-
-  <section>
-    <h2>Education</h2>
-    <p>Bachelor’s Degree – [Your University Name Here]</p>
-  </section>
-
-  <footer>
-    <p>Connect: 
-      <a href="https://github.com/dineshgokaram">GitHub</a> |
-      <a href="https://leetcode.com/dineshgokaram">LeetCode</a> |
-      <a href="https://linkedin.com/in/dineshgokaram">LinkedIn</a> |
-      <a href="https://bit.ly/43HDZf4">Portfolio</a>
-    </p>
-  </footer>
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+      document.querySelector(`[onclick="showTab('${id}')"]`).classList.add('active');
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
