@@ -1,52 +1,69 @@
 'use strict';
 
 /**
- * Toggle element visibility (used in multiple components)
+ * Toggle the "active" class on an element.
+ * Used for sidebar toggling and page switching.
  */
-const elementToggleFunc = (elem) => {
-  elem.classList.toggle("active");
+const toggleActiveClass = (element) => {
+  element.classList.toggle("active");
 };
 
-/* ========== SIDEBAR ========== */
+/* ----------------------------
+   SIDEBAR FUNCTIONALITY
+----------------------------- */
 const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+const sidebarToggleBtn = document.querySelector("[data-sidebar-btn]");
 
-sidebarBtn.addEventListener("click", () => {
-  elementToggleFunc(sidebar);
-});
+if (sidebar && sidebarToggleBtn) {
+  sidebarToggleBtn.addEventListener("click", () => toggleActiveClass(sidebar));
+}
 
-/* ========== FORM VALIDATION ========== */
+/* ----------------------------
+   FORM VALIDATION
+----------------------------- */
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+const formSubmitBtn = document.querySelector("[data-form-btn]");
 
-// Enable form button only when all fields are valid
-formInputs.forEach(input => {
-  input.addEventListener("input", () => {
-    formBtn.disabled = !form.checkValidity();
+if (form && formInputs.length && formSubmitBtn) {
+  formInputs.forEach((input) => {
+    input.addEventListener("input", () => {
+      formSubmitBtn.disabled = !form.checkValidity();
+    });
   });
-});
+}
 
-/* ========== PAGE NAVIGATION ========== */
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
+/* ----------------------------
+   PAGE NAVIGATION
+----------------------------- */
+const navLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-navigationLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    const targetPage = link.textContent.trim().toLowerCase();
+if (navLinks.length && pages.length) {
+  navLinks.forEach((navLink) => {
+    navLink.addEventListener("click", () => {
+      const targetPage = navLink.textContent.trim().toLowerCase();
 
-    pages.forEach(page => {
-      const pageName = page.dataset.page;
-      page.classList.toggle("active", pageName === targetPage);
+      // Toggle 'active' class on pages
+      pages.forEach((page) => {
+        const pageName = page.dataset.page;
+        page.classList.toggle("active", pageName === targetPage);
+      });
+
+      // Toggle 'active' class on navbar links
+      navLinks.forEach((link) => link.classList.remove("active"));
+      navLink.classList.add("active");
+
+      // Scroll to top for smooth UX
+      window.scrollTo(0, 0);
     });
-
-    navigationLinks.forEach(item => item.classList.remove("active"));
-    link.classList.add("active");
-
-    window.scrollTo(0, 0);
   });
-});
+}
 
-/* ========== TOOLTIP FOR SOCIAL ICONS (OPTIONAL ENHANCEMENT) ========== */
-// If you want tooltips to appear on hover (modern browser support)
-// This can be styled in CSS using [title] attribute
+/* ----------------------------
+   TOOLTIP ENHANCEMENT (OPTIONAL)
+   Tooltip shown using 'title' attribute on social icons
+----------------------------- */
+// Tooltips are handled by the browser via the title attribute.
+// Example: <a href="#" title="GitHub"></a>
+// Styling handled in CSS (see .tooltip or [title] overrides)
