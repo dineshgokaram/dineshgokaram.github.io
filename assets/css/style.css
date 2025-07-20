@@ -254,9 +254,7 @@ article.active {
   background: var(--text-gradient-yellow);
   border-radius: 3px;
 }
-/* Custom style to change service icon color */
-.service-icon-box ion-icon {
-  color: var(--orange-yellow-crayola);
+
 }
 .has-scrollbar::-webkit-scrollbar {
   width: 5px; /* for vertical scrollbar */
@@ -1890,4 +1888,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 .skills-item p {
   color: var(--orange-yellow-crayola);
   font-weight: 300; /* Optional: Keep the font from being too bold */
+}
+/* Custom style to change service icon color */
+.service-icon-box ion-icon {
+  color: var(--orange-yellow-crayola);
 }
