@@ -1,49 +1,33 @@
 'use strict';
 
-/**
- * Utility function to switch active class between tabs
- */
-const switchTab = (targetPage) => {
-  // Get all pages and nav buttons
-  const pages = document.querySelectorAll('.tab-page');
-  const navBtns = document.querySelectorAll('.nav-btn');
+// element toggle function
+const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-  pages.forEach(page => {
-    page.classList.remove('active');
-    if (page.dataset.page === targetPage) {
-      page.classList.add('active');
+// sidebar variables
+const sidebar = document.querySelector("[data-sidebar]");
+const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+
+// sidebar toggle functionality for mobile
+sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+
+// page navigation variables
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
+// add event to all nav link
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
+
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[i].classList.remove("active");
+        navigationLinks[i].classList.remove("active");
+      }
     }
-  });
 
-  navBtns.forEach(btn => {
-    btn.classList.remove('active');
-    if (btn.dataset.page === targetPage) {
-      btn.classList.add('active');
-    }
-  });
-
-  // Smooth scroll to top
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-
-/**
- * Handle navigation tab clicks
- */
-document.querySelectorAll('.nav-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const targetPage = button.dataset.page;
-    switchTab(targetPage);
-  });
-});
-
-/**
- * Toggle sidebar contact section (on small devices)
- */
-const sidebarToggle = document.querySelector('.sidebar-toggle');
-const sidebarContacts = document.querySelector('.sidebar-contacts');
-
-if (sidebarToggle && sidebarContacts) {
-  sidebarToggle.addEventListener('click', () => {
-    sidebarContacts.classList.toggle('show');
   });
 }
