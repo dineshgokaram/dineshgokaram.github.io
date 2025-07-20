@@ -333,7 +333,7 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 30%; /* This creates the squircle shape */
+  border-radius: 30%; /* <-- CHANGE THIS LINE */
 }
 
 .info-content .name {
@@ -1556,6 +1556,9 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar, article { width: 700px; }
+ .avatar-box {
+    border-radius: 30%; /* <-- CHANGE THIS LINE TOO */
+  }
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
