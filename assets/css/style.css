@@ -1,6 +1,6 @@
 /* =====================================
    GLOBAL RESET & BASE STYLES
-====================================== */
+===================================== */
 * {
   margin: 0;
   padding: 0;
@@ -34,15 +34,25 @@ button {
   cursor: pointer;
   background: none;
   border: none;
+  outline: none;
+}
+
+/* =====================================
+   LAYOUT STRUCTURE
+===================================== */
+.main-wrapper {
+  display: flex;
+  min-height: 100vh;
 }
 
 /* =====================================
    SIDEBAR STYLES
-====================================== */
+===================================== */
 .sidebar {
   background: #fff;
   padding: 2rem;
   width: 280px;
+  min-width: 260px;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -55,116 +65,77 @@ button {
   z-index: 1000;
 }
 
-.avatar-box img {
+.avatar {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.name {
+.sidebar-name {
   font-size: 1.5rem;
   font-weight: 600;
+  margin-top: 1rem;
 }
 
-.title {
+.sidebar-title {
   font-size: 1rem;
   font-weight: 400;
   color: #777;
 }
 
-.info_more-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #f7f7f7;
+.sidebar-toggle {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #555;
 }
 
-.separator {
-  border-bottom: 1px solid #ddd;
-  margin: 1.5rem 0;
+.sidebar-contacts {
+  margin-top: 1rem;
 }
 
-.contacts-list,
-.social-list {
+.sidebar-contacts ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.contact-item {
+.sidebar-contacts li {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.icon-box {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-.contact-title {
+  align-items: center;
+  gap: 0.75rem;
   font-size: 0.9rem;
-  font-weight: 500;
-  color: #777;
-}
-
-.contact-link {
-  color: #007bff;
-  font-size: 0.85rem;
-}
-
-address {
-  font-style: italic;
   color: #444;
 }
-.tab-page {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+
+.sidebar-contacts ion-icon {
+  font-size: 1.2rem;
 }
 
-.tab-page.active {
-  display: block;
-  opacity: 1;
-}
-
-.sidebar-contacts.show {
-  max-height: 500px;
-  transition: max-height 0.3s ease-in-out;
-}
-
-.sidebar-contacts {
-  max-height: 0;
-  overflow: hidden;
-}
-
-.social-list {
-  flex-direction: row;
+.social-links {
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
+  margin-top: 1.5rem;
 }
 
-.social-link {
+.social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   background-color: #333;
   color: #fff;
   border-radius: 50%;
-  transition: background-color 0.3s;
-  position: relative;
+  transition: background-color 0.3s ease;
 }
 
-.social-link:hover {
+.social-links a:hover {
   background-color: #007bff;
 }
 
-.social-link[title]:hover::after {
+.social-links a[title]:hover::after {
   content: attr(title);
   position: absolute;
   top: 110%;
@@ -179,88 +150,84 @@ address {
   opacity: 0.9;
 }
 
-/* =====================================
-   MAIN CONTENT STYLES
-====================================== */
-.main-content {
-  margin-left: 300px;
-  padding: 2rem;
+/* Sidebar toggle collapse behavior */
+.sidebar-contacts {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
-.navbar {
+.sidebar-contacts.show {
+  max-height: 500px;
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+.content {
+  margin-left: 280px;
+  padding: 2rem;
+  flex: 1;
+}
+
+.content-nav {
+  display: flex;
+  gap: 1rem;
   margin-bottom: 2rem;
 }
 
-.navbar-list {
-  display: flex;
-  gap: 1rem;
+.nav-btn {
+  padding: 0.6rem 1.2rem;
+  background: #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.navbar-link {
-  padding: 0.5rem 1rem;
-  font-size: 0.95rem;
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.navbar-link.active,
-.navbar-link:hover {
+.nav-btn.active,
+.nav-btn:hover {
   background-color: #007bff;
   color: #fff;
 }
 
-.article-title {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+/* =====================================
+   SECTION STYLES
+===================================== */
+.tab-page {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.about-text p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
+.tab-page.active {
+  display: block;
+  opacity: 1;
 }
 
-/* Resume timeline */
-.timeline {
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+section {
   margin-bottom: 2rem;
 }
 
-.timeline-list {
+section ul {
   padding-left: 1rem;
-  border-left: 2px solid #ccc;
 }
 
-.timeline-item {
+section li {
   margin-bottom: 1rem;
 }
 
-.timeline-item-title {
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.timeline-text {
-  font-size: 0.9rem;
-  color: #555;
-}
-
 /* Skills */
-.skills-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.skills-item h5 {
+section ul li {
   font-size: 0.95rem;
-  font-weight: 500;
 }
 
-/* Project */
-.projects {
-  margin-top: 1rem;
-}
-
+/* Project styles */
 .project-list {
   display: flex;
   flex-direction: column;
@@ -268,63 +235,81 @@ address {
 }
 
 .project-title {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
 .project-category {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #777;
 }
 
 /* Contact Form */
-.contact-form .form {
+.contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  max-width: 600px;
 }
 
-.input-wrapper {
-  display: flex;
-  gap: 1rem;
-}
-
-.form-input {
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
   padding: 0.75rem;
+  border-radius: 6px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  flex: 1;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
-textarea.form-input {
+.contact-form textarea {
   resize: vertical;
   min-height: 120px;
 }
 
-.form-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+.contact-form button {
+  padding: 0.75rem 1.2rem;
   background-color: #007bff;
   color: #fff;
-  font-size: 0.95rem;
   border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
 }
 
-.form-btn:hover {
+.contact-form button:hover {
   background-color: #0056b3;
 }
 
-/* Active state */
-[data-page] {
-  display: none;
-}
+/* =====================================
+   RESPONSIVE
+===================================== */
+@media screen and (max-width: 768px) {
+  .main-wrapper {
+    flex-direction: column;
+  }
 
-[data-page].active {
-  display: block;
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .content-nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .sidebar-contacts {
+    max-height: 500px;
+  }
 }
