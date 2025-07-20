@@ -1,64 +1,49 @@
 'use strict';
 
 /**
- * Toggle "active" class on element
+ * Utility function to switch active class between tabs
  */
-const toggleActive = (element) => {
-  element.classList.toggle("active");
+const switchTab = (targetPage) => {
+  // Get all pages and nav buttons
+  const pages = document.querySelectorAll('.tab-page');
+  const navBtns = document.querySelectorAll('.nav-btn');
+
+  pages.forEach(page => {
+    page.classList.remove('active');
+    if (page.dataset.page === targetPage) {
+      page.classList.add('active');
+    }
+  });
+
+  navBtns.forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.dataset.page === targetPage) {
+      btn.classList.add('active');
+    }
+  });
+
+  // Smooth scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
-/* --------------------------
-   SIDEBAR TOGGLE FUNCTION
---------------------------- */
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarToggleBtn = document.querySelector("[data-sidebar-btn]");
+/**
+ * Handle navigation tab clicks
+ */
+document.querySelectorAll('.nav-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const targetPage = button.dataset.page;
+    switchTab(targetPage);
+  });
+});
 
-if (sidebar && sidebarToggleBtn) {
-  sidebarToggleBtn.addEventListener("click", () => {
-    toggleActive(sidebar);
+/**
+ * Toggle sidebar contact section (on small devices)
+ */
+const sidebarToggle = document.querySelector('.sidebar-toggle');
+const sidebarContacts = document.querySelector('.sidebar-contacts');
+
+if (sidebarToggle && sidebarContacts) {
+  sidebarToggle.addEventListener('click', () => {
+    sidebarContacts.classList.toggle('show');
   });
 }
-
-/* --------------------------
-   FORM VALIDATION HANDLING
---------------------------- */
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
-if (form && formInputs.length > 0 && formBtn) {
-  formInputs.forEach(input => {
-    input.addEventListener("input", () => {
-      formBtn.disabled = !form.checkValidity();
-    });
-  });
-}
-
-/* --------------------------
-   PAGE NAVIGATION HANDLER
---------------------------- */
-const navLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-if (navLinks.length > 0 && pages.length > 0) {
-  navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      const targetPage = link.textContent.trim().toLowerCase();
-
-      pages.forEach(page => {
-        const isTarget = page.dataset.page === targetPage;
-        page.classList.toggle("active", isTarget);
-      });
-
-      navLinks.forEach(link => link.classList.remove("active"));
-      link.classList.add("active");
-
-      window.scrollTo(0, 0);
-    });
-  });
-}
-
-/* --------------------------
-   TOOLTIP SUPPORT (title attr)
---------------------------- */
-// Handled via HTML: <a title="GitHub"> and styled in CSS via [title]:hover::after
