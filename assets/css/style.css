@@ -121,6 +121,26 @@ address {
   font-style: italic;
   color: #444;
 }
+.tab-page {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tab-page.active {
+  display: block;
+  opacity: 1;
+}
+
+.sidebar-contacts.show {
+  max-height: 500px;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.sidebar-contacts {
+  max-height: 0;
+  overflow: hidden;
+}
 
 .social-list {
   flex-direction: row;
