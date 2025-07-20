@@ -1880,3 +1880,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+/* Custom style for skills text color */
+.skills-item p {
+  color: var(--orange-yellow-crayola);
+  font-weight: 300; /* Optional: Keep the font from being too bold */
+}
