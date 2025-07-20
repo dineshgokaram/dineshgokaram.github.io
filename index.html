@@ -11,107 +11,191 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-<main class="main-wrapper">
+
+<!--
+  - #MAIN
+-->
+<main>
+
+  <!--
+    - #SIDEBAR
+  -->
   <aside class="sidebar" data-sidebar>
-    <div class="sidebar-header">
-      <img src="assets/images/avatar.png" alt="Gokaram Dinesh Goud" width="80" class="avatar" />
-      <h1 class="sidebar-name">Gokaram Dinesh Goud</h1>
-      <p class="sidebar-title">Python & Backend Developer</p>
-      <button class="sidebar-toggle" data-sidebar-btn aria-label="Show Contacts" tabindex="0">
+    <div class="sidebar-info">
+      <figure class="avatar-box">
+        <img src="assets/images/avatar.png" alt="Gokaram Dinesh Goud" width="80">
+      </figure>
+
+      <div class="info-content">
+        <h1 class="name" title="Gokaram Dinesh Goud">Gokaram Dinesh Goud</h1>
+        <p class="title">Python & Backend Developer</p>
+      </div>
+
+      <button class="info_more-btn" data-sidebar-btn>
+        <span>Show Contacts</span>
         <ion-icon name="chevron-down"></ion-icon>
       </button>
     </div>
-    <nav class="sidebar-contacts">
+
+    <div class="sidebar-info_more">
+      <div class="separator"></div>
       <ul class="contacts-list">
         <li class="contact-item">
-          <ion-icon name="mail-outline"></ion-icon>
-          <span><a href="mailto:dineshgokaram2706@gmail.com">dineshgokaram2706@gmail.com</a></span>
+          <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Email</p>
+            <a href="mailto:dineshgokaram2706@gmail.com" class="contact-link">dineshgokaram2706@gmail.com</a>
+          </div>
         </li>
         <li class="contact-item">
-          <ion-icon name="call-outline"></ion-icon>
-          <span><a href="tel:+919515741345">+91-9515741345</a></span>
+          <div class="icon-box"><ion-icon name="call-outline"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Phone</p>
+            <a href="tel:+919515741345" class="contact-link">+91 95157 41345</a>
+          </div>
         </li>
         <li class="contact-item">
-          <ion-icon name="location-outline"></ion-icon>
-          <span>Hyderabad, India</span>
+          <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Location</p>
+            <address>Hyderabad, Telangana, India</address>
+          </div>
         </li>
       </ul>
-      <div class="social-links">
-        <a href="mailto:dineshgokaram2706@gmail.com" class="social-link" title="Email"><ion-icon name="mail-outline"></ion-icon></a>
-        <a href="https://linkedin.com/in/dineshgokaram" class="social-link" target="_blank" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
-        <a href="https://github.com/dineshgokaram" class="social-link" target="_blank" title="GitHub"><ion-icon name="logo-github"></ion-icon></a>
-        <a href="https://leetcode.com/u/dineshgokaram/" class="social-link" target="_blank" title="LeetCode"><ion-icon name="code-outline"></ion-icon></a>
-        <a href="https://drive.google.com/file/d/1DXWs7Iitpe7s7ZPasrr74vUpxAZGkRjK/view?usp=sharing" class="social-link" target="_blank" title="Resume"><ion-icon name="document-outline"></ion-icon></a>
-      </div>
-    </nav>
+      <div class="separator"></div>
+      <ul class="social-list">
+        <li class="social-item"><a href="https://github.com/dineshgokaram" class="social-link" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+        <li class="social-item"><a href="https://linkedin.com/in/dineshgokaram" class="social-link" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+      </ul>
+    </div>
   </aside>
 
-  <section class="main-content">
+  <!--
+    - #MAIN-CONTENT
+  -->
+  <div class="main-content">
+
+    <!--
+      - #NAVBAR
+    -->
     <nav class="navbar">
       <ul class="navbar-list">
-        <li><button class="navbar-link active" data-nav-link>About</button></li>
-        <li><button class="navbar-link" data-nav-link>Resume</button></li>
-        <li><button class="navbar-link" data-nav-link>Projects</button></li>
-        <li><button class="navbar-link" data-nav-link>Contact</button></li>
+        <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Projects</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
       </ul>
     </nav>
 
+    <!--
+      - #ABOUT
+    -->
     <article class="about active" data-page="about">
-      <h2 class="h2 article-title">About Me</h2>
-      <p>Aspiring <strong>Python Developer</strong> with hands-on experience in backend systems, data-driven applications, and automation tools using Python, FastAPI, Django, Pandas, and SQL.</p>
-      <p>Skilled in designing RESTful APIs, processing large datasets, collaborating in agile teams, and building scalable AI-integrated systems using tools like Docker, Git, and Power BI.</p>
+        <header><h2 class="h2 article-title">About Me</h2></header>
+        <section class="about-text">
+            <p>Aspiring Python Developer with hands-on experience in building backend systems, data-driven applications, and automation tools using Python, FastAPI, Django, Pandas, and SQL.</p>
+            <p>Skilled in designing RESTful APIs, processing large datasets, and implementing clean, maintainable code. Adept at collaborating in agile teams, integrating AI/LLM-based features, and leveraging tools like Docker, Git, and Power BI. Passionate about continuous learning and building scalable solutions that drive real-world impact across web development and data domains.</p>
+        </section>
     </article>
 
+    <!--
+      - #RESUME
+    -->
     <article class="resume" data-page="resume">
-      <h2 class="h2 article-title">Resume</h2>
+      <header><h2 class="h2 article-title">Resume</h2></header>
       <section class="timeline">
-        <h3 class="h3">Education</h3>
-        <ul>
-          <li><strong>Sai Sudhir Degree and PG College</strong><br>Mar 2021 – Jan 2023<br>Master’s Degree in Computer Science</li>
-          <li><strong>Jagruti Degree and PG College</strong><br>July 2017 – Dec 2020<br>Bachelor’s Degree in Computer Science</li>
-
-        </ul>
+        <div class="title-wrapper"><div class="icon-box"><ion-icon name="book-outline"></ion-icon></div><h3 class="h3">Education</h3></div>
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Sai Sudhir Degree and PG College</h4>
+            <span>Mar 2021 — Jan 2023</span>
+            <p class="timeline-text">Master’s Degree in Computer Science.</p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Jagruti Degree and PG College</h4>
+            <span>July 2017 — Dec 2020</span>
+            <p class="timeline-text">Bachelor’s Degree in Computer Science.</p>
+          </li>
+        </ol>
       </section>
       <section class="timeline">
-        <h3 class="h3">Experience</h3>
-        <ul>
-          <li><strong>Codec Technology India</strong> (May 2025 – July 2025): Built ETL pipelines using Pandas and SQL, exposed data via REST APIs.</li>
-          <li><strong>Codtech IT Solutions</strong> (Dec 2024 – Feb 2025): Developed Python apps for grading and library systems.</li>
-          <li><strong>Codingster Pvt. Ltd.</strong> (Oct 2024 – Nov 2024): Built backend modules with Node.js, integrated payments.</li>
-          <li><strong>Innovapath IT Solutions</strong> (Feb 2024 – Sept 2024): Built FastAPI/Django APIs with AI/LLM, deployed via Docker.</li>
-          <li><strong>Cognizant Technology Solutions</strong> (Jul 2021 – Aug 2023): Analyzed data using Excel and Power BI.</li>
-        </ul>
+        <div class="title-wrapper"><div class="icon-box"><ion-icon name="book-outline"></ion-icon></div><h3 class="h3">Experience</h3></div>
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Codec Technology India</h4>
+            <span>May 2025 – July 2025</span>
+            <p class="timeline-text">Built ETL pipelines using Pandas and SQL, exposed data via REST APIs.</p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Codtech IT Solutions</h4>
+            <span>Dec 2024 – Feb 2025</span>
+            <p class="timeline-text">Developed Python apps for grading and library systems.</p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Codingster Pvt. Ltd.</h4>
+            <span>Oct 2024 – Nov 2024</span>
+            <p class="timeline-text">Built backend modules with Node.js, integrated payments.</p>
+          </li>
+        </ol>
       </section>
-      <section class="skills">
-        <h3 class="h3">Technical Skills</h3>
-        <ul>
-          <li>Python, SQL, HTML, CSS, JavaScript</li>
-          <li>Django, FastAPI, Flask, Pandas, NumPy</li>
-          <li>Docker, Git, Power BI, AWS, Excel</li>
-          <li>REST APIs, JWT Auth, Agile, QA, NLP</li>
+      <section class="skill">
+        <h3 class="h3 skills-title">My skills</h3>
+        <ul class="skills-list content-card">
+            <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Python, SQL, JavaScript</h5></div></li>
+            <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Django, FastAPI, Pandas</h5></div></li>
+            <li class="skills-item"><div class="title-wrapper"><h5 class="h5">Docker, Git, Power BI, AWS</h5></div></li>
         </ul>
       </section>
     </article>
 
+    <!--
+      - #PROJECTS
+    -->
     <article class="portfolio" data-page="projects">
-      <h2 class="h2 article-title">Projects</h2>
-      <ul>
-        <li><strong>Online Coding Platform</strong><br><span>Python, React, FastAPI, Render, Vercel</span></li>
-        <li><strong>Automated Report Generator</strong><br><span>Python, Pandas, ReportLab</span></li>
-        <li><strong>Library Management System (CLI)</strong><br><span>Python</span></li>
-      </ul>
+        <header><h2 class="h2 article-title">Projects</h2></header>
+        <section class="projects">
+            <ul class="project-list">
+                <li class="project-item active" data-filter-item data-category="web development">
+                    <a href="#">
+                        <figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="https://via.placeholder.com/400x300" alt="Online Coding Platform" loading="lazy"></figure>
+                        <h3 class="project-title">Online Coding Platform</h3>
+                        <p class="project-category">Python, React, FastAPI</p>
+                    </a>
+                </li>
+                <li class="project-item active" data-filter-item data-category="web development">
+                    <a href="#">
+                        <figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="https://via.placeholder.com/400x300" alt="Automated Report Generation" loading="lazy"></figure>
+                        <h3 class="project-title">Automated Report Generation</h3>
+                        <p class="project-category">Python, Pandas, ReportLab</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
     </article>
 
+    <!--
+      - #CONTACT
+    -->
     <article class="contact" data-page="contact">
-      <h2 class="h2 article-title">Contact</h2>
-      <form action="https://formsubmit.co/dineshgokaram2706@gmail.com" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit"><ion-icon name="paper-plane"></ion-icon> Send Message</button>
-      </form>
+        <header><h2 class="h2 article-title">Contact</h2></header>
+        <section class="mapbox" data-mapbox>
+            <figure><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.316094391!2d78.26795850257357!3d17.41229984138138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana%2C%20India!5e0!3m2!1sen!2sus!4v1654533924115!5m2!1sen!2sus" width="400" height="300" loading="lazy"></iframe></figure>
+        </section>
+        <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
+            <form action="https://formsubmit.co/dineshgokaram2706@gmail.com" method="POST" class="form" data-form>
+                <div class="input-wrapper">
+                    <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                    <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+                </div>
+                <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+                <button class="form-btn" type="submit" disabled data-form-btn>
+                    <ion-icon name="paper-plane"></ion-icon><span>Send Message</span>
+                </button>
+            </form>
+        </section>
     </article>
-  </section>
+  </div>
 </main>
 
 <script src="assets/js/script.js"></script>
