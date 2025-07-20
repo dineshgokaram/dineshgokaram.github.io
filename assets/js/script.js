@@ -1,69 +1,64 @@
 'use strict';
 
 /**
- * Toggle the "active" class on an element.
- * Used for sidebar toggling and page switching.
+ * Toggle "active" class on element
  */
-const toggleActiveClass = (element) => {
+const toggleActive = (element) => {
   element.classList.toggle("active");
 };
 
-/* ----------------------------
-   SIDEBAR FUNCTIONALITY
------------------------------ */
+/* --------------------------
+   SIDEBAR TOGGLE FUNCTION
+--------------------------- */
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarToggleBtn = document.querySelector("[data-sidebar-btn]");
 
 if (sidebar && sidebarToggleBtn) {
-  sidebarToggleBtn.addEventListener("click", () => toggleActiveClass(sidebar));
+  sidebarToggleBtn.addEventListener("click", () => {
+    toggleActive(sidebar);
+  });
 }
 
-/* ----------------------------
-   FORM VALIDATION
------------------------------ */
+/* --------------------------
+   FORM VALIDATION HANDLING
+--------------------------- */
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
-const formSubmitBtn = document.querySelector("[data-form-btn]");
+const formBtn = document.querySelector("[data-form-btn]");
 
-if (form && formInputs.length && formSubmitBtn) {
-  formInputs.forEach((input) => {
+if (form && formInputs.length > 0 && formBtn) {
+  formInputs.forEach(input => {
     input.addEventListener("input", () => {
-      formSubmitBtn.disabled = !form.checkValidity();
+      formBtn.disabled = !form.checkValidity();
     });
   });
 }
 
-/* ----------------------------
-   PAGE NAVIGATION
------------------------------ */
+/* --------------------------
+   PAGE NAVIGATION HANDLER
+--------------------------- */
 const navLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-if (navLinks.length && pages.length) {
-  navLinks.forEach((navLink) => {
-    navLink.addEventListener("click", () => {
-      const targetPage = navLink.textContent.trim().toLowerCase();
+if (navLinks.length > 0 && pages.length > 0) {
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      const targetPage = link.textContent.trim().toLowerCase();
 
-      // Toggle 'active' class on pages
-      pages.forEach((page) => {
-        const pageName = page.dataset.page;
-        page.classList.toggle("active", pageName === targetPage);
+      pages.forEach(page => {
+        const isTarget = page.dataset.page === targetPage;
+        page.classList.toggle("active", isTarget);
       });
 
-      // Toggle 'active' class on navbar links
-      navLinks.forEach((link) => link.classList.remove("active"));
-      navLink.classList.add("active");
+      navLinks.forEach(link => link.classList.remove("active"));
+      link.classList.add("active");
 
-      // Scroll to top for smooth UX
       window.scrollTo(0, 0);
     });
   });
 }
 
-/* ----------------------------
-   TOOLTIP ENHANCEMENT (OPTIONAL)
-   Tooltip shown using 'title' attribute on social icons
------------------------------ */
-// Tooltips are handled by the browser via the title attribute.
-// Example: <a href="#" title="GitHub"></a>
-// Styling handled in CSS (see .tooltip or [title] overrides)
+/* --------------------------
+   TOOLTIP SUPPORT (title attr)
+--------------------------- */
+// Handled via HTML: <a title="GitHub"> and styled in CSS via [title]:hover::after
