@@ -4,170 +4,138 @@
   <meta charset="UTF-8">
   <title>Gokaram Dinesh Goud - Python Backend Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="shortcut icon" href="/assets/images/logo.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- vCard-style minimalist CSS structure; link your final CSS file here -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="assets/images/logo.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-<main>
-  <aside class="sidebar" data-sidebar>
-    <div class="sidebar-info">
-      <figure class="avatar-box">
-        <img src="./assets/images/avatar.png" alt="Gokaram Dinesh Goud" width="80" style="border-radius: 50%;">
-      </figure>
-      <div class="info-content">
-        <h1 class="name">Gokaram Dinesh Goud</h1>
-        <p class="title">Python & Backend Developer</p>
-      </div>
-      <button class="info_more-btn" data-sidebar-btn>
-        <span>Show Contacts</span>
+<main class="main-wrapper">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="assets/images/avatar.png" alt="Gokaram Dinesh Goud" width="80" class="avatar"/>
+      <h1 class="sidebar-name">Gokaram Dinesh Goud</h1>
+      <p class="sidebar-title">Python & Backend Developer</p>
+      <button class="sidebar-toggle" aria-label="Show Contacts" tabindex="0">
         <ion-icon name="chevron-down"></ion-icon>
       </button>
     </div>
-    <div class="sidebar-info_more">
-      <div class="separator"></div>
-      <ul class="contacts-list">
-        <li class="contact-item">
-          <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
-          <div class="contact-info">
-            <p class="contact-title">Email</p>
-            <a href="mailto:dineshgokaram2706@gmail.com" class="contact-link" style="font-size: 0.85rem;">dineshgokaram2706@gmail.com</a>
-          </div>
+    <nav class="sidebar-contacts">
+      <ul>
+        <li>
+          <ion-icon name="mail-outline"></ion-icon>
+          <span><a href="mailto:dineshgokaram2706@gmail.com">dineshgokaram2706@gmail.com</a></span>
         </li>
-        <li class="contact-item">
-          <div class="icon-box"><ion-icon name="call-outline"></ion-icon></div>
-          <div class="contact-info">
-            <p class="contact-title">Phone</p>
-            <a href="tel:+919515741345" class="contact-link">+91-9515741345</a>
-          </div>
+        <li>
+          <ion-icon name="call-outline"></ion-icon>
+          <span><a href="tel:+919515741345">+91-9515741345</a></span>
         </li>
-        <li class="contact-item">
-          <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
-          <div class="contact-info">
-            <p class="contact-title">Location</p>
-            <address>Hyderabad, Telangana, India</address>
-          </div>
+        <li>
+          <ion-icon name="location-outline"></ion-icon>
+          <span>Hyderabad, India</span>
         </li>
       </ul>
-      <div class="separator"></div>
-      <ul class="social-list">
-        <li class="social-item">
-          <a href="mailto:dineshgokaram2706@gmail.com" class="social-link" title="Email">
-            <ion-icon name="mail-outline"></ion-icon>
-          </a>
-        </li>
-        <li class="social-item">
-          <a href="https://linkedin.com/in/dineshgokaram" class="social-link" target="_blank" title="LinkedIn">
-            <ion-icon name="logo-linkedin"></ion-icon>
-          </a>
-        </li>
-        <li class="social-item">
-          <a href="https://github.com/dineshgokaram" class="social-link" target="_blank" title="GitHub">
-            <ion-icon name="logo-github"></ion-icon>
-          </a>
-        </li>
-        <li class="social-item">
-          <a href="https://leetcode.com/u/dineshgokaram/" class="social-link" target="_blank" title="LeetCode">
-            <ion-icon name="code-outline"></ion-icon>
-          </a>
-        </li>
-        <li class="social-item">
-          <a href="https://drive.google.com/file/d/1DXWs7Iitpe7s7ZPasrr74vUpxAZGkRjK/view?usp=sharing" class="social-link" target="_blank" title="Resume">
-            <ion-icon name="document-outline"></ion-icon>
-          </a>
-        </li>
-      </ul>
-    </div>
+      <div class="social-links">
+        <a href="mailto:dineshgokaram2706@gmail.com" title="Email"><ion-icon name="mail-outline"></ion-icon></a>
+        <a href="https://linkedin.com/in/dineshgokaram" target="_blank" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="https://github.com/dineshgokaram" target="_blank" title="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+        <a href="https://leetcode.com/u/dineshgokaram/" target="_blank" title="LeetCode"><ion-icon name="code-outline"></ion-icon></a>
+        <a href="https://drive.google.com/file/d/1DXWs7Iitpe7s7ZPasrr74vUpxAZGkRjK/view?usp=sharing" target="_blank" title="Resume"><ion-icon name="document-outline"></ion-icon></a>
+      </div>
+    </nav>
   </aside>
 
-  <div class="main-content">
-    <nav class="navbar">
-      <ul class="navbar-list">
-        <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
-        <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
-        <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
-        <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
-      </ul>
+  <!-- Main Content -->
+  <section class="content">
+    <!-- Navigation -->
+    <nav class="content-nav">
+      <button class="nav-btn active" data-page="about">About</button>
+      <button class="nav-btn" data-page="resume">Resume</button>
+      <button class="nav-btn" data-page="portfolio">Projects</button>
+      <button class="nav-btn" data-page="contact">Contact</button>
     </nav>
 
-    <article class="about active" data-page="about">
-      <header><h2 class="h2 article-title">About Me</h2></header>
-      <section class="about-text">
-        <p>Aspiring Python Developer with hands-on experience in backend systems, data-driven applications, and automation tools using Python, FastAPI, Django, Pandas, and SQL.</p>
-        <p>Skilled in designing RESTful APIs, processing large datasets, collaborating in agile teams, and building scalable AI-integrated systems using tools like Docker, Git, and Power BI.</p>
-      </section>
+    <!-- About -->
+    <article class="tab-page about active" data-page="about">
+      <h2>About Me</h2>
+      <p>
+        Aspiring <strong>Python Developer</strong> with hands-on experience in backend systems, data-driven applications, and automation tools using Python, FastAPI, Django, Pandas, and SQL.
+      </p>
+      <p>
+        Skilled in designing RESTful APIs, processing large datasets, collaborating in agile teams, and building scalable AI-integrated systems using tools like Docker, Git, and Power BI.
+      </p>
     </article>
 
-    <article class="resume" data-page="resume">
-      <header><h2 class="h2 article-title">Resume</h2></header>
-      <section class="timeline">
-        <div class="title-wrapper"><div class="icon-box"><ion-icon name="school-outline"></ion-icon></div><h3 class="h3">Education</h3></div>
-        <ol class="timeline-list">
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Sai Sudhir Degree and PG College</h4>
-            <span>Mar 2021 – Jan 2023</span>
-            <p class="timeline-text">Master’s Degree in Computer Science</p>
+    <!-- Resume -->
+    <article class="tab-page resume" data-page="resume">
+      <h2>Resume</h2>
+      <section>
+        <h3>Education</h3>
+        <ul>
+          <li>
+            <strong>Sai Sudhir Degree and PG College</strong><br>
+            Mar 2021 – Jan 2023<br>
+            Master’s Degree in Computer Science
           </li>
-        </ol>
+        </ul>
       </section>
-      <section class="timeline">
-        <div class="title-wrapper"><div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div><h3 class="h3">Experience</h3></div>
-        <ol class="timeline-list">
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Codec Technology India</h4><span>May 2025 – July 2025</span><p class="timeline-text">Built ETL pipelines using Pandas and SQL, exposed data via REST APIs for reporting.</p></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Codtech IT Solutions</h4><span>Dec 2024 – Feb 2025</span><p class="timeline-text">Developed Python apps for student grading and library systems with modular logic.</p></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Codingster Pvt. Ltd.</h4><span>Oct 2024 – Nov 2024</span><p class="timeline-text">Built e-commerce backend modules with Node.js and integrated payment systems.</p></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Innovapath IT Solutions</h4><span>Feb 2024 – Sept 2024</span><p class="timeline-text">Built FastAPI/Django APIs, integrated AI/LLMs, deployed via Docker.</p></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Cognizant Technology Solutions</h4><span>Jul 2021 – Aug 2023</span><p class="timeline-text">Analyzed service data using Excel and Power BI to improve reporting and insights.</p></li>
-        </ol>
+      <section>
+        <h3>Experience</h3>
+        <ul>
+          <li><strong>Codec Technology India</strong> (May 2025 – July 2025): Built ETL pipelines using Pandas and SQL, exposed data via REST APIs for reporting.</li>
+          <li><strong>Codtech IT Solutions</strong> (Dec 2024 – Feb 2025): Developed Python apps for student grading and library systems with modular logic.</li>
+          <li><strong>Codingster Pvt. Ltd.</strong> (Oct 2024 – Nov 2024): Built e-commerce backend modules with Node.js and integrated payment systems.</li>
+          <li><strong>Innovapath IT Solutions</strong> (Feb 2024 – Sept 2024): Built FastAPI/Django APIs, integrated AI/LLMs, deployed via Docker.</li>
+          <li><strong>Cognizant Technology Solutions</strong> (Jul 2021 – Aug 2023): Analyzed service data using Excel and Power BI to improve reporting and insights.</li>
+        </ul>
       </section>
-      <section class="skill">
-        <h3 class="h3 skills-title">Technical Skills</h3>
-        <ul class="skills-list content-card">
-          <li class="skills-item"><h5 class="h5">Python, SQL, HTML, CSS, JavaScript</h5></li>
-          <li class="skills-item"><h5 class="h5">Django, FastAPI, Flask, Pandas, NumPy</h5></li>
-          <li class="skills-item"><h5 class="h5">Docker, Git, Power BI, AWS, Excel</h5></li>
-          <li class="skills-item"><h5 class="h5">REST APIs, JWT Auth, Agile, QA, NLP</h5></li>
+      <section>
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>Python, SQL, HTML, CSS, JavaScript</li>
+          <li>Django, FastAPI, Flask, Pandas, NumPy</li>
+          <li>Docker, Git, Power BI, AWS, Excel</li>
+          <li>REST APIs, JWT Auth, Agile, QA, NLP</li>
         </ul>
       </section>
     </article>
 
-    <article class="portfolio" data-page="portfolio">
-      <header><h2 class="h2 article-title">Projects</h2></header>
-      <section class="projects">
-        <ul class="project-list">
-          <li class="project-item"><h3 class="project-title">Online Coding Platform</h3><p class="project-category">Python, React, FastAPI, Render, Vercel</p></li>
-          <li class="project-item"><h3 class="project-title">Automated Report Generator</h3><p class="project-category">Python, Pandas, ReportLab</p></li>
-          <li class="project-item"><h3 class="project-title">Library Management System (CLI)</h3><p class="project-category">Python</p></li>
-        </ul>
-      </section>
+    <!-- Projects -->
+    <article class="tab-page portfolio" data-page="portfolio">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>Online Coding Platform</strong><br>
+          <span>Python, React, FastAPI, Render, Vercel</span>
+        </li>
+        <li>
+          <strong>Automated Report Generator</strong><br>
+          <span>Python, Pandas, ReportLab</span>
+        </li>
+        <li>
+          <strong>Library Management System (CLI)</strong><br>
+          <span>Python</span>
+        </li>
+      </ul>
     </article>
 
-    <article class="contact" data-page="contact">
-      <header><h2 class="h2 article-title">Contact</h2></header>
-      <section class="contact-form">
-       <form action="https://formsubmit.co/dineshgokaram2706@gmail.com"
-      method="POST"
-      class="form"
-      data-form>
-  <div class="input-wrapper">
-    <input type="text" name="name" class="form-input" placeholder="Your Name" required data-form-input>
-    <input type="email" name="email" class="form-input" placeholder="Your Email" required data-form-input>
-  </div>
-  <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-  <button class="form-btn" type="submit" data-form-btn disabled>
-    <ion-icon name="paper-plane"></ion-icon>
-    <span>Send Message</span>
-  </button>
-</form>
-
-      </section>
+    <!-- Contact -->
+    <article class="tab-page contact" data-page="contact">
+      <h2>Contact</h2>
+      <form action="https://formsubmit.co/dineshgokaram2706@gmail.com" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit"><ion-icon name="paper-plane"></ion-icon> Send Message</button>
+      </form>
     </article>
-  </div>
+  </section>
 </main>
 
-<script src="./assets/js/script.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!-- JS for navigation and toggling sidebar (write your own or adapt from vCard example) -->
+<script src="assets/js/script.js"></script>
 </body>
 </html>
