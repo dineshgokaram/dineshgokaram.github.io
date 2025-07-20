@@ -254,7 +254,10 @@ article.active {
   background: var(--text-gradient-yellow);
   border-radius: 3px;
 }
-
+/* Custom style to change service icon color */
+.service-icon-box ion-icon {
+  color: var(--orange-yellow-crayola);
+}
 .has-scrollbar::-webkit-scrollbar {
   width: 5px; /* for vertical scrollbar */
   height: 5px; /* for horizontal scrollbar */
