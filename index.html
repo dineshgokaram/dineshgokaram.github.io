@@ -12,14 +12,18 @@
 </head>
 <body>
 
+<!--
+  - #MAIN
+-->
 <main>
+
   <!--
     - #SIDEBAR
   -->
   <aside class="sidebar" data-sidebar>
     <div class="sidebar-info">
       <figure class="avatar-box">
-        <img src="./assets/images/my-avatar.png" alt="Gokaram Dinesh Goud" width="80">
+        <img src="assets/images/my-avatar.png" alt="Gokaram Dinesh Goud" width="80">
       </figure>
 
       <div class="info-content">
@@ -59,88 +63,139 @@
         </li>
       </ul>
       <div class="separator"></div>
-      <ul class="social-list">
-          <li class="social-item">
-              <a href="mailto:dineshgokaram2706@gmail.com" class="social-link" title="Email"><ion-icon name="mail-outline"></ion-icon></a>
-          </li>
-          <li class="social-item">
-              <a href="https://linkedin.com/in/dineshgokaram" class="social-link" target="_blank" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
-          </li>
-          <li class="social-item">
-              <a href="https://github.com/dineshgokaram" class="social-link" target="_blank" title="GitHub"><ion-icon name="logo-github"></ion-icon></a>
-          </li>
-          <li class="social-item">
-              <a href="https://leetcode.com/u/dineshgokaram/" class="social-link" target="_blank" title="LeetCode"><ion-icon name="code-outline"></ion-icon></a>
-          </li>
-          <li class="social-item">
-              <a href="https://drive.google.com/file/d/1bphbNPodqhh6RyDHJBLB5_bBa_TyscfN/view?usp=sharing" class="social-link" target="_blank" title="Resume"><ion-icon name="document-outline"></ion-icon></a>
-          </li>
-      </ul>
-    </div>
-  </aside>
+    <!-- START: UPDATED SOCIAL LINKS SECTION -->
+    <ul class="social-list">
+        <li class="social-item">
+            <a href="mailto:dineshgokaram2706@gmail.com" class="social-link" title="Email">
+                <ion-icon name="mail-outline"></ion-icon>
+            </a>
+        </li>
+        <li class="social-item">
+            <a href="https://linkedin.com/in/dineshgokaram" class="social-link" target="_blank" title="LinkedIn">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+        </li>
+        <li class="social-item">
+            <a href="https://github.com/dineshgokaram" class="social-link" target="_blank" title="GitHub">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+        </li>
+        <li class="social-item">
+            <a href="https://leetcode.com/u/dineshgokaram/" class="social-link" target="_blank" title="LeetCode">
+                <ion-icon name="code-outline"></ion-icon>
+            </a>
+        </li>
+        <li class="social-item">
+            <a href="https://drive.google.com/file/d/1bphbNPodqhh6RyDHJBLB5_bBa_TyscfN/view?usp=sharing" class="social-link" target="_blank" title="Resume">
+        <ion-icon name="document-outline"></ion-icon> 
+            </a>
+        </li>
+    </ul>
+    <!-- END: UPDATED SOCIAL LINKS SECTION -->
+
+  </div>
+</aside>
+
 
   <!--
     - #MAIN-CONTENT
   -->
   <div class="main-content">
+
     <!--
       - #NAVBAR
     -->
     <nav class="navbar">
       <ul class="navbar-list">
-        <li class="navbar-item"><button class="navbar-link active" data-page="about" data-nav-link>About</button></li>
-        <li class="navbar-item"><button class="navbar-link" data-page="resume" data-nav-link>Resume</button></li>
-        <li class="navbar-item"><button class="navbar-link" data-page="projects" data-nav-link>Projects</button></li>
-        <li class="navbar-item"><button class="navbar-link" data-page="contact" data-nav-link>Contact</button></li>
+        <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Projects</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Blog</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
       </ul>
     </nav>
 
     <!--
+    <!--
       - #ABOUT
     -->
     <article class="about active" data-page="about">
+
       <header>
         <h2 class="h2 article-title">About Me</h2>
       </header>
+
       <section class="about-text">
-        <p>My fascination isn't just with writing code; it's with building the engines that power modern, data-driven applications. I specialize in Python, architecting high-performance backends with frameworks like <strong>FastAPI and Django</strong> to create solutions that are both scalable and elegant.</p>
-        <p>But a powerful engine needs intelligent fuel. I thrive on transforming raw data into actionable insights using <strong>Pandas and SQL</strong>, and I integrate cutting-edge <strong>AI and LLMs</strong> to build the next generation of smart, interactive features. From concept to deployment with <strong>Docker and AWS</strong>, my focus is always on delivering clean, maintainable code that drives real-world results.</p>
+        <p>
+          My fascination isn't just with writing code; it's with building the engines that power modern, data-driven applications. I specialize in Python, architecting high-performance backends with frameworks like <strong>FastAPI and Django</strong> to create solutions that are both scalable and elegant.
+        </p>
+        <p>
+          But a powerful engine needs intelligent fuel. I thrive on transforming raw data into actionable insights using <strong>Pandas and SQL</strong>, and I integrate cutting-edge <strong>AI and LLMs</strong> to build the next generation of smart, interactive features. From concept to deployment with <strong>Docker and AWS</strong>, my focus is always on delivering clean, maintainable code that drives real-world results.
+        </p>
       </section>
+
+
+      <!--
+        - MY CORE SPECIALTIES
+      -->
       <section class="service">
+
         <h3 class="h3 service-title">What I Do</h3>
+
         <ul class="service-list">
+
           <li class="service-item">
-            <div class="service-icon-box"><ion-icon name="code-slash-outline"></ion-icon></div>
+            <div class="service-icon-box">
+              <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
             <div class="service-content-box">
               <h4 class="h4 service-item-title">High-Performance API & Backend Engineering</h4>
-              <p class="service-item-text">Designing and building robust, server-side logic and RESTful APIs using Python, FastAPI, and Django to ensure scalability and speed.</p>
+              <p class="service-item-text">
+                Designing and building robust, server-side logic and RESTful APIs using Python, FastAPI, and Django to ensure scalability and speed.
+              </p>
             </div>
           </li>
+
           <li class="service-item">
-            <div class="service-icon-box"><ion-icon name="analytics-outline"></ion-icon></div>
+            <div class="service-icon-box">
+              <ion-icon name="analytics-outline"></ion-icon>
+            </div>
             <div class="service-content-box">
               <h4 class="h4 service-item-title">Automated Data & ETL Pipelines</h4>
-              <p class="service-item-text">Crafting automated workflows with Pandas and SQL to ingest, clean, and process large datasets, making them ready for analysis and application use.</p>
+              <p class="service-item-text">
+                Crafting automated workflows with Pandas and SQL to ingest, clean, and process large datasets, making them ready for analysis and application use.
+              </p>
             </div>
           </li>
+
           <li class="service-item">
-            <div class="service-icon-box"><ion-icon name="sparkles-outline"></ion-icon></div>
+            <div class="service-icon-box">
+              <ion-icon name="sparkles-outline"></ion-icon>
+            </div>
             <div class="service-content-box">
               <h4 class="h4 service-item-title">AI & LLM-Powered Features</h4>
-              <p class="service-item-text">Integrating the power of Large Language Models to create intelligent chatbots, dynamic content systems, and other next-generation user experiences.</p>
+              <p class="service-item-text">
+                Integrating the power of Large Language Models to create intelligent chatbots, dynamic content systems, and other next-generation user experiences.
+              </p>
             </div>
           </li>
+
           <li class="service-item">
-            <div class="service-icon-box"><ion-icon name="layers-outline"></ion-icon></div>
+            <div class="service-icon-box">
+              <ion-icon name="layers-outline"></ion-icon>
+            </div>
             <div class="service-content-box">
               <h4 class="h4 service-item-title">Containerization & Deployment</h4>
-              <p class="service-item-text">Utilizing Docker and exploring AWS to ensure solutions are not just well-coded, but also consistently and efficiently delivered in production environments.</p>
+              <p class="service-item-text">
+                Utilizing Docker and exploring AWS to ensure solutions are not just well-coded, but also consistently and efficiently delivered in production environments.
+              </p>
             </div>
           </li>
+
         </ul>
       </section>
-    </article>
 
+    </article>
     <!--
       - #RESUME
     -->
@@ -161,124 +216,234 @@
           </li>
         </ol>
       </section>
+      <!--
+        - EXPERIENCE
+      -->
       <section class="timeline">
-        <div class="title-wrapper"><div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div><h3 class="h3">Experience</h3></div>
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <ion-icon name="briefcase-outline"></ion-icon>
+          </div>
+          <h3 class="h3">Experience</h3>
+        </div>
+
         <ol class="timeline-list">
+
           <li class="timeline-item">
             <h4 class="h4 timeline-item-title">Codec Technology India - Data Analytics Intern (Remote)</h4>
             <span>May 2025 – July 2025</span>
-            <div class="timeline-text"><ul><li>• Assisting in building backend-driven data workflows.</li><li>• Developed automated ETL pipelines using Pandas and SQL.</li></ul></div>
+            <div class="timeline-text">
+              <ul>
+                <li>• Assisting in building backend-driven data workflows, including data ingestion, transformation, and exposing processed data via RESTful APIs.</li>
+                <li>• Developed automated ETL pipelines using Pandas and SQL to extract insights and generate recurring reports from large-scale datasets.</li>
+              </ul>
+            </div>
           </li>
+
           <li class="timeline-item">
             <h4 class="h4 timeline-item-title">Codtech IT Solutions - Python Developer Intern (Remote)</h4>
             <span>Dec 2024 – Feb 2025</span>
-            <div class="timeline-text"><ul><li>• Built modular Python applications for student grade tracking.</li><li>• Collaborated with cross-functional teams to gather requirements.</li></ul></div>
+            <div class="timeline-text">
+              <ul>
+                <li>• Built modular Python applications for student grade tracking and library management, focusing on clean logic and efficient data handling.</li>
+                <li>• Collaborated with cross-functional teams to gather requirements, validate features, and deliver user-aligned solutions.</li>
+              </ul>
+            </div>
           </li>
+
           <li class="timeline-item">
             <h4 class="h4 timeline-item-title">Codingster Private Limited - Freelance Backend Developer (Remote)</h4>
             <span>Oct 2024 – Nov 2024</span>
-            <div class="timeline-text"><ul><li>• Contributed to an e-commerce web app using Node.js.</li><li>• Built REST APIs, implemented user auth, and integrated payments.</li></ul></div>
+            <div class="timeline-text">
+              <ul>
+                <li>• Contributed to an e-commerce web app using Node.js and JavaScript.</li>
+                <li>• Built REST APIs, implemented user auth, and integrated payment gateway.</li>
+                <li>• Assisted in building backend modules using MongoDB and Express.js, supporting data handling and API integration.</li>
+              </ul>
+            </div>
           </li>
+
           <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Innovapath IT Solutions - Python Developer (Hyderabad)</h4>
+            <h4 class="h4 timeline-item-title">Innovapath IT Solutions - Python Developer (Hyderabad, Telangana)</h4>
             <span>Feb 2024 – Sept 2024</span>
-            <div class="timeline-text"><ul><li>• Engineered scalable backend APIs using Python with FastAPI and Django.</li><li>• Built and integrated AI-driven modules using LLMs.</li><li>• Practiced containerized deployments using Docker.</li></ul></div>
+            <div class="timeline-text">
+              <ul>
+                <li>• Engineered scalable backend APIs using Python with FastAPI and Django.</li>
+                <li>• Built and integrated AI-driven modules using LLMs for dynamic content generation.</li>
+                <li>• Initiated development of an AI-powered chatbot leveraging NLP pipelines and API orchestration.</li>
+                <li>• Explored AWS services and practiced containerized deployments using Docker.</li>
+              </ul>
+            </div>
           </li>
+
           <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Cognizant Technology Solutions - Data Analyst (Hyderabad)</h4>
+            <h4 class="h4 timeline-item-title">Cognizant Technology Solutions - Data Analyst (Hyderabad, Telangana)</h4>
             <span>Jul 2021 – Aug 2023</span>
-            <div class="timeline-text"><ul><li>• Validated user-generated content, ensuring 98% compliance.</li><li>• Developed Excel trackers and Power BI dashboards.</li></ul></div>
+            <div class="timeline-text">
+              <ul>
+                <li>• Validated user-generated content, ensuring 98% compliance with internal guidelines.</li>
+                <li>• Developed Excel trackers and Power BI dashboards, improving reporting efficiency by 25%.</li>
+                <li>• Collaborated with teams to analyze service level trends, increasing issue resolution time by 15%.</li>
+              </ul>
+            </div>
           </li>
+
         </ol>
-      </section>
+      </section>             <!--
+        - SKILLS
+      -->
       <section class="skill">
         <h3 class="h3 skills-title">My Skills</h3>
-        <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Languages</h5></div><p>Python, SQL, HTML, CSS, JavaScript, C++ (familiar)</p></li></ul>
-        <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Frameworks & Libraries</h5></div><p>Django, Flask, FastAPI, Pandas, Numpy</p></li></ul>
-        <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Tools & Platforms</h5></div><p>Git/Github, Docker, AWS, Power BI, MS Excel</p></li></ul>
-        <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Concepts</h5></div><p>REST APIs, JWT, QA, Data Analysis, Agile Methodology</p></li></ul>
+
+        <ul class="skills-list content-card">
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">Languages</h5>
+            </div>
+            <p>Python, SQL, HTML, CSS, JavaScript, C++ (familiar)</p>
+          </li>
+        </ul>
+
+        <ul class="skills-list content-card">
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">Frameworks and Libraries</h5>
+            </div>
+            <p>Django, Flask, FastAPI, Pandas, Numpy</p>
+          </li>
+        </ul>
+
+        <ul class="skills-list content-card">
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">Development Tools and Platforms</h5>
+            </div>
+            <p>Git/Github, Docker, AWS, Power BI, MS Excel</p>
+          </li>
+        </ul>
+
+        <ul class="skills-list content-card">
+          <li class="skills-item">
+            <div class="title-wrapper">
+              <h5 class="h5">Concepts and Technologies</h5>
+            </div>
+            <p>REST APIs, JWT, QA, Data Analysis, Agile Methodology, Problem Solving, Soft Skills</p>
+          </li>
+        </ul>
       </section>
-    </article>
 
     <!--
+        <!--
+      - #PROJECTS
+    -->
+       <!--
       - #PROJECTS
     -->
     <article class="portfolio" data-page="projects">
+
       <header>
         <h2 class="h2 article-title">Portfolio</h2>
       </header>
+
       <section class="projects">
+
+        <!-- Filter Buttons -->
         <ul class="filter-list">
-          <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
-          <li class="filter-item"><button data-filter-btn>Data Visualization</button></li>
-          <li class="filter-item"><button data-filter-btn>Web Development</button></li>
-          <li class="filter-item"><button data-filter-btn>Automation</button></li>
+          <li class="filter-item">
+            <button class="active" data-filter-btn>All</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Data Visualization</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Web Development</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Automation</button>
+          </li>
         </ul>
+
+        <!-- Project Grid -->
         <ul class="project-list">
-          <li class="project-item active" data-category="Data Visualization">
+
+          <!-- Project 1: Power BI Dashboard -->
+          <li class="project-item active" data-category="data visualization">
             <a href="https://github.com/dineshgokaram/powerbi_project" target="_blank">
               <figure class="project-img">
-                <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                <img src="./assets/images/power-bi-dashboard.png" alt="Interactive Sales Dashboard" loading="lazy">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <!-- IMPORTANT: Double-check this image path and filename! -->
+                <img src="./assets/images/power-bi-dashboard.png" alt="Interactive Sales Dashboard in Power BI" loading="lazy">
               </figure>
               <h3 class="project-title">Chocolate Shipment Data Analysis</h3>
               <p class="project-category">Power BI / Data Visualization</p>
             </a>
           </li>
-          <li class="project-item active" data-category="Web Development">
-            <a href="#" target="_blank">
+
+          <!-- Project 2: Online Coding Platform -->
+          <li class="project-item active" data-category="web development">
+            <a href="YOUR_GITHUB_LINK_HERE" target="_blank">
               <figure class="project-img">
-                <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
                 <img src="./assets/images/coding-platform.png" alt="Online Coding Platform" loading="lazy">
               </figure>
               <h3 class="project-title">Online Coding Platform</h3>
               <p class="project-category">Python, React, FastAPI</p>
             </a>
           </li>
-          <li class="project-item active" data-category="Automation">
-            <a href="#" target="_blank">
+
+          <!-- Project 3: Automated Report Generator -->
+          <li class="project-item active" data-category="automation">
+            <a href="YOUR_GITHUB_LINK_HERE" target="_blank">
               <figure class="project-img">
-                <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                <img src="./assets/images/report-generator.png" alt="Automated Report Generator" loading="lazy">
+                <div class="project-item-icon-box">
+                  <ion-icon name="eye-outline"></ion-icon>
+                </div>
+                <img src="./assets/images/report-generator.png" alt="Automated Report Generation" loading="lazy">
               </figure>
               <h3 class="project-title">Automated Report Generation</h3>
               <p class="project-category">Python, Pandas, ReportLab</p>
             </a>
           </li>
+
         </ul>
       </section>
-    </article>
 
-    <!--
+    </article>
+         <!--
       - #CONTACT
     -->
     <article class="contact" data-page="contact">
-      <header>
-        <h2 class="h2 article-title">Contact</h2>
-      </header>
-      <section class="mapbox" data-mapbox>
-        <figure><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.316094391!2d78.26795850257357!3d17.41229984138138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana%2C%20India!5e0!3m2!1sen!2sus!4v1654533924115!5m2!1sen!2sus" width="400" height="300" loading="lazy"></iframe></figure>
-      </section>
-      <section class="contact-form">
-        <h3 class="h3 form-title">Contact Form</h3>
-        <form action="https://formsubmit.co/dineshgokaram2706@gmail.com" method="POST" class="form" data-form>
-          <div class="input-wrapper">
-            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-          </div>
-          <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-          <button class="form-btn" type="submit" disabled data-form-btn>
-            <ion-icon name="paper-plane"></ion-icon>
-            <span>Send Message</span>
-          </button>
-        </form>
-      </section>
+        <header>
+            <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+            <figure>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.316094391!2d78.26795850257357!3d17.41229984138138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana%2C%20India!5e0!3m2!1sen!2sus!4v1654533924115!5m2!1sen!2sus" width="400" height="300" loading="lazy"></iframe>
+            </figure>
+        </section>
+
+        <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
+
+            <form action="https://formsubmit.co/dineshgokaram2706@gmail.com" method="POST" class="form" data-form>
+                <div class="input-wrapper">
+                    <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                    <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+                </div>
+                <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+                <button class="form-btn" type="submit" disabled data-form-btn>
+                    <ion-icon name="paper-plane"></ion-icon>
+                    <span>Send Message</span>
+                </button>
+            </form>
+        </section>
     </article>
 
-  </div>
-</main>
-
-<script src="./assets/js/script.js"></script>
-
+<script src="assets/js/script.js"></script>
 </body>
 </html>
