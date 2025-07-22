@@ -426,23 +426,40 @@
     </article>
 
 <article class="blog" data-page="blog">
-        <header><h2 class="h2 article-title">Blog</h2></header>
-    <a href="https://dineshgokaram.blogspot.com/2025/07/more-than-just-code-lessons-from-my.html" target="_blank" rel="noopener noreferrer">
+  <header>
+    <h2 class="h2 article-title">Blog</h2>
+  </header>
 
-        <section class="blog-posts">
-            <ul class="blog-posts-list">
-                <li class="blog-post-item">
-                    <a href="#">
-                       <figure class="blog-banner-box"><img src="./assets/images/blog-2.png" loading="lazy"></figure>
-                      <div class="blog-content"> <div class="blog-meta"><p class="blog-category">My Thoughts</p>
-                       </div> <h3 class="h3 blog-item-title">More Than Just Code</h3> 
-                         <p class="blog-text">Lessons From My First Real-World Project as a Developer</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </section>
-    </article>
+  <section class="blog-posts">
+    <ul class="blog-posts-list">
+
+      <li class="blog-post-item">
+        <!-- 
+          This is the correct placement for the link.
+          It wraps all the content inside the list item, making the whole card a single, clickable link.
+        -->
+        <a href="https://dineshgokaram.blogspot.com/2025/07/more-than-just-code-lessons-from-my.html" target="_blank" rel="noopener noreferrer">
+
+          <figure class="blog-banner-box">
+            <img src="./assets/images/blog-2.png" alt="Blog post thumbnail" loading="lazy">
+          </figure>
+
+          <div class="blog-content">
+            <div class="blog-meta">
+              <p class="blog-category">My Thoughts</p>
+            </div>
+            <h3 class="h3 blog-item-title">More Than Just Code</h3>
+            <p class="blog-text">Lessons From My First Real-World Project as a Developer</p>
+          </div>
+
+        </a>
+      </li>
+
+      <!-- You can add more blog posts here by copying the <li class="blog-post-item">...</li> block -->
+
+    </ul>
+  </section>
+</article>
 
     <article class="contact" data-page="contact">
       <header><h2 class="h2 article-title">Contact</h2></header>
