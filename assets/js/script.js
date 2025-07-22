@@ -1,5 +1,3 @@
-#script.js
-
 'use strict';
 
 // Element toggle function
@@ -29,12 +27,18 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+// Add event listener to all nav links
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
+    const clickedPage = this.innerHTML.toLowerCase(); // Get the clicked page name (e.g., "resume")
+
     for (let j = 0; j < pages.length; j++) {
-      if (this.dataset.page === pages[j].dataset.page) {
+      const pageName = pages[j].dataset.page.toLowerCase();
+      
+      // *** FIX: Compare the clicked link's text to the page's data-page attribute ***
+      if (clickedPage === pageName) {
         pages[j].classList.add("active");
-        navigationLinks[j].classList.add("active");
+        navigationLinks[i].classList.add("active"); // Use 'i' for the clicked link
         window.scrollTo(0, 0);
       } else {
         pages[j].classList.remove("active");
@@ -44,27 +48,30 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// -- NEW: Project filter functionality --
+// Project filter functionality
 const filterBtns = document.querySelectorAll("[data-filter-btn]");
-const filterItems = document.querySelectorAll(".project-item"); // Using class selector
+const filterItems = document.querySelectorAll(".project-item");
 
 let lastClickedFilterBtn = filterBtns[0];
 
 const filterFunc = function () {
-  // Remove active class from last clicked button and add to current
   lastClickedFilterBtn.classList.remove("active");
   this.classList.add("active");
   lastClickedFilterBtn = this;
 
-  // Hide or show filter items based on category
+  const selectedCategory = this.innerText.toLowerCase();
+
   for (let i = 0; i < filterItems.length; i++) {
-    const selectedCategory = this.innerText.toLowerCase();
     const itemCategory = filterItems[i].dataset.category.toLowerCase();
 
     if (selectedCategory === "all" || selectedCategory === itemCategory) {
+      // Show the item if it matches the category or if "All" is selected
       filterItems[i].classList.add("active");
+      filterItems[i].style.display = "block"; // Explicitly show
     } else {
+      // Hide the item if it doesn't match
       filterItems[i].classList.remove("active");
+      filterItems[i].style.display = "none"; // Explicitly hide
     }
   }
 }
