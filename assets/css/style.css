@@ -255,8 +255,8 @@ article.active {
   border-radius: 3px;
 }
 
+/* CORRECTION: Removed the extra closing brace `}` that was here, which was breaking the CSS. */
 
-}
 .has-scrollbar::-webkit-scrollbar {
   width: 5px; /* for vertical scrollbar */
   height: 5px; /* for horizontal scrollbar */
@@ -335,7 +335,7 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 30%; /* <-- CHANGE THIS LINE */
+  border-radius: 30%;
 }
 
 .info-content .name {
@@ -1339,7 +1339,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30px; }
+  .avatar-box { 
+    border-radius: 30%; /* CORRECTION: Ensures avatar is squircle on medium screens */
+  }
 
   .avatar-box img { width: 120px; }
 
@@ -1558,9 +1560,8 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar, article { width: 700px; }
- .avatar-box {
-    border-radius: 30%; /* <-- CHANGE THIS LINE TOO */
-  }
+ 
+  /* CORRECTION: Removed the misplaced avatar-box style that was here. */
 
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
