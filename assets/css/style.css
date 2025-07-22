@@ -255,6 +255,7 @@ article.active {
   border-radius: 3px;
 }
 
+
 }
 .has-scrollbar::-webkit-scrollbar {
   width: 5px; /* for vertical scrollbar */
