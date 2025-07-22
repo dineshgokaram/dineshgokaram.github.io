@@ -1,3 +1,5 @@
+#style.css
+
 /*-----------------------------------*\
   #style.css
 \*-----------------------------------*/
@@ -255,6 +257,7 @@ article.active {
   border-radius: 3px;
 }
 
+}
 .has-scrollbar::-webkit-scrollbar {
   width: 5px; /* for vertical scrollbar */
   height: 5px; /* for horizontal scrollbar */
@@ -333,7 +336,7 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 30%;
+  border-radius: 30%; /* <-- CHANGE THIS LINE */
 }
 
 .info-content .name {
@@ -551,7 +554,7 @@ main {
 .service-item-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-300);
+  font-weight: var(--fw-3);
   line-height: 1.6;
 }
 
@@ -1337,7 +1340,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30%; }
+  .avatar-box { border-radius: 30px; }
 
   .avatar-box img { width: 120px; }
 
@@ -1556,7 +1559,10 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar, article { width: 700px; }
- 
+ .avatar-box {
+    border-radius: 30%; /* <-- CHANGE THIS LINE TOO */
+  }
+
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
 
@@ -1880,17 +1886,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
-
-/*-----------------------------------*\
-  #YOUR CUSTOM STYLES
-\*-----------------------------------*/
-
 /* Custom style for skills text color */
 .skills-item p {
   color: var(--orange-yellow-crayola);
-  font-weight: 300;
+  font-weight: 300; /* Optional: Keep the font from being too bold */
 }
-
 /* Custom style to change service icon color */
 .service-icon-box ion-icon {
   color: var(--orange-yellow-crayola);
