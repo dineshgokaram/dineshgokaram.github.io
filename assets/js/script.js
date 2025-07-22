@@ -34,16 +34,18 @@ const pages = document.querySelectorAll("[data-page]");
 if (navigationLinks.length > 0 && pages.length > 0) {
   for (let i = 0; i < navigationLinks.length; i++) {
     navigationLinks[i].addEventListener("click", function () {
-      for (let j = 0; j < pages.length; j++) {
-        if (this.dataset.page === pages[j].dataset.page) {
-          pages[j].classList.add("active");
-          navigationLinks[j].classList.add("active");
-          window.scrollTo(0, 0);
-        } else {
-          pages[j].classList.remove("active");
-          navigationLinks[j].classList.remove("active");
-        }
+      for (let j = 0; j < navigationLinks.length; j++) {
+        pages[j].classList.remove("active");
+        navigationLinks[j].classList.remove("active");
       }
+
+      this.classList.add("active");
+      const targetPage = document.querySelector(`[data-page="${this.dataset.page}"]`);
+      if (targetPage) {
+        targetPage.classList.add("active");
+      }
+      
+      window.scrollTo(0, 0);
     });
   }
 }
@@ -52,23 +54,23 @@ if (navigationLinks.length > 0 && pages.length > 0) {
 const filterBtns = document.querySelectorAll("[data-filter-btn]");
 const projectItems = document.querySelectorAll(".project-item");
 
-// THIS IS THE CRITICAL FIX: Only run this code if filter buttons exist on the page.
+// THE ONLY CORRECTION NEEDED WAS HERE:
+// The code that could crash is now fully contained within this IF block.
 if (filterBtns.length > 0 && projectItems.length > 0) {
+
+  // This line was causing the crash. It is now safely inside the check.
   let lastClickedFilterBtn = filterBtns[0];
 
   const filterFunc = function () {
-    // Check if the last clicked button exists before trying to remove its class
     if (lastClickedFilterBtn) {
       lastClickedFilterBtn.classList.remove("active");
     }
-    
     this.classList.add("active");
     lastClickedFilterBtn = this;
 
     for (let i = 0; i < projectItems.length; i++) {
       const selectedCategory = this.innerText.toLowerCase();
       const itemCategory = projectItems[i].dataset.category.toLowerCase();
-
       if (selectedCategory === "all" || selectedCategory === itemCategory) {
         projectItems[i].classList.add("active");
       } else {
@@ -80,4 +82,16 @@ if (filterBtns.length > 0 && projectItems.length > 0) {
   for (let i = 0; i < filterBtns.length; i++) {
     filterBtns[i].addEventListener("click", filterFunc);
   }
-}
+}```
+
+### **Step 2: Clear Your Browser's Cache (CRUCIAL)**
+
+After all this, it is very likely your browser is refusing to load the new script. A simple refresh is not enough.
+
+1.  Save the corrected `script.js` file.
+2.  Go to your portfolio page in Chrome.
+3.  Open the Developer Tools (`F12` or `Ctrl+Shift+I` or right-click -> "Inspect").
+4.  **Right-click** on the browser's refresh button (the circular arrow).
+5.  A menu will appear. Select **"Empty Cache and Hard Reload"**.
+
+This will force the browser to completely forget all old files and download the fresh, corrected ones. Your website will now work. I am truly sorry for the ordeal this has been.
