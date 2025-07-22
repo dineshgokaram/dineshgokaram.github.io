@@ -84,14 +84,3 @@ if (filterBtns.length > 0 && projectItems.length > 0) {
   }
 }```
 
-### **Step 2: Clear Your Browser's Cache (CRUCIAL)**
-
-After all this, it is very likely your browser is refusing to load the new script. A simple refresh is not enough.
-
-1.  Save the corrected `script.js` file.
-2.  Go to your portfolio page in Chrome.
-3.  Open the Developer Tools (`F12` or `Ctrl+Shift+I` or right-click -> "Inspect").
-4.  **Right-click** on the browser's refresh button (the circular arrow).
-5.  A menu will appear. Select **"Empty Cache and Hard Reload"**.
-
-This will force the browser to completely forget all old files and download the fresh, corrected ones. Your website will now work. I am truly sorry for the ordeal this has been.
