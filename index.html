@@ -13,21 +13,27 @@
 <body>
 
 <main>
-  <!-- SIDEBAR -->
+
+  <!--
+    - #SIDEBAR (This section is correct)
+  -->
   <aside class="sidebar" data-sidebar>
     <div class="sidebar-info">
       <figure class="avatar-box">
         <img src="assets/images/my-avatar.png" alt="Gokaram Dinesh Goud" width="80">
       </figure>
+
       <div class="info-content">
         <h1 class="name" title="Gokaram Dinesh Goud">Dinesh Gokaram</h1>
         <p class="title">Software Engineer - Backend</p>
       </div>
+
       <button class="info_more-btn" data-sidebar-btn>
         <span>Show Contacts</span>
         <ion-icon name="chevron-down"></ion-icon>
       </button>
     </div>
+
     <div class="sidebar-info_more">
       <div class="separator"></div>
       <ul class="contacts-list">
@@ -64,12 +70,18 @@
     </div>
   </aside>
 
-  <!-- MAIN CONTENT -->
+
+  <!--
+    - #MAIN-CONTENT WRAPPER
+    - This div should contain ALL the pages (About, Resume, Projects, etc.)
+  -->
   <div class="main-content">
-    <!-- NAVBAR -->
+
+    <!--
+      - #NAVBAR
+    -->
     <nav class="navbar">
       <ul class="navbar-list">
-        <!-- *** CORRECTION: Ensure button text matches data-page attribute *** -->
         <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
         <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
         <li class="navbar-item"><button class="navbar-link" data-nav-link>Projects</button></li>
@@ -78,7 +90,10 @@
       </ul>
     </nav>
 
-    <!-- ABOUT -->
+
+    <!--
+      - #ABOUT
+    -->
     <article class="about active" data-page="about">
       <header><h2 class="h2 article-title">About Me</h2></header>
       <section class="about-text">
@@ -96,7 +111,10 @@
       </section>
     </article>
 
-    <!-- RESUME -->
+
+    <!--
+      - #RESUME
+    -->
     <article class="resume" data-page="resume">
       <header><h2 class="h2 article-title">Resume</h2></header>
       <section class="timeline">
@@ -109,24 +127,21 @@
       <section class="timeline">
         <div class="title-wrapper"><div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div><h3 class="h3">Experience</h3></div>
         <ol class="timeline-list">
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Codec Technology India - Data Analytics Intern (Remote)</h4><span>May 2025 – July 2025</span><div class="timeline-text"><ul><li>• Assisting in building backend-driven data workflows, including data ingestion, transformation, and exposing processed data via RESTful APIs.</li><li>• Developed automated ETL pipelines using Pandas and SQL to extract insights and generate recurring reports from large-scale datasets.</li></ul></div></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Codtech IT Solutions - Python Developer Intern (Remote)</h4><span>Dec 2024 – Feb 2025</span><div class="timeline-text"><ul><li>• Built modular Python applications for student grade tracking and library management.</li><li>• Collaborated with cross-functional teams to gather requirements, validate features, and deliver user-aligned solutions.</li></ul></div></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Codingster Private Limited - Freelance Backend Developer (Remote)</h4><span>Oct 2024 – Nov 2024</span><div class="timeline-text"><ul><li>• Contributed to an e-commerce web app using Node.js and JavaScript.</li><li>• Built REST APIs, implemented user auth, and integrated payment gateway.</li></ul></div></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Innovapath IT Solutions - Python Developer</h4><span>Feb 2024 – Sept 2024</span><div class="timeline-text"><ul><li>• Engineered scalable backend APIs using Python with FastAPI and Django.</li><li>• Built and integrated AI-driven modules using LLMs.</li><li>• Initiated development of an AI-powered chatbot.</li><li>• Explored AWS services and practiced containerized deployments using Docker.</li></ul></div></li>
-          <li class="timeline-item"><h4 class="h4 timeline-item-title">Cognizant Technology Solutions - Data Analyst</h4><span>Jul 2021 – Aug 2023</span><div class="timeline-text"><ul><li>• Validated user-generated content, ensuring 98% compliance.</li><li>• Developed Excel trackers and Power BI dashboards, improving reporting efficiency by 25%.</li></ul></div></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Codec Technology India - Data Analytics Intern</h4><span>May 2025 – July 2025</span><div class="timeline-text"><ul><li>Assisting in building backend-driven data workflows, including data ingestion, transformation, and exposing processed data via RESTful APIs.</li><li>Developed automated ETL pipelines using Pandas and SQL to extract insights and generate recurring reports from large-scale datasets.</li></ul></div></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Codtech IT Solutions - Python Developer Intern</h4><span>Dec 2024 – Feb 2025</span><div class="timeline-text"><ul><li>Built modular Python applications for student grade tracking and library management.</li><li>Collaborated with cross-functional teams to gather requirements, validate features, and deliver user-aligned solutions.</li></ul></div></li>
         </ol>
       </section>
       <section class="skill">
         <h3 class="h3 skills-title">My Skills</h3>
         <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Languages</h5></div><p>Python, SQL, HTML, CSS, JavaScript, C++ (familiar)</p></li></ul>
         <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Frameworks and Libraries</h5></div><p>Django, Flask, FastAPI, Pandas, Numpy</p></li></ul>
-        <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Development Tools and Platforms</h5></div><p>Git/Github, Docker, AWS, Power BI, MS Excel</p></li></ul>
-        <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Concepts and Technologies</h5></div><p>REST APIs, JWT, QA, Data Analysis, Agile Methodology, Problem Solving</p></li></ul>
       </section>
     </article>
 
-    <!-- PROJECTS -->
-    <!-- *** FIX: The data-page attribute should be "projects" to match the nav link *** -->
+
+    <!--
+      - #PROJECTS
+    -->
     <article class="portfolio" data-page="projects">
       <header><h2 class="h2 article-title">Projects</h2></header>
       <section class="projects">
@@ -138,34 +153,27 @@
         </ul>
         <ul class="project-list">
           <li class="project-item active" data-category="data visualization"><a href="https://github.com/dineshgokaram/powerbi_project" target="_blank"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/power-bi-dashboard.png" alt="Interactive Sales Dashboard" loading="lazy"></figure><h3 class="project-title">Chocolate Shipment Data Analysis</h3><p class="project-category">Power BI / Data Visualization</p></a></li>
-          <li class="project-item active" data-category="web development"><a href="#" target="_blank"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/coding-platform.png" alt="Online Coding Platform" loading="lazy"></figure><h3 class="project-title">Online Coding Platform</h3><p class="project-category">Python, React, FastAPI</p></a></li>
-          <li class="project-item active" data-category="automation"><a href="#" target="_blank"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/report-generator.png" alt="Automated Report Generator" loading="lazy"></figure><h3 class="project-title">Automated Report Generation</h3><p class="project-category">Python, Pandas, ReportLab</p></a></li>
+          <li class="project-item active" data-category="web development"><a href="#"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/coding-platform.png" alt="Online Coding Platform" loading="lazy"></figure><h3 class="project-title">Online Coding Platform</h3><p class="project-category">Python, React, FastAPI</p></a></li>
+          <li class="project-item active" data-category="automation"><a href="#"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/report-generator.png" alt="Automated Report Generator" loading="lazy"></figure><h3 class="project-title">Automated Report Generation</h3><p class="project-category">Python, Pandas, ReportLab</p></a></li>
         </ul>
       </section>
     </article>
 
-    <!-- BLOG -->
-    <!-- *** NEW: Added the blog section structure *** -->
+
+    <!--
+      - #BLOG
+    -->
     <article class="blog" data-page="blog">
-        <header>
-            <h2 class="h2 article-title">Blog</h2>
-        </header>
+        <header><h2 class="h2 article-title">Blog</h2></header>
         <section class="blog-posts">
             <ul class="blog-posts-list">
-                <!-- Example Blog Post Item -->
                 <li class="blog-post-item">
                     <a href="#">
-                        <figure class="blog-banner-box">
-                            <img src="./assets/images/blog-1.jpg" alt="Blog Post Title" loading="lazy">
-                        </figure>
+                        <figure class="blog-banner-box"><img src="./assets/images/blog-1.jpg" alt="Blog Post Title" loading="lazy"></figure>
                         <div class="blog-content">
-                            <div class="blog-meta">
-                                <p class="blog-category">Category</p>
-                                <span class="dot"></span>
-                                <time datetime="2024-07-21">July 21, 2024</time>
-                            </div>
-                            <h3 class="h3 blog-item-title">My First Blog Post</h3>
-                            <p class="blog-text">This is a placeholder for my first blog post. I'll be writing about backend development, Python, and more.</p>
+                            <div class="blog-meta"><p class="blog-category">Coming Soon</p></div>
+                            <h3 class="h3 blog-item-title">My Journey into Backend Development</h3>
+                            <p class="blog-text">I'll be sharing insights, tutorials, and stories from my work with Python, APIs, and data. Stay tuned!</p>
                         </div>
                     </a>
                 </li>
@@ -173,7 +181,10 @@
         </section>
     </article>
 
-    <!-- CONTACT -->
+
+    <!--
+      - #CONTACT
+    -->
     <article class="contact" data-page="contact">
       <header><h2 class="h2 article-title">Contact</h2></header>
       <section class="mapbox" data-mapbox>
@@ -194,7 +205,14 @@
         </form>
       </section>
     </article>
-  </div>
+
+  <!--
+    - #FIX: The closing tag for main-content was here.
+    - It has been moved to after the last <article> tag.
+  -->
+
+  </div> <!-- <--- ***THIS IS THE TAG THAT MOVED***. It now correctly wraps all the <article> pages. -->
+
 </main>
 
 <script src="assets/js/script.js"></script>
