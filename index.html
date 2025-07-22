@@ -336,42 +336,59 @@
         <!--
       - #PROJECTS
     -->
+       <!--
+      - #PROJECTS
+    -->
     <article class="portfolio" data-page="projects">
+
       <header>
-        <h2 class="h2 article-title">Projects</h2>
+        <h2 class="h2 article-title">Portfolio</h2>
       </header>
 
       <section class="projects">
 
+        <!-- Filter Buttons -->
+        <ul class="filter-list">
+          <li class="filter-item">
+            <button class="active" data-filter-btn>All</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Data Visualization</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Web Development</button>
+          </li>
+          <li class="filter-item">
+            <button data-filter-btn>Automation</button>
+          </li>
+        </ul>
+
+        <!-- Project Grid -->
         <ul class="project-list">
 
-          <!-- Project 1: Power BI Dashboard (Your New Project) -->
-          <li class="project-item active" data-filter-item data-category="data visualization">
+          <!-- Project 1: Power BI Dashboard -->
+          <li class="project-item active" data-category="data visualization">
             <a href="https://github.com/dineshgokaram/powerbi_project" target="_blank">
-
               <figure class="project-img">
                 <div class="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
                 </div>
-                
-                <!-- Make sure this path is correct -->
+                <!-- IMPORTANT: Double-check this image path and filename! -->
                 <img src="./assets/images/power-bi-dashboard.png" alt="Interactive Sales Dashboard in Power BI" loading="lazy">
               </figure>
-
               <h3 class="project-title">Chocolate Shipment Data Analysis</h3>
               <p class="project-category">Power BI / Data Visualization</p>
-
             </a>
           </li>
 
           <!-- Project 2: Online Coding Platform -->
-          <li class="project-item active" data-filter-item data-category="web development">
-            <a href="#">
+          <li class="project-item active" data-category="web development">
+            <a href="YOUR_GITHUB_LINK_HERE" target="_blank">
               <figure class="project-img">
                 <div class="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
                 </div>
-                <img src="https://via.placeholder.com/400x300" alt="Online Coding Platform" loading="lazy">
+                <img src="./assets/images/coding-platform.png" alt="Online Coding Platform" loading="lazy">
               </figure>
               <h3 class="project-title">Online Coding Platform</h3>
               <p class="project-category">Python, React, FastAPI</p>
@@ -379,13 +396,13 @@
           </li>
 
           <!-- Project 3: Automated Report Generator -->
-          <li class="project-item active" data-filter-item data-category="automation">
-            <a href="#">
+          <li class="project-item active" data-category="automation">
+            <a href="YOUR_GITHUB_LINK_HERE" target="_blank">
               <figure class="project-img">
                 <div class="project-item-icon-box">
                   <ion-icon name="eye-outline"></ion-icon>
                 </div>
-                <img src="https://via.placeholder.com/400x300" alt="Automated Report Generation" loading="lazy">
+                <img src="./assets/images/report-generator.png" alt="Automated Report Generation" loading="lazy">
               </figure>
               <h3 class="project-title">Automated Report Generation</h3>
               <p class="project-category">Python, Pandas, ReportLab</p>
@@ -393,7 +410,6 @@
           </li>
 
         </ul>
-
       </section>
 
     </article>
