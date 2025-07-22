@@ -255,8 +255,6 @@ article.active {
   border-radius: 3px;
 }
 
-/* CORRECTION: Removed the extra closing brace `}` that was here, which was breaking the CSS. */
-
 .has-scrollbar::-webkit-scrollbar {
   width: 5px; /* for vertical scrollbar */
   height: 5px; /* for horizontal scrollbar */
@@ -553,7 +551,7 @@ main {
 .service-item-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
-  font-weight: var(--fw-3);
+  font-weight: var(--fw-300);
   line-height: 1.6;
 }
 
@@ -1339,9 +1337,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { 
-    border-radius: 30%; /* CORRECTION: Ensures avatar is squircle on medium screens */
-  }
+  .avatar-box { border-radius: 30%; }
 
   .avatar-box img { width: 120px; }
 
@@ -1561,8 +1557,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar, article { width: 700px; }
  
-  /* CORRECTION: Removed the misplaced avatar-box style that was here. */
-
   .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
 
 
@@ -1886,11 +1880,17 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/*-----------------------------------*\
+  #YOUR CUSTOM STYLES
+\*-----------------------------------*/
+
 /* Custom style for skills text color */
 .skills-item p {
   color: var(--orange-yellow-crayola);
-  font-weight: 300; /* Optional: Keep the font from being too bold */
+  font-weight: 300;
 }
+
 /* Custom style to change service icon color */
 .service-icon-box ion-icon {
   color: var(--orange-yellow-crayola);
