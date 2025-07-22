@@ -42,27 +42,25 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// -- NEW: Project filter functionality --
+// Project filter functionality
 const filterBtns = document.querySelectorAll("[data-filter-btn]");
-const filterItems = document.querySelectorAll(".project-item"); // Using class selector
+const projectItems = document.querySelectorAll(".project-item");
 
 let lastClickedFilterBtn = filterBtns[0];
 
 const filterFunc = function () {
-  // Remove active class from last clicked button and add to current
   lastClickedFilterBtn.classList.remove("active");
   this.classList.add("active");
   lastClickedFilterBtn = this;
 
-  // Hide or show filter items based on category
-  for (let i = 0; i < filterItems.length; i++) {
+  for (let i = 0; i < projectItems.length; i++) {
     const selectedCategory = this.innerText.toLowerCase();
-    const itemCategory = filterItems[i].dataset.category.toLowerCase();
+    const itemCategory = projectItems[i].dataset.category.toLowerCase();
 
     if (selectedCategory === "all" || selectedCategory === itemCategory) {
-      filterItems[i].classList.add("active");
+      projectItems[i].classList.add("active");
     } else {
-      filterItems[i].classList.remove("active");
+      projectItems[i].classList.remove("active");
     }
   }
 }
