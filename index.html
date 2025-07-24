@@ -357,14 +357,10 @@
       </section>
     </article>
 
-    <!-- 
-      ===============================================================
-      FIX: Changed class="Resume" to "resume" and data-page="Resume" to "resume".
-      This must be lowercase to match the navigation button's text.
-      ===============================================================
-    -->
     <article class="resume" data-page="resume">
-      <header><h2 class="h2 article-title">Resume</h2></header>
+      <!-- FIX: Renamed H2 title as requested -->
+      <header><h2 class="h2 article-title">Professional Profile</h2></header>
+      
       <section class="timeline">
         <div class="title-wrapper"><div class="icon-box"><ion-icon name="book-outline"></ion-icon></div><h3 class="h3">Education</h3></div>
         <ol class="timeline-list">
@@ -372,12 +368,7 @@
           <li class="timeline-item"><h4 class="h4 timeline-item-title">Jagruti Degree and PG College</h4><span>July 2017 — Dec 2020</span><p class="timeline-text">Bachelor’s Degree in Computer Science.</p></li>
         </ol>
       </section>
-      <!-- ... The rest of your resume content goes here ... -->
-    </article>
 
-    <!-- Add your other <article> sections for Projects, Blog, and Contact here -->
-
-  </div>
       <section class="timeline">
         <div class="title-wrapper">
           <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
@@ -411,6 +402,7 @@
           </li>
         </ol>
       </section>
+
       <section class="skill">
         <h3 class="h3 skills-title">My Skills</h3>
         <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Languages</h5></div><p>Python, SQL, HTML, CSS, JavaScript, C++ (familiar)</p></li></ul>
@@ -418,6 +410,7 @@
         <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Development Tools and Platforms</h5></div><p>Git/Github, Docker, AWS, Power BI, MS Excel</p></li></ul>
         <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Concepts and Technologies</h5></div><p>REST APIs, JWT, QA, Data Analysis, Agile Methodology, Problem Solving, Soft Skills</p></li></ul>
       </section>
+
     </article>
 
     <article class="portfolio" data-page="projects">
@@ -437,63 +430,33 @@
       </section>
     </article>
 
-<article class="blog" data-page="blog">
-  <header>
-    <h2 class="h2 article-title">Blog</h2>
-  </header>
-
-  <section class="blog-posts">
-    <ul class="blog-posts-list">
-
-      <li class="blog-post-item">
-        <!-- 
-          This is the correct placement for the link.
-          It wraps all the content inside the list item, making the whole card a single, clickable link.
-        -->
-        <a href="https://dineshgokaram.blogspot.com/2025/07/more-than-just-code-lessons-from-my.html" target="_blank" rel="noopener noreferrer">
-
-          <figure class="blog-banner-box">
-            <img src="./assets/images/blog-2.png" alt="Blog post thumbnail" loading="lazy">
-          </figure>
-
-          <div class="blog-content">
-            <div class="blog-meta">
-              <p class="blog-category">My Thoughts</p>
-            </div>
-            <h3 class="h3 blog-item-title">More Than Just Code</h3>
-            <p class="blog-text">Lessons From My First Real-World Project as a Developer</p>
-          </div>
-
-        </a>
-      </li>
-
-      <li class="blog-post-item">
-        <!-- 
-          This is the correct placement for the link.
-          It wraps all the content inside the list item, making the whole card a single, clickable link.
-        -->
-        <a href="https://dineshgokaram.blogspot.com/2025/07/you-dont-solve-problems-to-pass-tests.html" target="_blank" rel="noopener noreferrer">
-
-          <figure class="blog-banner-box">
-            <img src="./assets/images/blog-3.png" alt="Blog post thumbnail" loading="lazy">
-          </figure>
-
-          <div class="blog-content">
-            <div class="blog-meta">
-              <p class="blog-category">My Thoughts</p>
-            </div>
-            <h3 class="h3 blog-item-title">DSA isn't just Problem Solving, It's a lifestyle</h3>
-            <p class="blog-text">What DSA Taught Me as a Developer</p>
-          </div>
-
-        </a>
-      </li>
-
-      <!-- You can add more blog posts here by copying the <li class="blog-post-item">...</li> block -->
-
-    </ul>
-  </section>
-</article>
+    <article class="blog" data-page="blog">
+      <header><h2 class="h2 article-title">Blog</h2></header>
+      <section class="blog-posts">
+        <ul class="blog-posts-list">
+          <li class="blog-post-item">
+            <a href="https://dineshgokaram.blogspot.com/2025/07/more-than-just-code-lessons-from-my.html" target="_blank" rel="noopener noreferrer">
+              <figure class="blog-banner-box"><img src="./assets/images/blog-2.png" alt="Blog post thumbnail" loading="lazy"></figure>
+              <div class="blog-content">
+                <div class="blog-meta"><p class="blog-category">My Thoughts</p></div>
+                <h3 class="h3 blog-item-title">More Than Just Code</h3>
+                <p class="blog-text">Lessons From My First Real-World Project as a Developer</p>
+              </div>
+            </a>
+          </li>
+          <li class="blog-post-item">
+            <a href="https://dineshgokaram.blogspot.com/2025/07/you-dont-solve-problems-to-pass-tests.html" target="_blank" rel="noopener noreferrer">
+              <figure class="blog-banner-box"><img src="./assets/images/blog-3.png" alt="Blog post thumbnail" loading="lazy"></figure>
+              <div class="blog-content">
+                <div class="blog-meta"><p class="blog-category">My Thoughts</p></div>
+                <h3 class="h3 blog-item-title">DSA isn't just Problem Solving, It's a lifestyle</h3>
+                <p class="blog-text">What DSA Taught Me as a Developer</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </article>
 
     <article class="contact" data-page="contact">
       <header><h2 class="h2 article-title">Contact</h2></header>
@@ -519,9 +482,7 @@
   </div>
 </main>
 
-<!-- =================================================================== -->
-<!--                JAVASCRIPT FUNCTIONALITY EMBEDDED                  -->
-<!-- =================================================================== -->
+<!-- ... Your script tag ... -->
 <script>
   'use strict';
   
@@ -597,6 +558,5 @@
     filterBtns[i].addEventListener("click", filterFunc);
   }
 </script>
-
 </body>
 </html>
