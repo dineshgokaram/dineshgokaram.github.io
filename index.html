@@ -329,30 +329,55 @@
     </div>
   </aside>
 
-<article class="resume" data-page="resume">
-      
-      <header>
-        <h2 class="h2 article-title">Professional Profile</h2>
-      </header>
+  <div class="main-content">
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Projects</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Blog</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+      </ul>
+    </nav>
 
+    <article class="about active" data-page="about">
+      <header><h2 class="h2 article-title">About Me</h2></header>
+      <section class="about-text">
+        <p>I’m Gokaram Dinesh Goud — a <b>Python Developer</b> passionate about building systems that don’t just run, but scale with purpose. My craft lies in architecting clean, robust backends using <strong><b>FastAPI</b></strong> and <strong><b>Django</b></strong>, designing <strong><b>RESTful APIs</b></strong> that are efficient, secure, and ready for production. Whether it's building automation tools or backend logic, I take pride in writing code that’s as thoughtful as it is functional.</p>
+        <p>Beyond backend architecture, I dive deep into data — using <strong><b>Pandas</b></strong> and <strong><b>SQL</b></strong> to wrangle insights from complex datasets and integrating smart features powered by <strong><b>AI</b> and <b>LLMs</b></strong>. I’m also fluent in tools like <b><strong>Docker</strong>, <strong>Git</strong>, and <strong>Power BI</strong></b>, bringing full-stack awareness to everything I build. Driven by curiosity and a continuous learning mindset, I love turning ideas into real-world, scalable solutions.</p>
+      </section>
+      <section class="service">
+        <h3 class="h3 service-title">What I Do</h3>
+        <ul class="service-list">
+          <li class="service-item"><div class="service-icon-box"><ion-icon name="code-slash-outline"></ion-icon></div><div class="service-content-box"><h4 class="h4 service-item-title">High-Performance API & Backend Engineering</h4><p class="service-item-text">Designing and building robust, server-side logic and RESTful APIs using Python, FastAPI, and Django to ensure scalability and speed.</p></div></li>
+          <li class="service-item"><div class="service-icon-box"><ion-icon name="analytics-outline"></ion-icon></div><div class="service-content-box"><h4 class="h4 service-item-title">Automated Data & ETL Pipelines</h4><p class="service-item-text">Crafting automated workflows with Pandas and SQL to ingest, clean, and process large datasets, making them ready for analysis and application use.</p></div></li>
+          <li class="service-item"><div class="service-icon-box"><ion-icon name="sparkles-outline"></ion-icon></div><div class="service-content-box"><h4 class="h4 service-item-title">AI & LLM-Powered Features</h4><p class="service-item-text">Integrating the power of Large Language Models to create intelligent chatbots, dynamic content systems, and other next-generation user experiences.</p></div></li>
+          <li class="service-item"><div class="service-icon-box"><ion-icon name="layers-outline"></ion-icon></div><div class="service-content-box"><h4 class="h4 service-item-title">Containerization & Deployment</h4><p class="service-item-text">Utilizing Docker and exploring AWS to ensure solutions are not just well-coded, but also consistently and efficiently delivered in production environments.</p></div></li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- 
+      ===============================================================
+      FIX: Changed class="Resume" to "resume" and data-page="Resume" to "resume".
+      This must be lowercase to match the navigation button's text.
+      ===============================================================
+    -->
+    <article class="resume" data-page="resume">
+      <header><h2 class="h2 article-title">Resume</h2></header>
       <section class="timeline">
-        <div class="title-wrapper">
-          <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
-          <h3 class="h3">Education</h3>
-        </div>
+        <div class="title-wrapper"><div class="icon-box"><ion-icon name="book-outline"></ion-icon></div><h3 class="h3">Education</h3></div>
         <ol class="timeline-list">
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Sai Sudhir Degree and PG College</h4>
-            <span>Mar 2021 — Jan 2023</span>
-            <p class="timeline-text">Master’s Degree in Computer Science.</p>
-          </li>
-          <li class="timeline-item">
-            <h4 class="h4 timeline-item-title">Jagruti Degree and PG College</h4>
-            <span>July 2017 — Dec 2020</span>
-            <p class="timeline-text">Bachelor’s Degree in Computer Science.</p>
-          </li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Sai Sudhir Degree and PG College</h4><span>Mar 2021 — Jan 2023</span><p class="timeline-text">Master’s Degree in Computer Science.</p></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Jagruti Degree and PG College</h4><span>July 2017 — Dec 2020</span><p class="timeline-text">Bachelor’s Degree in Computer Science.</p></li>
         </ol>
       </section>
+      <!-- ... The rest of your resume content goes here ... -->
+    </article>
+
+    <!-- Add your other <article> sections for Projects, Blog, and Contact here -->
+
+  </div>
       <section class="timeline">
         <div class="title-wrapper">
           <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
