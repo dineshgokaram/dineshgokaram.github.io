@@ -329,11 +329,14 @@
     </div>
   </aside>
 
-  <div class="main-content">
+    <div class="main-content">
     <nav class="navbar">
       <ul class="navbar-list">
         <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+        
+        <!-- FIX 1: The visible text on the button is changed to "Professional Profile" -->
         <li class="navbar-item"><button class="navbar-link" data-nav-link>Professional Profile</button></li>
+        
         <li class="navbar-item"><button class="navbar-link" data-nav-link>Projects</button></li>
         <li class="navbar-item"><button class="navbar-link" data-nav-link>Blog</button></li>
         <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
@@ -341,7 +344,7 @@
     </nav>
 
     <article class="about active" data-page="about">
-      <header><h2 class="h2 article-title">About</h2></header>
+      <header><h2 class="h2 article-title">About Me</h2></header>
       <section class="about-text">
         <p>I’m Gokaram Dinesh Goud — a <b>Python Developer</b> passionate about building systems that don’t just run, but scale with purpose. My craft lies in architecting clean, robust backends using <strong><b>FastAPI</b></strong> and <strong><b>Django</b></strong>, designing <strong><b>RESTful APIs</b></strong> that are efficient, secure, and ready for production. Whether it's building automation tools or backend logic, I take pride in writing code that’s as thoughtful as it is functional.</p>
         <p>Beyond backend architecture, I dive deep into data — using <strong><b>Pandas</b></strong> and <strong><b>SQL</b></strong> to wrangle insights from complex datasets and integrating smart features powered by <strong><b>AI</b> and <b>LLMs</b></strong>. I’m also fluent in tools like <b><strong>Docker</strong>, <strong>Git</strong>, and <strong>Power BI</strong></b>, bringing full-stack awareness to everything I build. Driven by curiosity and a continuous learning mindset, I love turning ideas into real-world, scalable solutions.</p>
@@ -357,8 +360,11 @@
       </section>
     </article>
 
-    <article class="Professional Profile" data-page="Professional Profile">
-      <!-- FIX: Renamed H2 title as requested -->
+    <!-- 
+      FIX 2: The data-page attribute is updated to match the button's text (in lowercase).
+      This is what the JavaScript needs to find the correct page.
+    -->
+    <article class="resume" data-page="professional profile">
       <header><h2 class="h2 article-title">Professional Profile</h2></header>
       
       <section class="timeline">
@@ -410,8 +416,7 @@
         <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Development Tools and Platforms</h5></div><p>Git/Github, Docker, AWS, Power BI, MS Excel</p></li></ul>
         <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Concepts and Technologies</h5></div><p>REST APIs, JWT, QA, Data Analysis, Agile Methodology, Problem Solving, Soft Skills</p></li></ul>
       </section>
-
-    </article>
+     </article>
 
     <article class="portfolio" data-page="projects">
       <header><h2 class="h2 article-title">Projects</h2></header>
