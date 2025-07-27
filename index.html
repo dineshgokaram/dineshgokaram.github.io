@@ -471,85 +471,108 @@
     </article>
 
     <article class="portfolio" data-page="projects">
-      <header><h2 class="h2 article-title">Projects</h2></header>
-      <section class="projects">
-        <ul class="filter-list">
-          <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
-          <li class="filter-item"><button data-filter-btn>Data Visualization</button></li>
-          <li class="filter-item"><button data-filter-btn>Web Development</button></li>
-          <li class="filter-item"><button data-filter-btn>Automation</button></li>
-        </ul>
-        <ul class="project-list">
 
-  <!-- ======================================= -->
-  <!-- == Tech-Debt Gamify (Visible in All 3 Categories) == -->
-  <!-- ======================================= -->
-  <li class="project-item active" data-category="web development data visualization automation">
-    <a href="https://github.com/dineshgokaram/tech-debt-gamify" target="_blank">
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
-        <img src="./assets/images/tech-debt-dashboard.png" alt="Full-Stack Gamified Tech Debt Platform" loading="lazy">
-      </figure>
-      <h3 class="project-title">Tech-Debt Gamify Platform</h3>
-      <p class="project-category">- FastAPI, Docker, PostgreSQL, Pandas, JS -</p>
-    </a>
-  </li>
+  <header>
+    <h2 class="h2 article-title">Projects</h2>
+  </header>
 
-  <!-- ======================================= -->
-  <!-- == Power BI Project (Data Visualization) == -->
-  <!-- ======================================= -->
-  <li class="project-item active" data-category="data visualization">
-    <a href="https://github.com/dineshgokaram/powerbi_project" target="_blank">
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
-        <img src="./assets/images/power-bi-dashboard.png" alt="Interactive Sales Dashboard" loading="lazy">
-      </figure>
-      <h3 class="project-title">Chocolate Shipment Dashboard</h3>
-      <p class="project-category">- Power BI, DAX, Data Modeling -</p>
-    </a>
-  </li>
+  <section class="projects">
 
-  <!-- ======================================= -->
-  <!-- == Online Code Editor (Web Development) == -->
-  <!-- ======================================= -->
-  <li class="project-item active" data-category="web development">
-    <a href="https://github.com/dineshgokaram/online-code-editor">
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <ion-icon name="eye-outline"></ion-icon>
-        </div>
-        <img src="./assets/images/coding-platform.png" alt="Online Coding Platform" loading="lazy">
-      </figure>
-      <h3 class="project-title">Online Code Editor</h3>
-      <p class="project-category">- Python, FastAPI, React -</p>
-    </a>
-  </li>
+    <ul class="filter-list">
+      <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+      <li class="filter-item"><button data-filter-btn>Data Visualization</button></li>
+      <li class="filter-item"><button data-filter-btn>Web Development</button></li>
+      <li class="filter-item"><button data-filter-btn>Automation</button></li>
+    </ul>
 
-  <!-- ======================================= -->
-  <!-- == Automated Report (Automation)      == -->
-  <!-- ======================================= -->
-  <li class="project-item active" data-category="automation">
-    <a href="https://github.com/dineshgokaram/automated-report-generation"> 
-      <figure class="project-img">
-        <div class="project-item-icon-box">
-          <div class="project-item-icon-box">
-            <ion-icon name="eye-outline"></ion-icon>
-          </div>
-        </div>
-        <img src="./assets/images/report-generator.png" alt="Automated Report Generator" loading="lazy">
-      </figure>
-      <h3 class="project-title">Automated PDF Report Generation</h3>
-      <p class="project-category">- Python, Pandas, ReportLab -</p>
-    </a>
-  </li>
+    <ul class="project-list">
 
-</ul>
-      </section>
-    </article>
+      <!-- ======================================= -->
+      <!-- == 1. Tech-Debt Gamify (All Categories) == -->
+      <!-- ======================================= -->
+      <li class="project-item active" data-category="web development data visualization automation">
+        <a href="https://github.com/dineshgokaram/tech-debt-gamify" target="_blank">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/tech-debt-dashboard.png" alt="Full-Stack Gamified Tech Debt Platform" loading="lazy">
+          </figure>
+          <h3 class="project-title">Tech-Debt Gamify Platform</h3>
+          <p class="project-category">- FastAPI, Docker, PostgreSQL, Pandas, JS -</p>
+        </a>
+      </li>
+
+      <!-- ======================================= -->
+      <!-- == 2. Code Collaborator (Web Dev & Automation) == -->
+      <!-- ======================================= -->
+      <li class="project-item active" data-category="web development automation">
+        <a href="https://github.com/dineshgokaram/code-collaborator-platform" target="_blank">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <!-- Suggestion: Create a new image for this project, e.g., 'collaborator-platform.png' -->
+            <img src="./assets/images/collaborator-platform.png" alt="Real-Time Collaborative Code Editor" loading="lazy">
+          </figure>
+          <h3 class="project-title">Real-Time Collaborative Code Editor</h3>
+          <p class="project-category">- FastAPI, WebSockets, Docker, JWT -</p>
+        </a>
+      </li>
+
+      <!-- ======================================= -->
+      <!-- == 3. Power BI Project (Data Visualization) == -->
+      <!-- ======================================= -->
+      <li class="project-item active" data-category="data visualization">
+        <a href="https://github.com/dineshgokaram/powerbi_project" target="_blank">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/power-bi-dashboard.png" alt="Interactive Sales Dashboard" loading="lazy">
+          </figure>
+          <h3 class="project-title">Chocolate Shipment Dashboard</h3>
+          <p class="project-category">- Power BI, DAX, Data Modeling -</p>
+        </a>
+      </li>
+
+      <!-- ======================================= -->
+      <!-- == 4. Online Code Editor (Web Development) == -->
+      <!-- ======================================= -->
+      <li class="project-item active" data-category="web development">
+        <a href="https://github.com/dineshgokaram/online-code-editor">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/coding-platform.png" alt="Online Coding Platform" loading="lazy">
+          </figure>
+          <h3 class="project-title">Online Code Editor</h3>
+          <p class="project-category">- Python, FastAPI, React -</p>
+        </a>
+      </li>
+
+      <!-- ======================================= -->
+      <!-- == 5. Automated Report (Automation)      == -->
+      <!-- ======================================= -->
+      <li class="project-item active" data-category="automation">
+        <a href="https://github.com/dineshgokaram/automated-report-generation"> 
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/report-generator.png" alt="Automated Report Generator" loading="lazy">
+          </figure>
+          <h3 class="project-title">Automated PDF Report Generation</h3>
+          <p class="project-category">- Python, Pandas, ReportLab -</p>
+        </a>
+      </li>
+
+    </ul>
+
+  </section>
+
+</article>
 
     <article class="blog" data-page="blog">
       <header><h2 class="h2 article-title">Blog</h2></header>
