@@ -1,1 +1,739 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>Gokaram Dinesh Goud - Python Backend Developer</title> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="shortcut icon" href="assets/images/logo.ico" type="image/x-icon"> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> <!-- =================================================================== --> <!-- COMPLETE CSS DESIGN TEMPLATE EMBEDDED --> <!-- =================================================================== --> <style> :root { --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%); --bg-gradient-jet: linear-gradient( to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100% ), hsl(240, 2%, 13%); --bg-gradient-yellow-1: linear-gradient( to bottom right, hsl(45, 100%, 71%) 0%, hsla(36, 100%, 69%, 0) 50% ); --bg-gradient-yellow-2: linear-gradient( 135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86% ), hsl(240, 2%, 13%); --border-gradient-onyx: linear-gradient( to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50% ); --text-gradient-yellow: linear-gradient( to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%) ); --jet: hsl(0, 0%, 22%); --onyx: hsl(240, 1%, 17%); --eerie-black-1: hsl(240, 2%, 13%); --eerie-black-2: hsl(240, 2%, 12%); --smoky-black: hsl(0, 0%, 7%); --white-1: hsl(0, 0%, 100%); --white-2: hsl(0, 0%, 98%); --orange-yellow-crayola: hsl(45, 100%, 72%); --vegas-gold: hsl(45, 54%, 58%); --light-gray: hsl(0, 0%, 84%); --light-gray-70: hsla(0, 0%, 84%, 0.7); --bittersweet-shimmer: hsl(0, 43%, 51%); --ff-poppins: 'Poppins', sans-serif; --fs-1: 24px; --fs-2: 18px; --fs-3: 17px; --fs-4: 16px; --fs-5: 15px; --fs-6: 14px; --fs-7: 13px; --fs-8: 11px; --fw-300: 300; --fw-400: 400; --fw-500: 500; --fw-600: 600; --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25); --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25); --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25); --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15); --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25); --transition-1: 0.25s ease; --transition-2: 0.5s ease-in-out; } *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; } a { text-decoration: none; } li { list-style: none; } img, ion-icon, a, button, time, span { display: block; } button { font: inherit; background: none; border: none; text-align: left; cursor: pointer; } input, textarea { display: block; width: 100%; background: none; font: inherit; } ::selection { background: var(--orange-yellow-crayola); color: var(--smoky-black); } :focus { outline-color: var(--orange-yellow-crayola); } html { font-family: var(--ff-poppins); } body { background: var(--smoky-black); } .sidebar, article { background: var(--eerie-black-2); border: 1px solid var(--jet); border-radius: 20px; padding: 15px; box-shadow: var(--shadow-1); z-index: 1; } .separator { width: 100%; height: 1px; background: var(--jet); margin: 16px 0; } .icon-box { position: relative; background: var(--border-gradient-onyx); width: 30px; height: 30px; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-size: 16px; color: var(--orange-yellow-crayola); box-shadow: var(--shadow-1); z-index: 1; } .icon-box::before { content: ""; position: absolute; inset: 1px; background: var(--eerie-black-1); border-radius: inherit; z-index: -1; } .icon-box ion-icon { --ionicon-stroke-width: 35px; } article { display: none; } article.active { display: block; animation: fade 0.5s ease backwards; } @keyframes fade { 0% { opacity: 0; } 100% { opacity: 1; } } .h2, .h3, .h4, .h5 { color: var(--white-2); text-transform: capitalize; } .h2 { font-size: var(--fs-1); } .h3 { font-size: var(--fs-2); } .h4 { font-size: var(--fs-4); } .h5 { font-size: var(--fs-7); font-weight: var(--fw-500); } .article-title { position: relative; padding-bottom: 7px; margin-bottom: 30px; } .article-title::after { content: ""; position: absolute; bottom: 0; left: 0; width: 30px; height: 3px; background: var(--text-gradient-yellow); border-radius: 3px; } .content-card { position: relative; background: var(--border-gradient-onyx); padding: 15px; padding-top: 45px; border-radius: 14px; box-shadow: var(--shadow-2); cursor: pointer; z-index: 1; } .content-card::before { content: ""; position: absolute; inset: 1px; background: var(--bg-gradient-jet); border-radius: inherit; z-index: -1; } main { margin: 15px 12px; margin-bottom: 75px; min-width: 259px; } .sidebar { margin-bottom: 15px; max-height: 112px; overflow: hidden; transition: var(--transition-2); } .sidebar.active { max-height: 405px; } .sidebar-info { position: relative; display: flex; justify-content: flex-start; align-items: center; gap: 15px; } .avatar-box { background: var(--bg-gradient-onyx); border-radius: 20px; } .info-content .name { color: var(--white-2); font-size: var(--fs-3); font-weight: var(--fw-500); letter-spacing: -0.25px; margin-bottom: 10px; } .info-content .title { color: var(--white-1); background: var(--onyx); font-size: var(--fs-8); font-weight: var(--fw-300); width: max-content; padding: 3px 12px; border-radius: 8px; } .info_more-btn { position: absolute; top: -15px; right: -15px; border-radius: 0 15px; font-size: 13px; color: var(--orange-yellow-crayola); background: var(--border-gradient-onyx); padding: 10px; box-shadow: var(--shadow-2); transition: var(--transition-1); z-index: 1; } .info_more-btn::before { content: ""; position: absolute; inset: 1px; border-radius: inherit; background: var(--bg-gradient-jet); transition: var(--transition-1); z-index: -1; } .info_more-btn:hover, .info_more-btn:focus { background: var(--bg-gradient-yellow-1); } .info_more-btn:hover::before, .info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); } .info_more-btn span { display: none; } .sidebar-info_more { opacity: 0; visibility: hidden; transition: var(--transition-2); } .sidebar.active .sidebar-info_more { opacity: 1; visibility: visible; } .contacts-list { display: grid; grid-template-columns: 1fr; gap: 16px; } .contact-item { min-width: 100%; display: flex; align-items: center; gap: 16px; } .contact-info { max-width: calc(100% - 46px); width: calc(100% - 46px); } .contact-title { color: var(--light-gray-70); font-size: var(--fs-8); text-transform: uppercase; margin-bottom: 2px; } .contact-info :is(.contact-link, time, address) { color: var(--white-2); font-size: var(--fs-7); } .contact-info address { font-style: normal; } .social-list { display: flex; justify-content: flex-start; align-items: center; gap: 15px; padding-bottom: 4px; padding-left: 7px; } .social-item .social-link { color: var(--light-gray-70); font-size: 18px; } .social-item .social-link:hover { color: var(--light-gray); } .navbar { position: fixed; bottom: 0; left: 0; width: 100%; background: hsla(240, 1%, 17%, 0.75); backdrop-filter: blur(10px); border: 1px solid var(--jet); border-radius: 12px 12px 0 0; box-shadow: var(--shadow-2); z-index: 5; } .navbar-list { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 0 10px; } .navbar-link { color: var(--light-gray); font-size: var(--fs-8); padding: 20px 7px; transition: color var(--transition-1); } .navbar-link:hover, .navbar-link:focus { color: var(--light-gray-70); } .navbar-link.active { color: var(--orange-yellow-crayola); } .about-text { color: var(--light-gray); font-size: var(--fs-6); font-weight: var(--fw-300); line-height: 1.6; } .about-text p { margin-bottom: 15px; } .service { margin-bottom: 35px; } .service-title { margin-bottom: 20px; } .service-list { display: grid; grid-template-columns: 1fr; gap: 20px; } .service-item { position: relative; background: var(--border-gradient-onyx); padding: 20px; border-radius: 14px; box-shadow: var(--shadow-2); z-index: 1; } .service-item::before { content: ""; position: absolute; inset: 1px; background: var(--bg-gradient-jet); border-radius: inherit; z-index: -1; } .service-icon-box { margin-bottom: 10px; } .service-icon-box ion-icon { margin: auto; font-size: 24px; } .service-content-box { text-align: center; } .service-item-title { margin-bottom: 7px; } .service-item-text { color: var(--light-gray); font-size: var(--fs-6); line-height: 1.6; } .timeline { margin-bottom: 30px; } .timeline .title-wrapper { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; } .timeline-list { font-size: var(--fs-6); margin-left: 45px; } .timeline-item { position: relative; } .timeline-item:not(:last-child) { margin-bottom: 20px; } .timeline-item-title { font-size: var(--fs-6); line-height: 1.3; margin-bottom: 7px; } .timeline-list span { color: var(--vegas-gold); font-weight: var(--fw-400); line-height: 1.6; } .timeline-item:not(:last-child)::before { content: ""; position: absolute; top: -25px; left: -30px; width: 1px; height: calc(100% + 50px); background: var(--jet); } .timeline-item::after { content: ""; position: absolute; top: 5px; left: -33px; height: 6px; width: 6px; background: var(--text-gradient-yellow); border-radius: 50%; box-shadow: 0 0 0 4px var(--jet); } .timeline-text { color: var(--light-gray); font-weight: var(--fw-300); line-height: 1.6; } .timeline-text ul { padding-left: 20px; } .timeline-text ul li { list-style-type: disc; margin-bottom: 10px; } .skills-title { margin-bottom: 20px; } .skills-list { padding: 20px; } .skills-item:not(:last-child) { margin-bottom: 15px; } .skill .title-wrapper { display: flex; align-items: center; gap: 5px; margin-bottom: 8px; } .skill .title-wrapper data { color: var(--light-gray); font-size: var(--fs-7); font-weight: var(--fw-300); } .skill-progress-bg { background: var(--jet); width: 100%; height: 8px; border-radius: 10px; } .skill-progress-fill { background: var(--text-gradient-yellow); height: 100%; border-radius: inherit; } .filter-list { display: none; } .filter-select-box { position: relative; margin-bottom: 25px; } .filter-select { background: var(--eerie-black-2); color: var(--light-gray); display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 12px 16px; border: 1px solid var(--jet); border-radius: 14px; font-size: var(--fs-6); font-weight: var(--fw-300); } .filter-select.active .select-icon { transform: rotate(0.5turn); } .select-list { background: var(--eerie-black-2); position: absolute; top: calc(100% + 6px); width: 100%; padding: 6px; border: 1px solid var(--jet); border-radius: 14px; z-index: 2; opacity: 0; visibility: hidden; pointer-events: none; transition: 0.15s ease-in-out; } .filter-select.active + .select-list { opacity: 1; visibility: visible; pointer-events: all; } .select-item button { background: var(--eerie-black-2); color: var(--light-gray); font-size: var(--fs-6); font-weight: var(--fw-300); text-transform: capitalize; width: 100%; padding: 8px 10px; border-radius: 8px; } .select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); } .project-list { display: grid; grid-template-columns: 1fr; gap: 30px; margin-bottom: 10px; } .project-item { display: none; } .project-item.active { display: block; animation: scaleUp 0.25s ease forwards; } @keyframes scaleUp { 0% { transform: scale(0.5); } 100% { transform: scale(1); } } .project-item > a { width: 100%; } .project-img { position: relative; width: 100%; height: 200px; border-radius: 16px; overflow: hidden; margin-bottom: 15px; } .project-img::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 1; transition: var(--transition-1); } .project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); } .project-item-icon-box { --scale: 0.8; background: var(--jet); color: var(--orange-yellow-crayola); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(var(--scale)); font-size: 20px; padding: 18px; border-radius: 12px; opacity: 0; z-index: 1; transition: var(--transition-1); } .project-item > a:hover .project-item-icon-box { --scale: 1; opacity: 1; } .project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; } .project-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition-1); } .project-item > a:hover img { transform: scale(1.1); } .project-title, .project-category { margin-left: 10px; } .project-title { color: var(--white-2); font-size: var(--fs-5); font-weight: var(--fw-400); text-transform: capitalize; line-height: 1.3; } .project-category { color: var(--light-gray-70); font-size: var(--fs-6); font-weight: var(--fw-300); } .blog-posts { margin-bottom: 10px; } .blog-posts-list { display: grid; grid-template-columns: 1fr; gap: 20px; } .blog-post-item > a { position: relative; background: var(--border-gradient-onyx); height: 100%; box-shadow: var(--shadow-4); border-radius: 16px; z-index: 1; } .blog-post-item > a::before { content: ""; position: absolute; inset: 1px; border-radius: inherit; background: var(--eerie-black-1); z-index: -1; } .blog-banner-box { width: 100%; height: 200px; border-radius: 12px; overflow: hidden; } .blog-banner-box img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition-1); } .blog-post-item > a:hover .blog-banner-box img { transform: scale(1.1); } .blog-content { padding: 15px; } .blog-meta { display: flex; justify-content: flex-start; align-items: center; gap: 7px; margin-bottom: 10px; } .blog-meta :is(.blog-category, time) { color: var(--light-gray-70); font-size: var(--fs-6); font-weight: var(--fw-300); } .blog-meta .dot { background: var(--light-gray-70); width: 4px; height: 4px; border-radius: 4px; } .blog-item-title { margin-bottom: 10px; line-height: 1.3; transition: var(--transition-1); } .blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); } .blog-text { color: var(--light-gray); font-size: var(--fs-6); font-weight: var(--fw-300); line-height: 1.6; } .mapbox { position: relative; height: 250px; width: 100%; border-radius: 16px; margin-bottom: 30px; border: 1px solid var(--jet); overflow: hidden; } .mapbox figure { height: 100%; } .mapbox iframe { width: 100%; height: 100%; border: none; filter: grayscale(1) invert(1); } .contact-form { margin-bottom: 10px; } .form-title { margin-bottom: 20px; } .input-wrapper { display: grid; grid-template-columns: 1fr; gap: 25px; margin-bottom: 25px; } .form-input { color: var(--white-2); font-size: var(--fs-6); font-weight: var(--fw-400); padding: 13px 20px; border: 1px solid var(--jet); border-radius: 14px; outline: none; } .form-input::placeholder { font-weight: var(--fw-500); } .form-input:focus { border-color: var(--orange-yellow-crayola); } textarea.form-input { min-height: 100px; height: 120px; max-height: 200px; resize: vertical; margin-bottom: 25px; } textarea.form-input::-webkit-resizer { display: none; } .form-input:focus:invalid { border-color: var(--bittersweet-shimmer); } .form-btn { position: relative; width: 100%; background: var(--border-gradient-onyx); color: var(--orange-yellow-crayola); display: flex; justify-content: center; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 14px; font-size: var(--fs-6); text-transform: capitalize; box-shadow: var(--shadow-3); z-index: 1; transition: var(--transition-1); } .form-btn::before { content: ""; position: absolute; inset: 1px; background: var(--bg-gradient-jet); border-radius: inherit; z-index: -1; transition: var(--transition-1); } .form-btn ion-icon { font-size: 16px; } .form-btn:hover { background: var(--bg-gradient-yellow-1); } .form-btn:hover::before { background: var(--bg-gradient-yellow-2); } .form-btn:disabled { opacity: 0.7; cursor: not-allowed; } .form-btn:disabled:hover { background: var(--border-gradient-onyx); } .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); } @media (min-width: 580px) { :root { --fs-1: 32px; --fs-2: 24px; --fs-3: 26px; --fs-4: 18px; --fs-6: 15px; --fs-7: 15px; --fs-8: 12px; } .sidebar, article { width: 520px; margin-inline: auto; padding: 30px; } .article-title { font-weight: var(--fw-600); padding-bottom: 15px; } .article-title::after { width: 40px; height: 5px; } .icon-box { width: 48px; height: 48px; border-radius: 12px; font-size: 18px; } main { margin-top: 60px; margin-bottom: 100px; } .sidebar { max-height: 180px; margin-bottom: 30px; } .sidebar.active { max-height: 584px; } .sidebar-info { gap: 25px; } .avatar-box { border-radius: 30px; } .avatar-box img { width: 120px; } .info-content .name { margin-bottom: 15px; } .info-content .title { padding: 5px 18px; } .info_more-btn { top: -30px; right: -30px; padding: 10px 15px; } .info_more-btn span { display: block; font-size: var(--fs-8); } .info_more-btn ion-icon { display: none; } .separator { margin: 32px 0; } .contacts-list { gap: 20px; } .contact-info { max-width: calc(100% - 64px); width: calc(100% - 64px); } .navbar { border-radius: 20px 20px 0 0; } .navbar-list { gap: 20px; } .navbar-link { --fs-8: 14px; } .service-item { display: flex; justify-content: flex-start; align-items: flex-start; gap: 18px; padding: 30px; } .service-icon-box { margin-bottom: 0; margin-top: 5px; } .service-content-box { text-align: left; } } @media (min-width: 768px) { .sidebar, article { width: 700px; } .contacts-list { grid-template-columns: 1fr 1fr; gap: 30px 15px; } .navbar-link { --fs-8: 15px; } .filter-select-box { display: none; } .filter-list { display: flex; justify-content: flex-start; align-items: center; gap: 25px; padding-left: 5px; margin-bottom: 30px; } .filter-item button { color: var(--light-gray); font-size: var(--fs-5); transition: var(--transition-1); } .filter-item button:hover { color: var(--light-gray-70); } .filter-item button.active { color: var(--orange-yellow-crayola); } .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; } .input-wrapper { grid-template-columns: 1fr 1fr; } .form-btn { width: max-content; margin-left: auto; } } @media (min-width: 1024px) { :root { --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125); --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125); --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125); } .sidebar, article { width: 950px; box-shadow: var(--shadow-5); } main { margin-bottom: 60px; } .main-content { position: relative; width: max-content; margin: auto; } .navbar { position: absolute; bottom: auto; top: 0; left: auto; right: 0; width: max-content; border-radius: 0 20px; padding: 0 20px; box-shadow: none; } .navbar-list { gap: 30px; padding: 0 20px; } .navbar-link { font-weight: var(--fw-500); } .service-list { grid-template-columns: 1fr 1fr; gap: 20px 25px; } .project-list { grid-template-columns: repeat(3, 1fr); } } @media (min-width: 1250px) { main { max-width: 1200px; margin-inline: auto; display: flex; justify-content: center; align-items: stretch; gap: 25px; } .main-content { min-width: 75%; width: 75%; margin: 0; } .sidebar { position: sticky; top: 60px; max-height: max-content; height: 100%; margin-bottom: 0; padding-top: 60px; z-index: 1; } .sidebar-info { flex-direction: column; } .avatar-box img { width: 150px; } .info-content .name { white-space: nowrap; text-align: center; } .info-content .title { margin: auto; } .info_more-btn { display: none; } .sidebar-info_more { opacity: 1; visibility: visible; } .contacts-list { grid-template-columns: 1fr; } .contact-info :is(.contact-link) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .contact-info :is(.contact-link, time, address) { --fs-7: 14px; font-weight: var(--fw-300); } .separator:last-of-type { margin: 15px 0; opacity: 0; } .social-list { justify-content: center; } } /* Custom style for skills text color */ .skills-list p { color: var(--light-gray); font-weight: 300; } .service-icon-box ion-icon { color: var(--orange-yellow-crayola); } </style> </head> <body> <main> <aside class="sidebar" data-sidebar> <div class="sidebar-info"> <figure class="avatar-box"> <img src="assets/images/ppic.jpg" alt="Gokaram Dinesh Goud" width="80"> </figure> <div class="info-content"> <h1 class="name" title="Gokaram Dinesh Goud">Dinesh Gokaram</h1> <p class="title">Data Analyst | SQL • Power BI • Python (Pandas, NumPy)</p> </div> <button class="info_more-btn" data-sidebar-btn> <span>Show Contacts</span> <ion-icon name="chevron-down"></ion-icon> </button> </div> <div class="sidebar-info_more"> <div class="separator"></div> <ul class="contacts-list"> <li class="contact-item"> <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div> <div class="contact-info"> <p class="contact-title">Email</p> <a href="mailto:dineshgokaram2706@gmail.com" class="contact-link">dineshgokaram2706@gmail.com</a> </div> </li> <li class="contact-item"> <div class="icon-box"><ion-icon name="call-outline"></ion-icon></div> <div class="contact-info"> <p class="contact-title">Phone</p> <a href="tel:+919515741345" class="contact-link">+91 95157 41345</a> </div> </li> <li class="contact-item"> <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div> <div class="contact-info"> <p class="contact-title">Location</p> <address>Hyderabad, Telangana, India</address> </div> </li> </ul> <div class="separator"></div> <ul class="social-list"> <li class="social-item"><a href="mailto:dineshgokaram2706@gmail.com" class="social-link" title="Email"><ion-icon name="mail-outline"></ion-icon></a></li> <li class="social-item"><a href="https://linkedin.com/in/dineshgokaram" class="social-link" target="_blank" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a></li> <li class="social-item"><a href="https://github.com/dineshgokaram" class="social-link" target="_blank" title="GitHub"><ion-icon name="logo-github"></ion-icon></a></li> <li class="social-item"><a href="https://leetcode.com/u/dineshgokaram/" class="social-link" target="_blank" title="LeetCode"><ion-icon name="code-outline"></ion-icon></a></li> <li class="social-item"><a href="https://drive.google.com/drive/u/0/folders/12jWduzzQCSSkCJXXOjiE6z6NbEW_BH8S" class="social-link" target="_blank" title="Resume"><ion-icon name="document-outline"></ion-icon></a></li> </ul> </div> </aside> <div class="main-content"> <nav class="navbar"> <ul class="navbar-list"> <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li> <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li> <li class="navbar-item"><button class="navbar-link" data-nav-link>Projects</button></li> <li class="navbar-item"><button class="navbar-link" data-nav-link>Blog</button></li> <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li> </ul> </nav> <article class="about active" data-page="about"> <header><h2 class="h2 article-title">About</h2></header> <section class="about-text"> <p> I’m a Data Analyst specializing in SQL, Python analytics (Pandas, NumPy), Power BI, dashboarding, and data-driven reporting. </p> <p> I turn raw data into actionable insights, automate reporting workflows, and build analytical solutions that support business decision-making. My experience includes operational analytics, KPI tracking, and building dashboards for performance visualization. </p> </section> <section class="service"> <h3 class="h3 service-title">What I Do</h3> <ul class="service-list"> <li class="service-item"><div class="service-icon-box"><ion-icon name="code-slash-outline"></ion-icon></div><div class="service-content-box"><h4 class="h4 service-item-title">High-Performance API & Backend Engineering</h4><p class="service-item-text">Designing and building robust, server-side logic and RESTful APIs using Python, FastAPI, and Django to ensure scalability and speed.</p></div></li> <li class="service-item"><div class="service-icon-box"><ion-icon name="analytics-outline"></ion-icon></div><div class="service-content-box"><h4 class="h4 service-item-title">Automated Data & ETL Pipelines</h4><p class="service-item-text">Crafting automated workflows with Pandas and SQL to ingest, clean, and process large datasets, making them ready for analysis and application use.</p></div></li> <li class="service-item"><div class="service-icon-box"><ion-icon name="sparkles-outline"></ion-icon></div><div class="service-content-box"><h4 class="h4 service-item-title">AI & LLM-Powered Features</h4><p class="service-item-text">Integrating the power of Large Language Models to create intelligent chatbots, dynamic content systems, and other next-generation user experiences.</p></div></li> <li class="service-item"><div class="service-icon-box"><ion-icon name="layers-outline"></ion-icon></div><div class="service-content-box"><h4 class="h4 service-item-title">Containerization & Deployment</h4><p class="service-item-text">Utilizing Docker and exploring AWS to ensure solutions are not just well-coded, but also consistently and efficiently delivered in production environments.</p></div></li> </ul> </section> </article> <article class="resume" data-page="resume"> <header><h2 class="h2 article-title">Resume</h2></header> <!-- FIX: The Experience and Skills sections are now correctly INSIDE the resume article --> <section class="timeline"> <div class="title-wrapper"><div class="icon-box"><ion-icon name="book-outline"></ion-icon></div><h3 class="h3">Education</h3></div> <ol class="timeline-list"> <li class="timeline-item"><h4 class="h4 timeline-item-title">Sai Sudhir Degree and PG College</h4><span>Mar 2021 — Jan 2023</span><p class="timeline-text">Master’s Degree in Computer Science.</p></li> <li class="timeline-item"><h4 class="h4 timeline-item-title">Jagruti Degree and PG College</h4><span>July 2017 — Dec 2020</span><p class="timeline-text">Bachelor’s Degree in Computer Science.</p></li> </ol> </section> <section class="timeline"> <div class="title-wrapper"> <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div> <h3 class="h3">Experience</h3> </div> <ol class="timeline-list"> <li class="timeline-item"> <h4 class="h4 timeline-item-title">Codec Technology India - Data Analytics Intern (Remote)</h4> <span>May 2025 – July 2025</span> <div class="timeline-text"><ul><li>Assisting in building backend-driven data workflows, including data ingestion, transformation, and exposing processed data via RESTful APIs.</li><li>Developed automated ETL pipelines using Pandas and SQL to extract insights and generate recurring reports from large-scale datasets.</li></ul></div> </li> <li class="timeline-item"> <h4 class="h4 timeline-item-title">Codtech IT Solutions - Python Developer Intern (Remote)</h4> <span>Dec 2024 – Feb 2025</span> <div class="timeline-text"><ul><li>Built modular Python applications for student grade tracking and library management, focusing on clean logic and efficient data handling.</li><li>Collaborated with cross-functional teams to gather requirements, validate features, and deliver user-aligned solutions.</li></ul></div> </li> <li class="timeline-item"> <h4 class="h4 timeline-item-title">Codingster Private Limited - Freelance Backend Developer (Remote)</h4> <span>Oct 2024 – Nov 2024</span> <div class="timeline-text"><ul><li>Contributed to an e-commerce web app using Node.js and JavaScript.</li><li>Built REST APIs, implemented user auth, and integrated payment gateway.</li><li>Assisted in building backend modules using MongoDB and Express.js, supporting data handling and API integration.</li></ul></div> </li> <li class="timeline-item"> <h4 class="h4 timeline-item-title">Innovapath IT Solutions - Python Developer (Hyderabad, Telangana)</h4> <span>Feb 2024 – Sept 2024</span> <div class="timeline-text"><ul><li>Engineered scalable backend APIs using Python with FastAPI and Django, supporting data-driven AI features and efficient request handling.</li><li>Built and integrated AI-driven modules using LLMs (Large Language Models) to support dynamic content generation and contextual responses.</li><li>Initiated development of an AI-powered chatbot leveraging NLP pipelines and API orchestration.</li><li>Explored AWS services in staging environments and practiced containerized deployments using Docker.</li></ul></div> </li> <li class="timeline-item"> <h4 class="h4 timeline-item-title">Cognizant Technology Solutions - Data Analyst (Hyderabad, Telangana)</h4> <span>Jul 2021 – Aug 2023</span> <div class="timeline-text"><ul><li>Validated and audited user-generated content across platforms, ensuring 98% compliance with internal guidelines and regulatory standards.</li><li>Developed and maintained Excel-based trackers and Power BI dashboards to monitor content quality metrics, improving reporting efficiency by 25%.</li><li>Collaborated with cross-functional teams to analyze service level trends and recommended actionable insights, leading to a 15% increase in issue resolution time.</li></ul></div> </li> </ol> </section> <!-- =============================================================== | CERTIFICATIONS SECTION | =============================================================== --> <section class="timeline"> <div class="title-wrapper"> <div class="icon-box"> <!-- I've chosen a 'ribbon' icon, which fits well for awards/certifications --> <ion-icon name="ribbon-outline"></ion-icon> </div> <h3 class="h3">Certifications</h3> </div> <ol class="timeline-list"> <li class="timeline-item"> <!-- Each certification title is a clickable link that opens in a new tab --> <a href="https://drive.google.com/file/d/1KJh_iO45pTfYmPJBiEY1jexe0Zj1eLk1/view" target="_blank" rel="noopener noreferrer"> <h4 class="h4 timeline-item-title">Advanced Software Engineering Job Simulation</h4> </a> <span>Issued by Walmart</span> </li> <li class="timeline-item"> <!-- Each certification title is a clickable link that opens in a new tab --> <a href="https://drive.google.com/file/d/1R_Tx8NhUuRCd6ulxZ6ynC_Pzx6kZYaXx/view?usp=sharing" target="_blank" rel="noopener noreferrer"> <h4 class="h4 timeline-item-title">Gen AI Certification</h4> </a> <span>Issued by Simplilearn</span> </li> <li class="timeline-item"> <a href="https://oneroadmap.io/skills/da/certificate/CERT-223C255D" target="_blank" rel="noopener noreferrer"> <h4 class="h4 timeline-item-title">Data Analyst Certification</h4> </a> <span>Issued by one road map</span> </li> <li class="timeline-item"> <a href="https://drive.google.com/file/d/1Hol3-AeFy6kg82paAexASGqYDYhnN2DX/view" target="_blank" rel="noopener noreferrer"> <h4 class="h4 timeline-item-title">Python Django 101</h4> </a> <span>Issued by Simplilearn</span> </li> <li class="timeline-item"> <a href="https://drive.google.com/file/d/1DHHFhn7ItugSnDBtXYbOLCZ6M0Kb6X75/view" target="_blank" rel="noopener noreferrer"> <h4 class="h4 timeline-item-title">SQL Certification</h4> </a> <span>Issued by Frontlines EDTech Pvt Ltd.</span> </li> <li class="timeline-item"> <a href="https://drive.google.com/file/d/1oIsPfz-n8vrXOTgGkoSxbRaZg5mNRJA0/view" target="_blank" rel="noopener noreferrer"> <h4 class="h4 timeline-item-title">Linux Certification</h4> </a> <span>Issued by Frontlines EDTech Pvt Ltd.</span> </li> </ol> </section> <section class="skill"> <h3 class="h3 skills-title">My Skills</h3> <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Languages</h5></div><p>Python, SQL, HTML, CSS, JavaScript, C++ (familiar)</p></li></ul> <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Backend Development</h5></div><p>FastAPI, Django, Flask, REST APIs, WebSockets, JWT</p></li></ul> <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Databases</h5></div><p>PostgreSQL, SQL Alchemy</p></li></ul> <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">DevOps, Cloud, Automation</h5></div><p>Docker, Docker Compose, Git, GitHub, AWS, n8n</p></li></ul> <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Data Analysis & BI</h5></div><p>Pandas, NumPy, Matplotlib, Seaborn, Power BI, DAX, ETL Processes, MS Excel</p></li></ul> <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Frontend</h5></div><p>HTML, CSS, JavaScript</p></li></ul> </section> </article> <article class="portfolio" data-page="projects"> <header> <h2 class="h2 article-title">Projects</h2> </header> <section class="projects"> <ul class="filter-list"> <li class="filter-item"><button class="active" data-filter-btn>All</button></li> <li class="filter-item"><button data-filter-btn>Data Visualization</button></li> <li class="filter-item"><button data-filter-btn>Web Development</button></li> <li class="filter-item"><button data-filter-btn>Automation</button></li> </ul> <ul class="project-list"> <!-- ======================================= --> <!-- == 1. Tech-Debt Gamify (CORRECTED) == --> <!-- ======================================= --> <li class="project-item active" data-category="data visualization"> <a href="https://github.com/dineshgokaram/tech-debt-gamify" target="_blank"> <figure class="project-img"> <div class="project-item-icon-box"> <ion-icon name="eye-outline"></ion-icon> </div> <img src="./assets/images/tech-debt-dashboard.png" alt="Full-Stack Gamified Tech Debt Platform" loading="lazy"> </figure> <h3 class="project-title">Technical Debt Gamify Platform</h3> <p class="project-category">Python, FastAPI, Docker, PostgreSQL, Pandas, JS, HTML, CSS</p> </a> </li> <!-- ======================================= --> <!-- == 2. Code Collaborator (Web Dev & Automation) == --> <!-- ======================================= --> <li class="project-item active" data-category="web development"> <a href="https://github.com/dineshgokaram/code-collaborator-platform" target="_blank"> <figure class="project-img"> <div class="project-item-icon-box"> <ion-icon name="eye-outline"></ion-icon> </div> <img src="./assets/images/collaborator-platform.png" alt="Real-Time Collaborative Code Editor" loading="lazy"> </figure> <h3 class="project-title">Code Collaborator Platform</h3> <p class="project-category">Python, FastAPI, WebSockets, Docker, JWT, HTML, CSS, JS</p> </a> </li> <!-- ======================================= --> <!-- == 3. Power BI Project (Data Visualization) == --> <!-- ======================================= --> <li class="project-item active" data-category="data visualization"> <a href="https://github.com/dineshgokaram/powerbi_project" target="_blank"> <figure class="project-img"> <div class="project-item-icon-box"> <ion-icon name="eye-outline"></ion-icon> </div> <img src="./assets/images/power-bi-dashboard.png" alt="Interactive Sales Dashboard" loading="lazy"> </figure> <h3 class="project-title">Chocolate Shipment Dashboard</h3> <p class="project-category">Power BI, DAX, Data Modeling, MS Excel</p> </a> </li> <!-- ======================================= --> <!-- == 4. Online Code Editor (Web Development) == --> <!-- =S====================================== --> <li class="project-item active" data-category="web development"> <a href="https://github.com/dineshgokaram/online-code-editor"> <figure class="project-img"> <div class="project-item-icon-box"> <ion-icon name="eye-outline"></ion-icon> </div> <img src="./assets/images/coding-platform.png" alt="Online Coding Platform" loading="lazy"> </figure> <h3 class="project-title">Online Code Editor</h3> <p class="project-category">Python, FastAPI, React, HTML, CSS</p> </a> </li> <!-- ======================================= --> <!-- == 5. Automated Report (Automation) == --> <!-- ======================================= --> <li class="project-item active" data-category="automation"> <a href="https://github.com/dineshgokaram/automated-report-generation"> <figure class="project-img"> <div class="project-item-icon-box"> <ion-icon name="eye-outline"></ion-icon> </div> <img src="./assets/images/report-generator.png" alt="Automated Report Generator" loading="lazy"> </figure> <h3 class="project-title">Automated PDF Report Generation</h3> <p class="project-category">Python, Pandas, ReportLab</p> </a> </li> </ul> </section> </article> <article class="blog" data-page="blog"> <header><h2 class="h2 article-title">Blog</h2></header> <section class="blog-posts"> <ul class="blog-posts-list"> <li class="blog-post-item"> <a href="https://dineshgokaram.blogspot.com/2025/07/i-know-my-pace-is-slow-but-i-will-rise.html" target="_blank" rel="noopener noreferrer"> <figure class="blog-banner-box"><img src="./assets/images/blog-1.png" alt="Blog post thumbnail" loading="lazy"></figure> <div class="blog-content"> <div class="blog-meta"><p class="blog-category">My Thoughts</p></div> <h3 class="h3 blog-item-title">The Journey of Self Learning!</h3> <p class="blog-text">I know my pace is slow...but I will RISE.</p> </div> </a> </li> <li class="blog-post-item"> <a href="https://dineshgokaram.blogspot.com/2025/07/more-than-just-code-lessons-from-my.html" target="_blank" rel="noopener noreferrer"> <figure class="blog-banner-box"><img src="./assets/images/blog-2.png" alt="Blog post thumbnail" loading="lazy"></figure> <div class="blog-content"> <div class="blog-meta"><p class="blog-category">My Thoughts</p></div> <h3 class="h3 blog-item-title">More Than Just Code</h3> <p class="blog-text">Lessons From My First Real-World Project as a Developer</p> </div> </a> </li> <li class="blog-post-item"> <a href="https://dineshgokaram.blogspot.com/2025/07/you-dont-solve-problems-to-pass-tests.html" target="_blank" rel="noopener noreferrer"> <figure class="blog-banner-box"><img src="./assets/images/blog-3.png" alt="Blog post thumbnail" loading="lazy"></figure> <div class="blog-content"> <div class="blog-meta"><p class="blog-category">My Thoughts</p></div> <h3 class="h3 blog-item-title">DSA isn't just Problem Solving, It's a lifestyle</h3> <p class="blog-text">What DSA Taught Me as a Developer</p> </div> </a> </li> <li class="blog-post-item"> <a href="https://dineshgokaram.blogspot.com/2025/07/debugging-made-me-better-thinker-not.html" target="_blank" rel="noopener noreferrer"> <figure class="blog-banner-box"><img src="./assets/images/blog-4.png" alt="Blog post thumbnail" loading="lazy"></figure> <div class="blog-content"> <div class="blog-meta"><p class="blog-category">My Thoughts</p></div> <h3 class="h3 blog-item-title">Debugging Made Me a Better Thinker</h3> <p class="blog-text">Not Just a Better Coder</p> </div> </a> </li> </ul> </section> </article> <article class="contact" data-page="contact"> <header><h2 class="h2 article-title">Contact</h2></header> <section class="mapbox" data-mapbox> <figure><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.316094391!2d78.26795850257357!3d17.41229984138138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana%2C%20India!5e0!3m2!1sen!2sus!4v1654533924115!5m2!1sen!2sus" width="400" height="300" loading="lazy"></iframe></figure> </section> <section class="contact-form"> <h3 class="h3 form-title">Contact Form</h3> <form action="https://formsubmit.co/dineshgokaram2706@gmail.com" method="POST" class="form" data-form> <div class="input-wrapper"> <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input> <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input> </div> <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea> <button class="form-btn" type="submit" disabled data-form-btn> <ion-icon name="paper-plane"></ion-icon> <span>Send Message</span> </button> </form> </section> </article> </div> </main> <!-- ... Your script tag ... --> <script> 'use strict'; const elementToggleFunc = function (elem) { elem.classList.toggle("active"); } const sidebar = document.querySelector("[data-sidebar]"); const sidebarBtn = document.querySelector("[data-sidebar-btn]"); sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }); const form = document.querySelector("[data-form]"); const formInputs = document.querySelectorAll("[data-form-input]"); const formBtn = document.querySelector("[data-form-btn]"); for (let i = 0; i < formInputs.length; i++) { formInputs[i].addEventListener("input", function () { if (form.checkValidity()) { formBtn.removeAttribute("disabled"); } else { formBtn.setAttribute("disabled", ""); } }); } const navigationLinks = document.querySelectorAll("[data-nav-link]"); const pages = document.querySelectorAll("[data-page]"); for (let i = 0; i < navigationLinks.length; i++) { navigationLinks[i].addEventListener("click", function () { const clickedPageName = this.innerHTML.toLowerCase(); for (let j = 0; j < navigationLinks.length; j++) { navigationLinks[j].classList.remove("active"); } this.classList.add("active"); for (let k = 0; k < pages.length; k++) { if (pages[k].dataset.page === clickedPageName) { pages[k].classList.add("active"); window.scrollTo(0, 0); } else { pages[k].classList.remove("active"); } } }); } const filterBtns = document.querySelectorAll("[data-filter-btn]"); const filterItems = document.querySelectorAll(".project-item"); let lastClickedFilterBtn = filterBtns.length > 0 ? filterBtns[0] : null; const filterFunc = function () { if (lastClickedFilterBtn) { lastClickedFilterBtn.classList.remove("active"); } this.classList.add("active"); lastClickedFilterBtn = this; const selectedCategory = this.innerText.toLowerCase(); for (let i = 0; i < filterItems.length; i++) { const itemCategory = filterItems[i].dataset.category.toLowerCase(); if (selectedCategory === "all" || selectedCategory === itemCategory) { filterItems[i].style.display = "block"; filterItems[i].classList.add("active"); } else { filterItems[i].style.display = "none"; filterItems[i].classList.remove("active"); } } } for (let i = 0; i < filterBtns.length; i++) { filterBtns[i].addEventListener("click", filterFunc); } </script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gokaram Dinesh Goud - Python Backend Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/images/logo.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+  <!-- =================================================================== -->
+  <!--               COMPLETE CSS DESIGN TEMPLATE EMBEDDED                 -->
+  <!-- =================================================================== -->
+  <style>
+    :root {
+      --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+      --bg-gradient-jet: linear-gradient( to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100% ), hsl(240, 2%, 13%);
+      --bg-gradient-yellow-1: linear-gradient( to bottom right, hsl(45, 100%, 71%) 0%, hsla(36, 100%, 69%, 0) 50% );
+      --bg-gradient-yellow-2: linear-gradient( 135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86% ), hsl(240, 2%, 13%);
+      --border-gradient-onyx: linear-gradient( to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50% );
+      --text-gradient-yellow: linear-gradient( to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%) );
+      --jet: hsl(0, 0%, 22%);
+      --onyx: hsl(240, 1%, 17%);
+      --eerie-black-1: hsl(240, 2%, 13%);
+      --eerie-black-2: hsl(240, 2%, 12%);
+      --smoky-black: hsl(0, 0%, 7%);
+      --white-1: hsl(0, 0%, 100%);
+      --white-2: hsl(0, 0%, 98%);
+      --orange-yellow-crayola: hsl(45, 100%, 72%);
+      --vegas-gold: hsl(45, 54%, 58%);
+      --light-gray: hsl(0, 0%, 84%);
+      --light-gray-70: hsla(0, 0%, 84%, 0.7);
+      --bittersweet-shimmer: hsl(0, 43%, 51%);
+      --ff-poppins: 'Poppins', sans-serif;
+      --fs-1: 24px;
+      --fs-2: 18px;
+      --fs-3: 17px;
+      --fs-4: 16px;
+      --fs-5: 15px;
+      --fs-6: 14px;
+      --fs-7: 13px;
+      --fs-8: 11px;
+      --fw-300: 300;
+      --fw-400: 400;
+      --fw-500: 500;
+      --fw-600: 600;
+      --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+      --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+      --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
+      --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
+      --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+      --transition-1: 0.25s ease;
+      --transition-2: 0.5s ease-in-out;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    a { text-decoration: none; }
+    li { list-style: none; }
+    img, ion-icon, a, button, time, span { display: block; }
+    button { font: inherit; background: none; border: none; text-align: left; cursor: pointer; }
+    input, textarea { display: block; width: 100%; background: none; font: inherit; }
+    ::selection { background: var(--orange-yellow-crayola); color: var(--smoky-black); }
+    :focus { outline-color: var(--orange-yellow-crayola); }
+    html { font-family: var(--ff-poppins); }
+    body { background: var(--smoky-black); }
+    .sidebar, article { background: var(--eerie-black-2); border: 1px solid var(--jet); border-radius: 20px; padding: 15px; box-shadow: var(--shadow-1); z-index: 1; }
+    .separator { width: 100%; height: 1px; background: var(--jet); margin: 16px 0; }
+    .icon-box { position: relative; background: var(--border-gradient-onyx); width: 30px; height: 30px; border-radius: 8px; display: flex; justify-content: center; align-items: center; font-size: 16px; color: var(--orange-yellow-crayola); box-shadow: var(--shadow-1); z-index: 1; }
+    .icon-box::before { content: ""; position: absolute; inset: 1px; background: var(--eerie-black-1); border-radius: inherit; z-index: -1; }
+    .icon-box ion-icon { --ionicon-stroke-width: 35px; }
+    article { display: none; }
+    article.active { display: block; animation: fade 0.5s ease backwards; }
+    @keyframes fade { 0% { opacity: 0; } 100% { opacity: 1; } }
+    .h2, .h3, .h4, .h5 { color: var(--white-2); text-transform: capitalize; }
+    .h2 { font-size: var(--fs-1); }
+    .h3 { font-size: var(--fs-2); }
+    .h4 { font-size: var(--fs-4); }
+    .h5 { font-size: var(--fs-7); font-weight: var(--fw-500); }
+    .article-title { position: relative; padding-bottom: 7px; margin-bottom: 30px; }
+    .article-title::after { content: ""; position: absolute; bottom: 0; left: 0; width: 30px; height: 3px; background: var(--text-gradient-yellow); border-radius: 3px; }
+    .content-card { position: relative; background: var(--border-gradient-onyx); padding: 15px; padding-top: 45px; border-radius: 14px; box-shadow: var(--shadow-2); cursor: pointer; z-index: 1; }
+    .content-card::before { content: ""; position: absolute; inset: 1px; background: var(--bg-gradient-jet); border-radius: inherit; z-index: -1; }
+    main { margin: 15px 12px; margin-bottom: 75px; min-width: 259px; }
+    .sidebar { margin-bottom: 15px; max-height: 112px; overflow: hidden; transition: var(--transition-2); }
+    .sidebar.active { max-height: 405px; }
+    .sidebar-info { position: relative; display: flex; justify-content: flex-start; align-items: center; gap: 15px; }
+    .avatar-box { background: var(--bg-gradient-onyx); border-radius: 20px; }
+    .info-content .name { color: var(--white-2); font-size: var(--fs-3); font-weight: var(--fw-500); letter-spacing: -0.25px; margin-bottom: 10px; }
+    .info-content .title { color: var(--white-1); background: var(--onyx); font-size: var(--fs-8); font-weight: var(--fw-300); width: max-content; padding: 3px 12px; border-radius: 8px; }
+    .info_more-btn { position: absolute; top: -15px; right: -15px; border-radius: 0 15px; font-size: 13px; color: var(--orange-yellow-crayola); background: var(--border-gradient-onyx); padding: 10px; box-shadow: var(--shadow-2); transition: var(--transition-1); z-index: 1; }
+    .info_more-btn::before { content: ""; position: absolute; inset: 1px; border-radius: inherit; background: var(--bg-gradient-jet); transition: var(--transition-1); z-index: -1; }
+    .info_more-btn:hover, .info_more-btn:focus { background: var(--bg-gradient-yellow-1); }
+    .info_more-btn:hover::before, .info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
+    .info_more-btn span { display: none; }
+    .sidebar-info_more { opacity: 0; visibility: hidden; transition: var(--transition-2); }
+    .sidebar.active .sidebar-info_more { opacity: 1; visibility: visible; }
+    .contacts-list { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .contact-item { min-width: 100%; display: flex; align-items: center; gap: 16px; }
+    .contact-info { max-width: calc(100% - 46px); width: calc(100% - 46px); }
+    .contact-title { color: var(--light-gray-70); font-size: var(--fs-8); text-transform: uppercase; margin-bottom: 2px; }
+    .contact-info :is(.contact-link, time, address) { color: var(--white-2); font-size: var(--fs-7); }
+    .contact-info address { font-style: normal; }
+    .social-list { display: flex; justify-content: flex-start; align-items: center; gap: 15px; padding-bottom: 4px; padding-left: 7px; }
+    .social-item .social-link { color: var(--light-gray-70); font-size: 18px; }
+    .social-item .social-link:hover { color: var(--light-gray); }
+    .navbar { position: fixed; bottom: 0; left: 0; width: 100%; background: hsla(240, 1%, 17%, 0.75); backdrop-filter: blur(10px); border: 1px solid var(--jet); border-radius: 12px 12px 0 0; box-shadow: var(--shadow-2); z-index: 5; }
+    .navbar-list { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 0 10px; }
+    .navbar-link { color: var(--light-gray); font-size: var(--fs-8); padding: 20px 7px; transition: color var(--transition-1); }
+    .navbar-link:hover, .navbar-link:focus { color: var(--light-gray-70); }
+    .navbar-link.active { color: var(--orange-yellow-crayola); }
+    .about-text { color: var(--light-gray); font-size: var(--fs-6); font-weight: var(--fw-300); line-height: 1.6; }
+    .about-text p { margin-bottom: 15px; }
+    .service { margin-bottom: 35px; }
+    .service-title { margin-bottom: 20px; }
+    .service-list { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .service-item { position: relative; background: var(--border-gradient-onyx); padding: 20px; border-radius: 14px; box-shadow: var(--shadow-2); z-index: 1; }
+    .service-item::before { content: ""; position: absolute; inset: 1px; background: var(--bg-gradient-jet); border-radius: inherit; z-index: -1; }
+    .service-icon-box { margin-bottom: 10px; }
+    .service-icon-box ion-icon { margin: auto; font-size: 24px; }
+    .service-content-box { text-align: center; }
+    .service-item-title { margin-bottom: 7px; }
+    .service-item-text { color: var(--light-gray); font-size: var(--fs-6); line-height: 1.6; }
+    .timeline { margin-bottom: 30px; }
+    .timeline .title-wrapper { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+    .timeline-list { font-size: var(--fs-6); margin-left: 45px; }
+    .timeline-item { position: relative; }
+    .timeline-item:not(:last-child) { margin-bottom: 20px; }
+    .timeline-item-title { font-size: var(--fs-6); line-height: 1.3; margin-bottom: 7px; }
+    .timeline-list span { color: var(--vegas-gold); font-weight: var(--fw-400); line-height: 1.6; }
+    .timeline-item:not(:last-child)::before { content: ""; position: absolute; top: -25px; left: -30px; width: 1px; height: calc(100% + 50px); background: var(--jet); }
+    .timeline-item::after { content: ""; position: absolute; top: 5px; left: -33px; height: 6px; width: 6px; background: var(--text-gradient-yellow); border-radius: 50%; box-shadow: 0 0 0 4px var(--jet); }
+    .timeline-text { color: var(--light-gray); font-weight: var(--fw-300); line-height: 1.6; }
+    .timeline-text ul { padding-left: 20px; }
+    .timeline-text ul li { list-style-type: disc; margin-bottom: 10px; }
+    .skills-title { margin-bottom: 20px; }
+    .skills-list { padding: 20px; }
+    .skills-item:not(:last-child) { margin-bottom: 15px; }
+    .skill .title-wrapper { display: flex; align-items: center; gap: 5px; margin-bottom: 8px; }
+    .skill .title-wrapper data { color: var(--light-gray); font-size: var(--fs-7); font-weight: var(--fw-300); }
+    .skill-progress-bg { background: var(--jet); width: 100%; height: 8px; border-radius: 10px; }
+    .skill-progress-fill { background: var(--text-gradient-yellow); height: 100%; border-radius: inherit; }
+    .filter-list { display: none; }
+    .filter-select-box { position: relative; margin-bottom: 25px; }
+    .filter-select { background: var(--eerie-black-2); color: var(--light-gray); display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 12px 16px; border: 1px solid var(--jet); border-radius: 14px; font-size: var(--fs-6); font-weight: var(--fw-300); }
+    .filter-select.active .select-icon { transform: rotate(0.5turn); }
+    .select-list { background: var(--eerie-black-2); position: absolute; top: calc(100% + 6px); width: 100%; padding: 6px; border: 1px solid var(--jet); border-radius: 14px; z-index: 2; opacity: 0; visibility: hidden; pointer-events: none; transition: 0.15s ease-in-out; }
+    .filter-select.active + .select-list { opacity: 1; visibility: visible; pointer-events: all; }
+    .select-item button { background: var(--eerie-black-2); color: var(--light-gray); font-size: var(--fs-6); font-weight: var(--fw-300); text-transform: capitalize; width: 100%; padding: 8px 10px; border-radius: 8px; }
+    .select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
+    .project-list { display: grid; grid-template-columns: 1fr; gap: 30px; margin-bottom: 10px; }
+    .project-item { display: none; }
+    .project-item.active { display: block; animation: scaleUp 0.25s ease forwards; }
+    @keyframes scaleUp { 0% { transform: scale(0.5); } 100% { transform: scale(1); } }
+    .project-item > a { width: 100%; }
+    .project-img { position: relative; width: 100%; height: 200px; border-radius: 16px; overflow: hidden; margin-bottom: 15px; }
+    .project-img::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 1; transition: var(--transition-1); }
+    .project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
+    .project-item-icon-box { --scale: 0.8; background: var(--jet); color: var(--orange-yellow-crayola); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(var(--scale)); font-size: 20px; padding: 18px; border-radius: 12px; opacity: 0; z-index: 1; transition: var(--transition-1); }
+    .project-item > a:hover .project-item-icon-box { --scale: 1; opacity: 1; }
+    .project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
+    .project-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition-1); }
+    .project-item > a:hover img { transform: scale(1.1); }
+    .project-title, .project-category { margin-left: 10px; }
+    .project-title { color: var(--white-2); font-size: var(--fs-5); font-weight: var(--fw-400); text-transform: capitalize; line-height: 1.3; }
+    .project-category { color: var(--light-gray-70); font-size: var(--fs-6); font-weight: var(--fw-300); }
+    .blog-posts { margin-bottom: 10px; }
+    .blog-posts-list { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .blog-post-item > a { position: relative; background: var(--border-gradient-onyx); height: 100%; box-shadow: var(--shadow-4); border-radius: 16px; z-index: 1; }
+    .blog-post-item > a::before { content: ""; position: absolute; inset: 1px; border-radius: inherit; background: var(--eerie-black-1); z-index: -1; }
+    .blog-banner-box { width: 100%; height: 200px; border-radius: 12px; overflow: hidden; }
+    .blog-banner-box img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition-1); }
+    .blog-post-item > a:hover .blog-banner-box img { transform: scale(1.1); }
+    .blog-content { padding: 15px; }
+    .blog-meta { display: flex; justify-content: flex-start; align-items: center; gap: 7px; margin-bottom: 10px; }
+    .blog-meta :is(.blog-category, time) { color: var(--light-gray-70); font-size: var(--fs-6); font-weight: var(--fw-300); }
+    .blog-meta .dot { background: var(--light-gray-70); width: 4px; height: 4px; border-radius: 4px; }
+    .blog-item-title { margin-bottom: 10px; line-height: 1.3; transition: var(--transition-1); }
+    .blog-post-item > a:hover .blog-item-title { color: var(--orange-yellow-crayola); }
+    .blog-text { color: var(--light-gray); font-size: var(--fs-6); font-weight: var(--fw-300); line-height: 1.6; }
+    .mapbox { position: relative; height: 250px; width: 100%; border-radius: 16px; margin-bottom: 30px; border: 1px solid var(--jet); overflow: hidden; }
+    .mapbox figure { height: 100%; }
+    .mapbox iframe { width: 100%; height: 100%; border: none; filter: grayscale(1) invert(1); }
+    .contact-form { margin-bottom: 10px; }
+    .form-title { margin-bottom: 20px; }
+    .input-wrapper { display: grid; grid-template-columns: 1fr; gap: 25px; margin-bottom: 25px; }
+    .form-input { color: var(--white-2); font-size: var(--fs-6); font-weight: var(--fw-400); padding: 13px 20px; border: 1px solid var(--jet); border-radius: 14px; outline: none; }
+    .form-input::placeholder { font-weight: var(--fw-500); }
+    .form-input:focus { border-color: var(--orange-yellow-crayola); }
+    textarea.form-input { min-height: 100px; height: 120px; max-height: 200px; resize: vertical; margin-bottom: 25px; }
+    textarea.form-input::-webkit-resizer { display: none; }
+    .form-input:focus:invalid { border-color: var(--bittersweet-shimmer); }
+    .form-btn { position: relative; width: 100%; background: var(--border-gradient-onyx); color: var(--orange-yellow-crayola); display: flex; justify-content: center; align-items: center; gap: 10px; padding: 13px 20px; border-radius: 14px; font-size: var(--fs-6); text-transform: capitalize; box-shadow: var(--shadow-3); z-index: 1; transition: var(--transition-1); }
+    .form-btn::before { content: ""; position: absolute; inset: 1px; background: var(--bg-gradient-jet); border-radius: inherit; z-index: -1; transition: var(--transition-1); }
+    .form-btn ion-icon { font-size: 16px; }
+    .form-btn:hover { background: var(--bg-gradient-yellow-1); }
+    .form-btn:hover::before { background: var(--bg-gradient-yellow-2); }
+    .form-btn:disabled { opacity: 0.7; cursor: not-allowed; }
+    .form-btn:disabled:hover { background: var(--border-gradient-onyx); }
+    .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
+    @media (min-width: 580px) {
+      :root { --fs-1: 32px; --fs-2: 24px; --fs-3: 26px; --fs-4: 18px; --fs-6: 15px; --fs-7: 15px; --fs-8: 12px; }
+      .sidebar, article { width: 520px; margin-inline: auto; padding: 30px; }
+      .article-title { font-weight: var(--fw-600); padding-bottom: 15px; }
+      .article-title::after { width: 40px; height: 5px; }
+      .icon-box { width: 48px; height: 48px; border-radius: 12px; font-size: 18px; }
+      main { margin-top: 60px; margin-bottom: 100px; }
+      .sidebar { max-height: 180px; margin-bottom: 30px; }
+      .sidebar.active { max-height: 584px; }
+      .sidebar-info { gap: 25px; }
+      .avatar-box { border-radius: 30px; }
+      .avatar-box img { width: 120px; }
+      .info-content .name { margin-bottom: 15px; }
+      .info-content .title { padding: 5px 18px; }
+      .info_more-btn { top: -30px; right: -30px; padding: 10px 15px; }
+      .info_more-btn span { display: block; font-size: var(--fs-8); }
+      .info_more-btn ion-icon { display: none; }
+      .separator { margin: 32px 0; }
+      .contacts-list { gap: 20px; }
+      .contact-info { max-width: calc(100% - 64px); width: calc(100% - 64px); }
+      .navbar { border-radius: 20px 20px 0 0; }
+      .navbar-list { gap: 20px; }
+      .navbar-link { --fs-8: 14px; }
+      .service-item { display: flex; justify-content: flex-start; align-items: flex-start; gap: 18px; padding: 30px; }
+      .service-icon-box { margin-bottom: 0; margin-top: 5px; }
+      .service-content-box { text-align: left; }
+    }
+    @media (min-width: 768px) {
+      .sidebar, article { width: 700px; }
+      .contacts-list { grid-template-columns: 1fr 1fr; gap: 30px 15px; }
+      .navbar-link { --fs-8: 15px; }
+      .filter-select-box { display: none; }
+      .filter-list { display: flex; justify-content: flex-start; align-items: center; gap: 25px; padding-left: 5px; margin-bottom: 30px; }
+      .filter-item button { color: var(--light-gray); font-size: var(--fs-5); transition: var(--transition-1); }
+      .filter-item button:hover { color: var(--light-gray-70); }
+      .filter-item button.active { color: var(--orange-yellow-crayola); }
+      .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
+      .input-wrapper { grid-template-columns: 1fr 1fr; }
+      .form-btn { width: max-content; margin-left: auto; }
+    }
+    @media (min-width: 1024px) {
+      :root { --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125); --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125); --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125); }
+      .sidebar, article { width: 950px; box-shadow: var(--shadow-5); }
+      main { margin-bottom: 60px; }
+      .main-content { position: relative; width: max-content; margin: auto; }
+      .navbar { position: absolute; bottom: auto; top: 0; left: auto; right: 0; width: max-content; border-radius: 0 20px; padding: 0 20px; box-shadow: none; }
+      .navbar-list { gap: 30px; padding: 0 20px; }
+      .navbar-link { font-weight: var(--fw-500); }
+      .service-list { grid-template-columns: 1fr 1fr; gap: 20px 25px; }
+      .project-list { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 1250px) {
+      main { max-width: 1200px; margin-inline: auto; display: flex; justify-content: center; align-items: stretch; gap: 25px; }
+      .main-content { min-width: 75%; width: 75%; margin: 0; }
+      .sidebar { position: sticky; top: 60px; max-height: max-content; height: 100%; margin-bottom: 0; padding-top: 60px; z-index: 1; }
+      .sidebar-info { flex-direction: column; }
+      .avatar-box img { width: 150px; }
+      .info-content .name { white-space: nowrap; text-align: center; }
+      .info-content .title { margin: auto; }
+      .info_more-btn { display: none; }
+      .sidebar-info_more { opacity: 1; visibility: visible; }
+      .contacts-list { grid-template-columns: 1fr; }
+      .contact-info :is(.contact-link) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .contact-info :is(.contact-link, time, address) { --fs-7: 14px; font-weight: var(--fw-300); }
+      .separator:last-of-type { margin: 15px 0; opacity: 0; }
+      .social-list { justify-content: center; }
+    }
+    /* Custom style for skills text color */
+    .skills-list p {
+      color: var(--light-gray);
+      font-weight: 300;
+    }
+    .service-icon-box ion-icon {
+      color: var(--orange-yellow-crayola);
+    }
+  </style>
+
+</head>
+<body>
+
+
+<main>
+
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-info">
+      <figure class="avatar-box">
+        <img src="assets/images/ppic.jpg" alt="Gokaram Dinesh Goud" width="80">
+      </figure>
+      <div class="info-content">
+        <h1 class="name" title="Gokaram Dinesh Goud">Dinesh Gokaram</h1>
+        <p class="title">Data Analyst | SQL • Power BI • Python (Pandas, NumPy)</p>
+      </div>
+      <button class="info_more-btn" data-sidebar-btn>
+        <span>Show Contacts</span>
+        <ion-icon name="chevron-down"></ion-icon>
+      </button>
+    </div>
+    <div class="sidebar-info_more">
+      <div class="separator"></div>
+      <ul class="contacts-list">
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Email</p>
+            <a href="mailto:dineshgokaram2706@gmail.com" class="contact-link">dineshgokaram2706@gmail.com</a>
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="call-outline"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Phone</p>
+            <a href="tel:+919515741345" class="contact-link">+91 95157 41345</a>
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Location</p>
+            <address>Hyderabad, Telangana, India</address>
+          </div>
+        </li>
+      </ul>
+      <div class="separator"></div>
+      <ul class="social-list">
+        <li class="social-item"><a href="mailto:dineshgokaram2706@gmail.com" class="social-link" title="Email"><ion-icon name="mail-outline"></ion-icon></a></li>
+        <li class="social-item"><a href="https://linkedin.com/in/dineshgokaram" class="social-link" target="_blank" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li class="social-item"><a href="https://github.com/dineshgokaram" class="social-link" target="_blank" title="GitHub"><ion-icon name="logo-github"></ion-icon></a></li>
+        <li class="social-item"><a href="https://leetcode.com/u/dineshgokaram/" class="social-link" target="_blank" title="LeetCode"><ion-icon name="code-outline"></ion-icon></a></li>
+        <li class="social-item"><a href="https://drive.google.com/drive/u/0/folders/12jWduzzQCSSkCJXXOjiE6z6NbEW_BH8S" class="social-link" target="_blank" title="Resume"><ion-icon name="document-outline"></ion-icon></a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Projects</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Blog</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+      </ul>
+    </nav>
+
+    <article class="about active" data-page="about">
+      <header><h2 class="h2 article-title">About</h2></header>
+      <section class="about-text">
+       <p>
+I’m a Data Analyst specializing in SQL, Python analytics (Pandas, NumPy), Power BI, dashboarding, and data-driven reporting.
+  </p>
+  <p>
+I turn raw data into actionable insights, automate reporting workflows, and build analytical solutions that support business decision-making. My experience includes operational analytics, KPI tracking, and building dashboards for performance visualization.
+  </p>
+      </section>
+      <section class="service">
+        <h3 class="h3 service-title">What I Do</h3>
+        <ul class="service-list">
+          <li class="service-item"><div class="service-icon-box"><ion-icon name="code-slash-outline"></ion-icon></div><div class="service-content-box"><h4 class="h4 service-item-title">High-Performance API & Backend Engineering</h4><p class="service-item-text">Designing and building robust, server-side logic and RESTful APIs using Python, FastAPI, and Django to ensure scalability and speed.</p></div></li>
+          <li class="service-item"><div class="service-icon-box"><ion-icon name="analytics-outline"></ion-icon></div><div class="service-content-box"><h4 class="h4 service-item-title">Automated Data & ETL Pipelines</h4><p class="service-item-text">Crafting automated workflows with Pandas and SQL to ingest, clean, and process large datasets, making them ready for analysis and application use.</p></div></li>
+          <li class="service-item"><div class="service-icon-box"><ion-icon name="sparkles-outline"></ion-icon></div><div class="service-content-box"><h4 class="h4 service-item-title">AI & LLM-Powered Features</h4><p class="service-item-text">Integrating the power of Large Language Models to create intelligent chatbots, dynamic content systems, and other next-generation user experiences.</p></div></li>
+          <li class="service-item"><div class="service-icon-box"><ion-icon name="layers-outline"></ion-icon></div><div class="service-content-box"><h4 class="h4 service-item-title">Containerization & Deployment</h4><p class="service-item-text">Utilizing Docker and exploring AWS to ensure solutions are not just well-coded, but also consistently and efficiently delivered in production environments.</p></div></li>
+        </ul>
+      </section>
+    </article>
+
+    <article class="resume" data-page="resume">
+      <header><h2 class="h2 article-title">Resume</h2></header>
+      
+      <!-- FIX: The Experience and Skills sections are now correctly INSIDE the resume article -->
+      <section class="timeline">
+        <div class="title-wrapper"><div class="icon-box"><ion-icon name="book-outline"></ion-icon></div><h3 class="h3">Education</h3></div>
+        <ol class="timeline-list">
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Sai Sudhir Degree and PG College</h4><span>Mar 2021 — Jan 2023</span><p class="timeline-text">Master’s Degree in Computer Science.</p></li>
+          <li class="timeline-item"><h4 class="h4 timeline-item-title">Jagruti Degree and PG College</h4><span>July 2017 — Dec 2020</span><p class="timeline-text">Bachelor’s Degree in Computer Science.</p></li>
+        </ol>
+      </section>
+
+      <section class="timeline">
+        <div class="title-wrapper">
+          <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
+          <h3 class="h3">Experience</h3>
+        </div>
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Codec Technology India - Data Analytics Intern (Remote)</h4>
+            <span>May 2025 – July 2025</span>
+            <div class="timeline-text"><ul><li>Assisting in building backend-driven data workflows, including data ingestion, transformation, and exposing processed data via RESTful APIs.</li><li>Developed automated ETL pipelines using Pandas and SQL to extract insights and generate recurring reports from large-scale datasets.</li></ul></div>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Codtech IT Solutions - Python Developer Intern (Remote)</h4>
+            <span>Dec 2024 – Feb 2025</span>
+            <div class="timeline-text"><ul><li>Built modular Python applications for student grade tracking and library management, focusing on clean logic and efficient data handling.</li><li>Collaborated with cross-functional teams to gather requirements, validate features, and deliver user-aligned solutions.</li></ul></div>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Codingster Private Limited - Freelance Backend Developer (Remote)</h4>
+            <span>Oct 2024 – Nov 2024</span>
+            <div class="timeline-text"><ul><li>Contributed to an e-commerce web app using Node.js and JavaScript.</li><li>Built REST APIs, implemented user auth, and integrated payment gateway.</li><li>Assisted in building backend modules using MongoDB and Express.js, supporting data handling and API integration.</li></ul></div>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Innovapath IT Solutions - Python Developer (Hyderabad, Telangana)</h4>
+            <span>Feb 2024 – Sept 2024</span>
+            <div class="timeline-text"><ul><li>Engineered scalable backend APIs using Python with FastAPI and Django, supporting data-driven AI features and efficient request handling.</li><li>Built and integrated AI-driven modules using LLMs (Large Language Models) to support dynamic content generation and contextual responses.</li><li>Initiated development of an AI-powered chatbot leveraging NLP pipelines and API orchestration.</li><li>Explored AWS services in staging environments and practiced containerized deployments using Docker.</li></ul></div>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Cognizant Technology Solutions - Data Analyst (Hyderabad, Telangana)</h4>
+            <span>Jul 2021 – Aug 2023</span>
+            <div class="timeline-text"><ul><li>Validated and audited user-generated content across platforms, ensuring 98% compliance with internal guidelines and regulatory standards.</li><li>Developed and maintained Excel-based trackers and Power BI dashboards to monitor content quality metrics, improving reporting efficiency by 25%.</li><li>Collaborated with cross-functional teams to analyze service level trends and recommended actionable insights, leading to a 15% increase in issue resolution time.</li></ul></div>
+          </li>
+        </ol>
+      </section>
+           <!--
+      ===============================================================
+      |                  CERTIFICATIONS SECTION                     |
+      ===============================================================
+      -->
+      <section class="timeline">
+
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <!-- I've chosen a 'ribbon' icon, which fits well for awards/certifications -->
+            <ion-icon name="ribbon-outline"></ion-icon>
+          </div>
+          <h3 class="h3">Certifications</h3>
+        </div>
+
+        <ol class="timeline-list">
+
+          <li class="timeline-item">
+            <!-- Each certification title is a clickable link that opens in a new tab -->
+            <a href="https://drive.google.com/file/d/1KJh_iO45pTfYmPJBiEY1jexe0Zj1eLk1/view" target="_blank" rel="noopener noreferrer">
+              <h4 class="h4 timeline-item-title">Advanced Software Engineering Job Simulation</h4>
+            </a>
+            <span>Issued by Walmart</span>
+          </li>
+        <li class="timeline-item">
+            <!-- Each certification title is a clickable link that opens in a new tab -->
+            <a href="https://drive.google.com/file/d/1R_Tx8NhUuRCd6ulxZ6ynC_Pzx6kZYaXx/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <h4 class="h4 timeline-item-title">Gen AI Certification</h4>
+            </a>
+            <span>Issued by Simplilearn</span>
+          </li>
+          <li class="timeline-item">
+            <a href="https://oneroadmap.io/skills/da/certificate/CERT-223C255D" target="_blank" rel="noopener noreferrer">
+              <h4 class="h4 timeline-item-title">Data Analyst Certification</h4>
+            </a>
+            <span>Issued by one road map</span>
+          </li>
+          
+          <li class="timeline-item">
+            <a href="https://drive.google.com/file/d/1Hol3-AeFy6kg82paAexASGqYDYhnN2DX/view" target="_blank" rel="noopener noreferrer">
+              <h4 class="h4 timeline-item-title">Python Django 101</h4>
+            </a>
+            <span>Issued by Simplilearn</span>
+          </li>
+
+          <li class="timeline-item">
+            <a href="https://drive.google.com/file/d/1DHHFhn7ItugSnDBtXYbOLCZ6M0Kb6X75/view" target="_blank" rel="noopener noreferrer">
+              <h4 class="h4 timeline-item-title">SQL Certification</h4>
+            </a>
+            <span>Issued by Frontlines EDTech Pvt Ltd.</span>
+          </li>
+
+          <li class="timeline-item">
+            <a href="https://drive.google.com/file/d/1oIsPfz-n8vrXOTgGkoSxbRaZg5mNRJA0/view" target="_blank" rel="noopener noreferrer">
+              <h4 class="h4 timeline-item-title">Linux Certification</h4>
+            </a>
+            <span>Issued by Frontlines EDTech Pvt Ltd.</span>
+          </li>
+
+        </ol>
+
+      </section>
+
+      <section class="skill">
+        <h3 class="h3 skills-title">My Skills</h3>
+        <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Languages</h5></div><p>Python, SQL, HTML, CSS, JavaScript, C++ (familiar)</p></li></ul>
+        <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Backend Development</h5></div><p>FastAPI, Django, Flask, REST APIs, WebSockets, JWT</p></li></ul>
+        <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Databases</h5></div><p>PostgreSQL, SQL Alchemy</p></li></ul>
+        <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">DevOps, Cloud, Automation</h5></div><p>Docker, Docker Compose, Git, GitHub, AWS, n8n</p></li></ul>
+        <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Data Analysis & BI</h5></div><p>Pandas, NumPy, Matplotlib, Seaborn, Power BI, DAX, ETL Processes, MS Excel</p></li></ul>
+        <ul class="skills-list content-card"><li class="skills-item"><div class="title-wrapper"><h5 class="h5">Frontend</h5></div><p>HTML, CSS, JavaScript</p></li></ul>
+
+      </section>
+     
+    </article>
+
+    <article class="portfolio" data-page="projects">
+
+  <header>
+    <h2 class="h2 article-title">Projects</h2>
+  </header>
+
+  <section class="projects">
+
+    <ul class="filter-list">
+      <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+      <li class="filter-item"><button data-filter-btn>Data Visualization</button></li>
+      <li class="filter-item"><button data-filter-btn>Web Development</button></li>
+      <li class="filter-item"><button data-filter-btn>Automation</button></li>
+    </ul>
+
+    <ul class="project-list">
+
+      <!-- ======================================= -->
+      <!-- == 1. Tech-Debt Gamify (CORRECTED) == -->
+      <!-- ======================================= -->
+      <li class="project-item active" data-category="data visualization">
+        <a href="https://github.com/dineshgokaram/tech-debt-gamify" target="_blank">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/tech-debt-dashboard.png" alt="Full-Stack Gamified Tech Debt Platform" loading="lazy">
+          </figure>
+          <h3 class="project-title">Technical Debt Gamify Platform</h3>
+          <p class="project-category">Python, FastAPI, Docker, PostgreSQL, Pandas, JS, HTML, CSS</p>
+        </a>
+      </li>
+
+      <!-- ======================================= -->
+      <!-- == 2. Code Collaborator (Web Dev & Automation) == -->
+      <!-- ======================================= -->
+      <li class="project-item active" data-category="web development">
+        <a href="https://github.com/dineshgokaram/code-collaborator-platform" target="_blank">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/collaborator-platform.png" alt="Real-Time Collaborative Code Editor" loading="lazy">
+          </figure>
+          <h3 class="project-title">Code Collaborator Platform</h3>
+          <p class="project-category">Python, FastAPI, WebSockets, Docker, JWT, HTML, CSS, JS</p>
+        </a>
+      </li>
+
+      <!-- ======================================= -->
+      <!-- == 3. Power BI Project (Data Visualization) == -->
+      <!-- ======================================= -->
+      <li class="project-item active" data-category="data visualization">
+        <a href="https://github.com/dineshgokaram/powerbi_project" target="_blank">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/power-bi-dashboard.png" alt="Interactive Sales Dashboard" loading="lazy">
+          </figure>
+          <h3 class="project-title">Chocolate Shipment Dashboard</h3>
+          <p class="project-category">Power BI, DAX, Data Modeling, MS Excel</p>
+        </a>
+      </li>
+
+      <!-- ======================================= -->
+      <!-- == 4. Online Code Editor (Web Development) == -->
+      <!-- =S====================================== -->
+      <li class="project-item active" data-category="web development">
+        <a href="https://github.com/dineshgokaram/online-code-editor">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/coding-platform.png" alt="Online Coding Platform" loading="lazy">
+          </figure>
+          <h3 class="project-title">Online Code Editor</h3>
+          <p class="project-category">Python, FastAPI, React, HTML, CSS</p>
+        </a>
+      </li>
+
+      <!-- ======================================= -->
+      <!-- == 5. Automated Report (Automation)      == -->
+      <!-- ======================================= -->
+      <li class="project-item active" data-category="automation">
+        <a href="https://github.com/dineshgokaram/automated-report-generation"> 
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+                <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="./assets/images/report-generator.png" alt="Automated Report Generator" loading="lazy">
+          </figure>
+          <h3 class="project-title">Automated PDF Report Generation</h3>
+          <p class="project-category">Python, Pandas, ReportLab</p>
+        </a>
+      </li>
+
+    </ul>
+
+  </section>
+
+</article>
+
+    <article class="blog" data-page="blog">
+      <header><h2 class="h2 article-title">Blog</h2></header>
+      <section class="blog-posts">
+        <ul class="blog-posts-list">
+           <li class="blog-post-item">
+            <a href="https://dineshgokaram.blogspot.com/2025/07/i-know-my-pace-is-slow-but-i-will-rise.html" target="_blank" rel="noopener noreferrer">
+              <figure class="blog-banner-box"><img src="./assets/images/blog-1.png" alt="Blog post thumbnail" loading="lazy"></figure>
+              <div class="blog-content">
+                <div class="blog-meta"><p class="blog-category">My Thoughts</p></div>
+                <h3 class="h3 blog-item-title">The Journey of Self Learning!</h3>
+                <p class="blog-text">I know my pace is slow...but I will RISE.</p>
+              </div>
+            </a>
+          </li>
+          <li class="blog-post-item">
+            <a href="https://dineshgokaram.blogspot.com/2025/07/more-than-just-code-lessons-from-my.html" target="_blank" rel="noopener noreferrer">
+              <figure class="blog-banner-box"><img src="./assets/images/blog-2.png" alt="Blog post thumbnail" loading="lazy"></figure>
+              <div class="blog-content">
+                <div class="blog-meta"><p class="blog-category">My Thoughts</p></div>
+                <h3 class="h3 blog-item-title">More Than Just Code</h3>
+                <p class="blog-text">Lessons From My First Real-World Project as a Developer</p>
+              </div>
+            </a>
+          </li>
+          <li class="blog-post-item">
+            <a href="https://dineshgokaram.blogspot.com/2025/07/you-dont-solve-problems-to-pass-tests.html" target="_blank" rel="noopener noreferrer">
+              <figure class="blog-banner-box"><img src="./assets/images/blog-3.png" alt="Blog post thumbnail" loading="lazy"></figure>
+              <div class="blog-content">
+                <div class="blog-meta"><p class="blog-category">My Thoughts</p></div>
+                <h3 class="h3 blog-item-title">DSA isn't just Problem Solving, It's a lifestyle</h3>
+                <p class="blog-text">What DSA Taught Me as a Developer</p>
+              </div>
+            </a>
+          </li>
+          <li class="blog-post-item">
+            <a href="https://dineshgokaram.blogspot.com/2025/07/debugging-made-me-better-thinker-not.html" target="_blank" rel="noopener noreferrer">
+              <figure class="blog-banner-box"><img src="./assets/images/blog-4.png" alt="Blog post thumbnail" loading="lazy"></figure>
+              <div class="blog-content">
+                <div class="blog-meta"><p class="blog-category">My Thoughts</p></div>
+                <h3 class="h3 blog-item-title">Debugging Made Me a Better Thinker</h3>
+                <p class="blog-text">Not Just a Better Coder</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </article>
+
+    <article class="contact" data-page="contact">
+      <header><h2 class="h2 article-title">Contact</h2></header>
+      <section class="mapbox" data-mapbox>
+        <figure><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.316094391!2d78.26795850257357!3d17.41229984138138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana%2C%20India!5e0!3m2!1sen!2sus!4v1654533924115!5m2!1sen!2sus" width="400" height="300" loading="lazy"></iframe></figure>
+      </section>
+      <section class="contact-form">
+        <h3 class="h3 form-title">Contact Form</h3>
+        <form action="https://formsubmit.co/dineshgokaram2706@gmail.com" method="POST" class="form" data-form>
+          <div class="input-wrapper">
+            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+          </div>
+          <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+          <button class="form-btn" type="submit" disabled data-form-btn>
+            <ion-icon name="paper-plane"></ion-icon>
+            <span>Send Message</span>
+          </button>
+        </form>
+      </section>
+    </article>
+
+  </div>
+</main>
+
+<!-- ... Your script tag ... -->
+<script>
+  'use strict';
+  
+  const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+  
+  const sidebar = document.querySelector("[data-sidebar]");
+  const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+  sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+
+  const form = document.querySelector("[data-form]");
+  const formInputs = document.querySelectorAll("[data-form-input]");
+  const formBtn = document.querySelector("[data-form-btn]");
+
+  for (let i = 0; i < formInputs.length; i++) {
+    formInputs[i].addEventListener("input", function () {
+      if (form.checkValidity()) {
+        formBtn.removeAttribute("disabled");
+      } else {
+        formBtn.setAttribute("disabled", "");
+      }
+    });
+  }
+  
+  const navigationLinks = document.querySelectorAll("[data-nav-link]");
+  const pages = document.querySelectorAll("[data-page]");
+  
+  for (let i = 0; i < navigationLinks.length; i++) {
+    navigationLinks[i].addEventListener("click", function () {
+      const clickedPageName = this.innerHTML.toLowerCase();
+      
+      for (let j = 0; j < navigationLinks.length; j++) {
+        navigationLinks[j].classList.remove("active");
+      }
+      this.classList.add("active");
+      
+      for (let k = 0; k < pages.length; k++) {
+        if (pages[k].dataset.page === clickedPageName) {
+          pages[k].classList.add("active");
+          window.scrollTo(0, 0);
+        } else {
+          pages[k].classList.remove("active");
+        }
+      }
+    });
+  }
+
+  const filterBtns = document.querySelectorAll("[data-filter-btn]");
+  const filterItems = document.querySelectorAll(".project-item");
+  let lastClickedFilterBtn = filterBtns.length > 0 ? filterBtns[0] : null;
+
+  const filterFunc = function () {
+    if (lastClickedFilterBtn) {
+      lastClickedFilterBtn.classList.remove("active");
+    }
+    this.classList.add("active");
+    lastClickedFilterBtn = this;
+
+    const selectedCategory = this.innerText.toLowerCase();
+
+    for (let i = 0; i < filterItems.length; i++) {
+      const itemCategory = filterItems[i].dataset.category.toLowerCase();
+      if (selectedCategory === "all" || selectedCategory === itemCategory) {
+        filterItems[i].style.display = "block";
+        filterItems[i].classList.add("active");
+      } else {
+        filterItems[i].style.display = "none";
+        filterItems[i].classList.remove("active");
+      }
+    }
+  }
+
+  for (let i = 0; i < filterBtns.length; i++) {
+    filterBtns[i].addEventListener("click", filterFunc);
+  }
+</script>
+</body>
+</html>
+
